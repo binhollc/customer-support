@@ -44,6 +44,8 @@
     * [Qwiic Interface Board](user-guide/accessories/qwiic-interface-board.md)
     * [Feather Interface Board](user-guide/accessories/feather-interface-board.md)
     * [Total Retrofitter](user-guide/accessories/total-retrofitter.md)
+    * [mikroBUS Click Pack](user-guide/accessories/mikrobus-click-pack.md)
+    * [Socket Station](user-guide/accessories/socket-station.md)
 * [Python Libraries](python-libraries/README.md)
   * [binhoHostAdapter](python-libraries/binhohostadapter/README.md)
     * [Device Functions](python-libraries/binhohostadapter/device.md)
