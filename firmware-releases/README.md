@@ -10,5 +10,5 @@ It's now possible to automatically update device firmware when using it with our
 
 ### Releases
 
-{% page-ref page="v0.1.12-stable.md" %}
+{% page-ref page="v0.2.0-stable.md" %}
 
