@@ -1,5 +1,15 @@
 # Releases
 
+## V1.1.0
+
+{% page-ref page="v1.1.0-release.md" %}
+
+1. Improved I2C & SPI Data Transfer Performance
+2. Added checking for Mission Control updates on application startup
+3. Added firmware version detection & update prompt on device connection
+4. Numerous Bug Fixes
+5. Stability Improvements
+
 ## V1.0.6
 
 {% page-ref page="v1.0.6-release.md" %}

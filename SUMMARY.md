@@ -71,6 +71,7 @@
       * [Replay UART](python-libraries/examples/replaying-logic-captures/replay-uart.md)
 * [Mission Control Software](software/README.md)
   * [Releases](software/releases/README.md)
+    * [V1.1.0 Release](software/releases/v1.1.0-release.md)
     * [V1.0.6 Release](software/releases/v1.0.6-release.md)
     * [V1.0.5 Alpha Release](software/releases/alpha-release-1-0-5.md)
     * [V1.0.0 Alpha Release](software/releases/alpha-release-1-0-0.md)

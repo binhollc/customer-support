@@ -6,11 +6,11 @@ Our cross-platform software is available for Windows, Mac, and Linux and provide
 
 ![](../.gitbook/assets/alphareleasebanner.png)
 
-The Alpha version features support for SPI, I2C, and UART protocols, as well as IO functions.
+Mission Control features support for SPI, I2C, and UART protocols, as well as IO functions.
 
 You can download the latest version for your operating system here:
 
-{% page-ref page="releases/v1.0.6-release.md" %}
+{% page-ref page="releases/v1.1.0-release.md" %}
 
 Take a look at the Getting Started section of our support portal for an introduction to using our GUI software:
 
