@@ -2,7 +2,7 @@
 
 ![](../.gitbook/assets/missioncontrolsplashscreen_v3.png)
 
-Our cross-platform software is available for Windows, Mac, and Linux and provides an easy-to-use GUI interface for your _Binho Nova Multi-Protocol USB Host Adapter_. This public Alpha release allows us to begin collecting user feedback while we design a beautiful and intuitive UX.
+Our cross-platform software is available for Windows, Mac, and Linux and provides an easy-to-use GUI interface for your _Binho Nova Multi-Protocol USB Host Adapter_.
 
 ![](../.gitbook/assets/alphareleasebanner.png)
 
