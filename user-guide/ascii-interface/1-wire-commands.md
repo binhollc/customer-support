@@ -38,7 +38,7 @@ This command has no parameters.
 
 **Response:**
 
-This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in sending the reset command on the 1-WIRE bus. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the device on the 1-Wire bus asserted a presence pulse as a result of the result on the 1-WIRE bus. If the command fails or no device asserts a pulse after the reset, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
 
 **Example Usage:**
 
