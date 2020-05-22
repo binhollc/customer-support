@@ -41,7 +41,7 @@ This function takes one parameter:
 
 #### Outputs:
 
-The host adapter will respond with '-OK' upon successful execution of the command.
+The host adapter will respond with '-OK' if the device on the 1-Wire bus asserted a presence pulse as a result of the result on the 1-WIRE bus. If the command fails or no device asserts a pulse after the reset, the function will return '-NG'.
 
 #### Example Usage:
 
