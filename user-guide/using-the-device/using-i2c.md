@@ -1,4 +1,4 @@
-# Using I2C
+# Using I2C Master
 
 The _Binho Nova Multi-Protocol USB Host Adapter_ can serve as an I2C bus master device which can be configured to meet the needs of nearly any I2C bus implementation. The I2C master supports clock frequencies from 100kHz up to 3.4MHz, which covers all common operating modes \(standard, full speed, fast, and high speed modes\). The _Binho Nova Multi-Protocol USB Host Adapter_ also features support for clock-stretching and repeated starts. There are internal pull-up resistors which can be programmatically engaged or disabled as necessary.
 
@@ -6,7 +6,7 @@ The I2C pins are fixed - SDA is assigned to IO0 and SCL is assigned to IO2. IO1,
 
 ![](../../.gitbook/assets/image%20%2828%29.png)
 
-The following table gives a brief overview of the available I2C Commands.
+The following table gives a brief overview of the available I2C Master Commands.
 
 | Command | Description | Details |
 | :--- | :--- | :--- |
@@ -24,8 +24,6 @@ Feel free to jump ahead to the ASCII Command Set reference to learn the specific
 {% page-ref page="../ascii-interface/i2c-commands.md" %}
 
 ### Setting Up the I2C Bus
-
-The first step in using the _Binho Nova Multi-Protocol USB Host Adapter_ as an I2C master is to put the adapter into I2C mode using the [Device Operating Mode](https://support.binho.io/user-guide/using-the-device/device-settings#operating-mode) command.
 
 The first step in using the _Binho Nova Multi-Protocol USB Host Adapter_ as an I2C master is to put the adapter into I2C mode using the [Device Operating Mode](https://support.binho.io/user-guide/using-the-device/device-settings#operating-mode) command.
 

@@ -248,3 +248,196 @@ I2C0 END R
 -OK
 ```
 
+### SLAVE
+
+Configures Binho Nova to behave as an I2C Slave device. This command is also used to get and set the slave device address.
+
+Configure the I2C Slave to start with the given device address : `I2C0 SLAVE [address]`
+
+Get the current device address: `I2C0 SLAVE ?`
+
+**Parameters:**
+
+The `address` parameter can be any valid 8-bit I2C slave device address.
+
+**Response:**
+
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the device as an I2C Slave. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+
+**Example Usage:**
+
+```text
+I2C0 SLAVE 0xA0
+-OK
+```
+
+### SLAVE MODE
+
+Configures the behavior of the emulated I2C Slave device.
+
+The _Binho Nova_ I2C Slave device has two modes of operation which allow it to behave like some of the most common I2C slave devices:
+
+#### USEPTR - Use Pointer Register
+
+In this mode of operation, a "pointer register" is used to keep track of the current register index in the device memory bank. This pointer will auto-increment each time a register is read from or written to. This allows successive reads and writes. This is a common approach for advanced I2C devices with rich configuration settings and multiple data parameters that are interesting to be sampled/read at the same time. In this mode, the I2C master can set the value in the pointer register by performing a 1-byte Write of the desired register index before performing an I2C read operation. This is typically referred to as a "read register" operation. Note that this is the default mode upon I2C Slave initialization.
+
+#### STARTZERO - Start At Zero
+
+In this mode of operation, all I2C read and write transactions will always begin from the 0th register in the memory bank. This is very common for simple devices which just have a few registers.
+
+Set the mode: `I2C0 SLAVE MODE [mode]`
+
+Get the current mode: `I2C0 SLAVE MODE ?`
+
+**Parameters:**
+
+The `mode`parameter can be either `USEPTR` or `STARTZERO`.
+
+**Response:**
+
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in configuring the I2C Slave mode. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+
+**Example Usage:**
+
+```text
+I2C0 SLAVE MODE ?
+-I2C0 SLAVE MODE USEPTR
+
+I2C0 SLAVE MODE STARTZERO
+-OK
+
+I2C0 SLAVE MODE ?
+-I2C0 SLAVE MODE STARTZERO
+
+I2C0 SLAVE MODE USEPTR
+-OK
+
+I2C0 SLAVE MODE ?
+-I2C0 SLAVE MODE USEPTR
+```
+
+### SLAVE REGCNT
+
+Gets/sets the number of registers in the I2C Slave device memory bank.
+
+Set the number of registers: `I2C0 SLAVE REGCNT [count]`
+
+Get the current number of registers: `I2C0 SLAVE REGCNT ?`
+
+**Parameters:**
+
+The `count` ****parameter can be any integer value from 1 to 256.
+
+**Response:**
+
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in configuring the I2C Slave to have the desired number of registers in it's memory bank. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+
+**Example Usage:**
+
+```text
+I2C0 SLAVE REGCNT ?
+-I2C0 SLAVE REGCNT 0x100
+
+I2C0 SLAVE REGCNT 8
+-OK
+
+I2C0 SLAVE REGCNT ?
+-I2C0 SLAVE REGCNT 8
+```
+
+### SLAVE REG
+
+Gets/sets the value of any of the registers in the I2C Slave device, including the pointer register.
+
+Set the value of a slave register: `I2C0 SLAVE REG [register] [value]`
+
+Get the value of a slave register: `I2C0 SLAVE REG [register] ?`
+
+**Parameters:**
+
+The `register` ****parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255. This parameter can also be `PTR` to access the pointer register.
+
+The `value` parameter can be any integer value from 0 to 255.
+
+**Response:**
+
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in setting the target register to the desired value. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+
+**Example Usage:**
+
+```text
+I2C0 SLAVE REG 0x00 ?
+-I2C0 SLAVE REG 0x00 0xFF
+
+I2C0 SLAVE REG 0x0B 0xCD
+-OK
+
+I2C0 SLAVE REG 0x0B ?
+-I2C0 SLAVE REG 0x0B 0xCD
+
+I2C0 SLAVE REG PTR ?
+-I2C0 SLAVE REG PTR 0x00
+
+I2C0 SLAVE REG PTR 0x05
+-OK
+
+I2C0 SLAVE REG PTR ?
+-I2C0 SLAVE REG PRT 0x05
+```
+
+### SLAVE READMASK
+
+Gets/sets the value of any of the register's readmask.
+
+Set the value of a slave register: `I2C0 SLAVE READMASK [register] [value]`
+
+Get the value of a slave register: `I2C0 SLAVE READMASK [register] ?`
+
+**Parameters:**
+
+The `register` ****parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
+
+The `mask` parameter can be any integer value from 0 to 255, where a 1 corresponds to granting read access to the corresponding bit in the register.
+
+**Response:**
+
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in setting the `READMASK` register to the desired value for the specified register. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+
+**Example Usage:**
+
+```text
+I2C0 SLAVE READMASK 0x00 0x3F
+-OK
+
+I2C0 SLAVE READMASK 0x00 ?
+-I2C0 SLAVE READMASK 0x00 0x3F
+```
+
+### SLAVE WRITEMASK
+
+Gets/sets the value of any of the register's writemask.
+
+Set the value of a slave register: `I2C0 SLAVE WRITEMASK [register] [value]`
+
+Get the value of a slave register: `I2C0 SLAVE WRITEMASK [register] ?`
+
+**Parameters:**
+
+The `register` ****parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
+
+The `mask` parameter can be any integer value from 0 to 255, where a 1 corresponds to granting write ****access to the corresponding bit in the register.
+
+**Response:**
+
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in setting the `WRITEMASK` register to the desired value for the specified register. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+
+**Example Usage:**
+
+```text
+I2C0 SLAVE WRITEMASK 0x00 0xF0
+-OK
+
+I2C0 SLAVE WRITEMASK 0x00 ?
+-I2C0 SLAVE WRITEMASK 0x00 0xF0
+```
+
