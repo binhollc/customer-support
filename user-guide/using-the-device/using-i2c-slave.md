@@ -13,12 +13,12 @@ The following table gives a brief overview of the available I2C Slave Commands.
 | Command | Description | Details |
 | :--- | :--- | :--- |
 | **PULL** | Gets/sets the current state of the on-board pull-up resistors. | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#pull) |
-| **SLAVE** | Gets/sets the Slave Device Address | Details |
-| **SLAVE MODE** | Gets/sets the mode of operation of slave device | Details |
-| **SLAVE REGCOUNT** | Gets/sets the number of registers in the device register bank | Details |
-| **SLAVE REG** | Gets/sets the value contained in a register in the device register bank | Details |
-| **SLAVE READMASK** | Gets/sets the read permissions for the bits in a given register | Details |
-| **SLAVE WRITEMASK** | Gets/sets the write permissions for the bits in a given register | Details |
+| **SLAVE** | Gets/sets the Slave Device Address | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave) |
+| **SLAVE MODE** | Gets/sets the mode of operation of slave device | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) |
+| **SLAVE REGCNT** | Gets/sets the number of registers in the device register bank | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-regcnt) |
+| **SLAVE REG** | Gets/sets the value contained in a register in the device register bank | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-reg) |
+| **SLAVE READMASK** | Gets/sets the read permissions for the bits in a given register | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-readmask) |
+| **SLAVE WRITEMASK** | Gets/sets the write permissions for the bits in a given register | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-writemask) |
 
 Feel free to jump ahead to the ASCII Command Set reference to learn the specifics of each command, or continue below to see examples of how to use these commands to implement I2C Slave device behaviors using a _Binho Nova_.
 
