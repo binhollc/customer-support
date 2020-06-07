@@ -43,6 +43,12 @@ The _Binho Nova Multi-Protocol USB Host Adapter_ is ideal for manual testing dur
 
 ### Included Components
 
-The _Binho Nova Multi-Protocol USB Host Adapter_ comes along with a helpful [breadboard breakout adapter](https://binho.io/collections/accessories/products/breadboard-breakout) and with a 1 foot USB type C \(male\) to type A \(male\) cable in a soft-shell zippered case.  
+The _Binho Nova Multi-Protocol USB Host Adapter_ comes along with a helpful [breadboard breakout adapter](https://binho.io/collections/accessories/products/breadboard-breakout) and with a 1 foot USB type C \(male\) to type A \(male\) cable in a soft-shell zippered case.
+
+{% embed url="https://www.youtube.com/watch?v=-XRQQE0g3OM" %}
+
+
+
+  
 
 
