@@ -1,14 +1,10 @@
 # How To Update Firmware
 
-### Step \#1: Connect to Binho Nova
+Mission Control automatically detects the firmware version of a connected Binho Nova and checks if there's a newer version available. If a newer version of firmware is found, a prompt will be displayed asking if you'd like the device firmware to be updated. This process is shown below:
 
-### Step \#2: On the Devices Tab, Click "Check for Firmware Update
+![](../../.gitbook/assets/fwupdate-missioncontroll.gif)
 
-### Step \#3: Select "Continue" from the Dialog Box
-
-![Firmware Update On Windows](../../.gitbook/assets/windows-firmwareupdate.gif)
-
-![On MacOS, there&apos;s an additional prompt as part of the process.](../../.gitbook/assets/mac-firmwareupdate.gif)
-
-### Step \#4: Done
+{% hint style="info" %}
+The automatic firmware update process shown above will only work on computers which have an active internet connection. In order to update devices which are part of test stations that do not have an active internet connection, please see the Manual Firmware Update process [here](https://support.binho.io/user-guide/using-the-device/updating-firmware#manual-update).
+{% endhint %}
 
