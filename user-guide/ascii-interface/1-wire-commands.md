@@ -212,3 +212,34 @@ This function returns a Data Response containing the address of the device found
 -1WIRE0 ADDR 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 ```
 
+### WHR
+
+Performs an optional SKIP or SELECT command, followed by writing 0 to 1024 bytes, and then reading 0 to 1024 bytes.
+
+Syntax: `1WIRE0 WHR [cmd] [bytesToRead] [bytesToWrite] [hexPayload]`
+
+**Parameters:**
+
+The `cmd` parameter instructs Nova to optionally begin the transaction with a SKIP or SELECT command. The possible values for this parameter are `SKIP`, `SELECT`, or `NONE`.
+
+The `bytesToRead` parameter indicates the number of bytes to read after writing the hexPayload to the 1Wire bus. This value can be from `0` to `1024`.
+
+The `bytesToWrite` parameter indicates the number of bytes to read to the 1Wire bus. This value can be from `0` to `1024` and must match the length of the `hexPayload` parameter.
+
+The `hexPayload` parameter is the data that will be written to the 1Wire bus. This parameter should be entered as a string of hex values without a leading "0x" and no spaces. The length must match the bytesToWrite parameter.
+
+**Response:**
+
+This function returns either `OK` or `NG` when the WHR command is used only to write data \(_bytesToRead_ = 0\) to the 1Wire bus. When the WHR command is used to perform a read operation, the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
+
+**Example Usage:**
+
+```text
+1WIRE0 WHR SKIP 4 3 F00000
+-1WIRE0 RXD DEADBEEF
+```
+
+{% hint style="success" %}
+We've produced a video tutorial demonstrating how to use this command [here](https://www.youtube.com/watch?v=cAAF-zOJbJo).
+{% endhint %}
+
