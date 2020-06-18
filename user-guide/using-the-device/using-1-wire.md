@@ -1,6 +1,6 @@
 # Using 1-Wire
 
-The Binho Multi-Protocol USB Host Adapter can function as a Dallas 1-WIRE master device. This protocol can be configured to operate on any of the IO pins on the device, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
+The _Binho Nova Multi-Protocol USB Host Adapte_r can function as a Dallas 1-WIRE master device. This protocol can be configured to operate on any of the IO pins on the device, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
 
 The following table gives a brief overview of the available 1WIRE commands.
 
@@ -15,6 +15,7 @@ The following table gives a brief overview of the available 1WIRE commands.
 | **SEARCH** | Search for the next 1-Wire device on the bus. | [Details](https://support.binho.io/user-guide/ascii-interface/1-wire-commands#search) |
 | **DEPOWER** | Power down the 1-Wire bus. | [Details](https://support.binho.io/user-guide/ascii-interface/1-wire-commands#depower) |
 | **ADDR** | Get the address of the device found using the SEARCH command. | [Details](https://support.binho.io/user-guide/ascii-interface/1-wire-commands#addr) |
+| **WHR** | Writes 0 to 1024 bytes and then Reads 0 to 1024 bytes | [Details](https://support.binho.io/user-guide/ascii-interface/1-wire-commands#whr) |
 
 Feel free to jump ahead to the ASCII Command Set reference to learn the specifics of each command, or continue below to see an example of how to use these commands to achieve communication on the 1-WIRE bus.
 
@@ -105,7 +106,11 @@ Finally let's do some reading and writing:
 -1WIRE READ 0x0F
 ```
 
-That's all there is to it! Of course getting the transaction complete before any timeouts occur can be challenging when manually interacting with the devices on the bus, however this isn't an issue when scripting the interactions.
+That's all there is to it! Of course getting the transaction complete before any timeouts occur can be challenging when manually interacting with the devices on the bus using these commands, however this isn't an issue when scripting the interactions. When it comes to manually interacting with 1-Wire devices, we highly recommend using the [WHR ](https://support.binho.io/user-guide/ascii-interface/1-wire-commands#whr)command. You can see how to do this in our video tutorial embedded below:
+
+{% embed url="https://www.youtube.com/watch?v=cAAF-zOJbJo" %}
+
+
 
 Check out the examples section to see how to use 1-Wire in an automated way:
 
