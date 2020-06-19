@@ -4,7 +4,7 @@ The _Binho Nova Multi-Protocol USB Host Adapter_ can serve as an I2C bus periphe
 
 The I2C peripheral device supports clock frequencies from 100kHz up to 3.4MHz, which covers all common operating modes \(standard, full speed, fast, and high speed modes\). The _Binho Nova Multi-Protocol USB Host Adapter_ also features support for clock-stretching and repeated starts. There are internal pull-up resistors which can be programmatically engaged or disabled as necessary even when operating as an I2C peripheral device.
 
-The I2C pins are fixed - SDA is assigned to IO0 and SCL is assigned to IO2. IO1, IO3, and IO4 are available for use when the host adapter is configured for I2C Slave mode. This is particularly useful to implement interrupt or alert signals.
+The I2C pins are fixed - SDA is assigned to IO0 and SCL is assigned to IO2. IO1, IO3, and IO4 are available for use when the host adapter is configured for I2C peripheral mode. This is particularly useful to implement interrupt or alert signals.
 
 ![](../../../.gitbook/assets/20200619_novapinout.png)
 
