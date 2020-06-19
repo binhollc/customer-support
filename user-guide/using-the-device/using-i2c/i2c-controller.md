@@ -58,7 +58,7 @@ I2C0 PULL EN
 
 ### Scanning for I2C Devices
 
-Before even attempting communication with the slave device, let's make sure everything checks out. The address of the target device is 0x50.
+Before even attempting communication with the peripheral device, let's make sure everything checks out. The address of the target device is 0x50.
 
 ```text
 I2C0 SCAN 0x50
