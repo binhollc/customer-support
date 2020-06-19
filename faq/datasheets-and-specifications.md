@@ -4,7 +4,7 @@ The product datasheet, along with other technical assets can be found on the [do
 
 For convenience, it can also be directly downloaded from the link below:
 
-#### Download [Binho Nova Multi-Protocol USB Host Adapter Datasheet v1.3](https://cdn.binho.io/doc/nova/datasheet/latest/Binho%20Nova%20Datasheet%20v1.3.pdf) \[pdf\]
+#### Download [Binho Nova Multi-Protocol USB Host Adapter Datasheet v1.4](https://cdn.binho.io/doc/nova/datasheet/1.4/Binho%20Nova%20Datasheet%20v1.4.pdf) \[pdf\]
 
 
 
