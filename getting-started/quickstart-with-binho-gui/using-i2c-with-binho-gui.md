@@ -26,7 +26,7 @@ It's now possible to use both 7bit or 8bit formatted I2C addresses by selecting 
 
 ### Reading Data
 
-Reading data from the slave device is as simple as providing the number of bytes to read \(in either decimal or hex, preceded by "0x"\) and clicking the "Read \[n\] Byte\(s\)" button.
+Reading data from the peripheral device is as simple as providing the number of bytes to read \(in either decimal or hex, preceded by "0x"\) and clicking the "Read \[n\] Byte\(s\)" button.
 
 ![](../../.gitbook/assets/read-i2c.gif)
 
