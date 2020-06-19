@@ -1,6 +1,6 @@
 # Using SWI
 
-The _Binho Multi-Protocol USB Host Adapter_ can function as an Atmel Single-Wire Interface\(SWI\) master device. This protocol can be configured to operate on any of the IO pins on the device, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
+The _Binho Multi-Protocol USB Host Adapter_ can function as an Atmel Single-Wire Interface\(SWI\) host device. This protocol can be configured to operate on any of the IO pins on the device, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
 
 {% hint style="info" %}
 Atmel has been a bit ambiguous with their use of the term "Single Wire Interface", with multiple incompatible versions of a protocol referred to in their documentation as "single wire interface". The SWI protocol presented here is the version commonly found on their CryptoAuthentication portfolio devices. It is not compatible with [AT21CSx1](https://www.microchip.com/wwwproducts/en/AT21CS01) devices.
@@ -10,7 +10,7 @@ The following table gives a brief overview of the available SWI commands. Of par
 
 | Command | Description | Link |
 | :--- | :--- | :--- |
-| **BEGIN** | Starts the Atmel SWI master on the given IO pin.  | [Details](https://support.binho.io/user-guide/ascii-interface/swi-commands#begin) |
+| **BEGIN** | Starts the Atmel SWI host on the given IO pin.  | [Details](https://support.binho.io/user-guide/ascii-interface/swi-commands#begin) |
 | **TOKEN** | This command is used to send either a WAKE, ONE, or ZERO token. | [Details](https://support.binho.io/user-guide/ascii-interface/swi-commands#token) |
 | **FLAG** | Send a COMMAND, TRANSMIT, IDLE, or SLEEP Flag. | [Details](https://support.binho.io/user-guide/ascii-interface/swi-commands#flag) |
 | **PACKET** | Construct & Transmit a full data packet. | [Details](https://support.binho.io/user-guide/ascii-interface/swi-commands#packet) |
@@ -23,7 +23,7 @@ Feel free to jump ahead to the ASCII Command Set reference to learn the specific
 
 ### Setting Up the SWI Bus
 
-The first step in using the _Binho Multi-Protocol USB Host Adapter_ as a SWI master is to put the adapter into SWI mode using the [Device Operating Mode](https://support.binho.io/user-guide/using-the-device/device-settings#operating-mode) command.
+The first step in using the _Binho Multi-Protocol USB Host Adapter_ as a SWI host is to put the adapter into SWI mode using the [Device Operating Mode](https://support.binho.io/user-guide/using-the-device/device-settings#operating-mode) command.
 
 ```text
 +MODE 0 SWI

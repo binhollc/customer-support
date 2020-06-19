@@ -23,7 +23,7 @@ Feel free to jump ahead to the ASCII Command Set reference to learn the specific
 
 ### Setting Up the 1-WIRE Bus
 
-The first step in using the Binho Nova Multi-Protocol USB Host Adapter as a 1-Wire master is to put the adapter into 1-WIRE mode using the [Device Operating Mode](https://support.binho.io/user-guide/using-the-device/device-settings#operating-mode) command.
+The first step in using the Binho Nova Multi-Protocol USB Host Adapter as a 1-Wire host is to put the adapter into 1-WIRE mode using the [Device Operating Mode](https://support.binho.io/user-guide/using-the-device/device-settings#operating-mode) command.
 
 ```text
 +MODE 0 1WIRE
