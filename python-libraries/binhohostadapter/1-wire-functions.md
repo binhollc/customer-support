@@ -2,7 +2,7 @@
 
 ### begin1WIRE\(oneWireIndex, pin, pullup\)
 
-This function starts the 1-WIRE Master on the given IO pin.  The 1-Wire protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
+This function starts the 1-WIRE host on the given IO pin.  The 1-Wire protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
 
 #### Inputs:
 
@@ -31,7 +31,7 @@ binhoDevice.begin1WIRE(0, 0, True)
 
 ### reset1WIRE\(oneWireIndex\)
 
-This function instructions the 1-Wire Master to send the reset command. Sending the reset command is the first step of selecting a target device to communicate with.
+This function instructions the 1-Wire host to send the reset command. Sending the reset command is the first step of selecting a target device to communicate with.
 
 #### Inputs:
 
@@ -162,7 +162,7 @@ binhoDevice.select1WIRE(0)
 
 ### skip1WIRE\(oneWireIndex\)
 
-This function allows one to skip the search process and enables communication with the device right away. This can only be used when there is only one slave device on the bus.
+This function allows one to skip the search process and enables communication with the device right away. This can only be used when there is only one 1-Wire device on the bus.
 
 #### Inputs:
 
