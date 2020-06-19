@@ -162,9 +162,3 @@ And example Python scripts which demonstrate all of the various protocols and fe
 
 {% page-ref page="../python-libraries/examples/" %}
 
-And of course, the libraries are open-source and the repository can be found here:
-
-{% embed url="https://bitbucket.org/binho-llc/usb-host-adapter-python-libraries/src/master/" %}
-
-
-

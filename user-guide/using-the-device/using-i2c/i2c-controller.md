@@ -4,7 +4,7 @@ The _Binho Nova Multi-Protocol USB Host Adapter_ can serve as an I2C bus control
 
 The I2C pins are fixed - SDA is assigned to IO0 and SCL is assigned to IO2. IO1, IO3, and IO4 are available for use when the host adapter is configured for I2C controller mode.
 
-![](../../../.gitbook/assets/image%20%2828%29.png)
+![](../../../.gitbook/assets/20200619_novapinout.png)
 
 The following table gives a brief overview of the available I2C controller commands.
 

@@ -6,7 +6,7 @@ The _Binho Nova Multi-Protocol USB Host Adapter_ features a total of 5 x IO pins
 The operating mode of the _Binho Nova Multi-Protocol USB Host Adapter_ is set to IO by default at power-on. If the host adapter is in another mode of operation, then only the subset of IO pins that are unused will be available for use as IO.
 {% endhint %}
 
-![](https://lh6.googleusercontent.com/B0wtTLMyQRKR0hdAnhKn7ZrtWkvebW8P7kxPjLdgFhrJV8SeM7BVPZ1Nzwv5U6f9vIHKPIusSXxCpY97E9Q7DQ4fHGJxnetf3Qp9eBzfLwkASNAYwr76SxFgVfCCysFknVrSYifv)
+![](../../.gitbook/assets/20200619_novapinout.png)
 
 Discussion regarding the specific protocols will follow this chapter, and for now the focus will be on the general use of the IO pins. These functions include Digital Input, Digital Output, Analog Input, Analog Output, PWM output, as well as interrupt-enabled inputs.
 

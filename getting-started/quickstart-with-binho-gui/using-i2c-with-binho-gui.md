@@ -2,7 +2,7 @@
 
 The diagram below shows the pin assignments \(in purple\) for the SCL and SDA pins on the _Binho Nova Multi-Protocol USB Host Adapter_ when it is in I2C mode.
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/20200619_novapinout.png)
 
 ### Configuring the I2C Bus Settings
 

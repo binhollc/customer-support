@@ -16,7 +16,7 @@ The _Binho Nova Multi-Protocol USB Host Adapter_ features an integrated wire har
 
 The figure below shows the connector pinout and channel functions:
 
-![Binho Multi-Protocol USB Host Adapter Connector Pinout](https://lh6.googleusercontent.com/B0wtTLMyQRKR0hdAnhKn7ZrtWkvebW8P7kxPjLdgFhrJV8SeM7BVPZ1Nzwv5U6f9vIHKPIusSXxCpY97E9Q7DQ4fHGJxnetf3Qp9eBzfLwkASNAYwr76SxFgVfCCysFknVrSYifv)
+![](../../.gitbook/assets/20200619_novapinout.png)
 
 Use the link below to download a printable PDF version of this image for easy reference:
 

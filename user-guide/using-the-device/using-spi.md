@@ -2,7 +2,7 @@
 
 The _Binho Nova Multi-Protocol USB Host Adapter_ can serve as a SPI bus controller device which can be configured to meet the needs of nearly any SPI bus implementation. The SPI Clock can be set to a frequency between 500kHz and 12MHz, and all 4 SPI modes are supported. Transfers can be in 8-bit or 16-bit packets. The pin assignments for the SPI protocol are show in the graphic below, indicated in yellow:
 
-![](../../.gitbook/assets/image%20%289%29.png)
+![](../../.gitbook/assets/20200619_novapinout.png)
 
 The following table gives a brief overview of the available SPI commands. 
 

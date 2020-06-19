@@ -29,7 +29,7 @@
 
 ### Connector Pin Map
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![](../.gitbook/assets/20200619_novapinout.png)
 
 ### Device Description
 

@@ -6,7 +6,7 @@ The I2C peripheral device supports clock frequencies from 100kHz up to 3.4MHz, w
 
 The I2C pins are fixed - SDA is assigned to IO0 and SCL is assigned to IO2. IO1, IO3, and IO4 are available for use when the host adapter is configured for I2C Slave mode. This is particularly useful to implement interrupt or alert signals.
 
-![](../../../.gitbook/assets/image%20%2828%29.png)
+![](../../../.gitbook/assets/20200619_novapinout.png)
 
 The following table gives a brief overview of the available I2C Peripheral Commands.
 

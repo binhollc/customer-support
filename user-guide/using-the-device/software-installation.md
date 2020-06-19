@@ -44,7 +44,7 @@ Our friends over at [Sparkfun Electronics](https://www.sparkfun.com) have create
 More than likely you'll want to start writing scripts to employ the _Binho Nova Multi-Protocol USB Host Adapter_ in automated testing. You'll need Python 3 to use the provided libraries. If you don't already have Python 3 installed, you can download it [here](https://www.python.org/downloads/).
 
 {% hint style="warning" %}
-Our Python Libraries do not work with Python 2.7. Python 2.7 will be [retired on January 1, 2020](https://pythonclock.org/), so it's a great time to make the switch. 
+Our Python Libraries do not work with Python 2.7. Python 2.7 was [retired on January 1, 2020](https://pythonclock.org/), so it's a great time to make the switch. 
 {% endhint %}
 
 All of the documentation for the Python libraries can be found on the following page:

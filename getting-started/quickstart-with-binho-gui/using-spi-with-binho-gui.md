@@ -2,7 +2,7 @@
 
 The diagram below shows the pin assignments \(in yellow\) for the SCK, SDI, and SDO pins on the _Binho Nova Multi-Protocol USB Host Adapter_ when it is in SPI mode.
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/20200619_novapinout.png)
 
 ### Configuring the SPI Bus Settings
 

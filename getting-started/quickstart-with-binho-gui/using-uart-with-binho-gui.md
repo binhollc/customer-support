@@ -2,7 +2,7 @@
 
 The diagram below shows the pin assignments \(in green\) for the TX and RX pins on the _Binho Nova Multi-Protocol USB Host Adapter_ when it is in UART mode.
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/20200619_novapinout.png)
 
 ### Configuring the UART Settings
 

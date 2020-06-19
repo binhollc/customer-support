@@ -2,7 +2,7 @@
 
 The five IO pins of the _Binho Nova Multi-Protocol USB Host Adapter_ can be used in a variety of modes, and unassigned pins can be used for their IO functions even when other pins are used for SPI or I2C operation. The image below shows the pinout and functionality of each of the pins:
 
-![](../../.gitbook/assets/image%20%2828%29.png)
+![](../../.gitbook/assets/20200619_novapinout.png)
 
 ### Digital Input
 

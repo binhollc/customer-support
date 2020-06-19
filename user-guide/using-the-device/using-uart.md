@@ -4,7 +4,7 @@ The _Binho Multi-Protocol USB Host Adapter_ also supports UART communication. Th
 
 Again for easy reference, here's the connector pinout with the UART signals shown in green:
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/20200619_novapinout.png)
 
 | Command | Description | Link |
 | :--- | :--- | :--- |
