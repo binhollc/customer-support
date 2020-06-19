@@ -266,7 +266,7 @@ SPI0 END
 
 ### END
 
-Stops the SPI controller. This command ends the SPI session until a BEGIN command restarts the SPI Master.
+Stops the SPI controller. This command ends the SPI session until a BEGIN command restarts the SPI controller.
 
 Stop the SPI controller: `SPI0 END`
 
