@@ -1,12 +1,12 @@
 # Using Binho with Pytest
 
-The Binho Multi-Protocol USB Host Adapter pairs elegantly with [pytest ](https://docs.pytest.org/en/latest/)to implement an incredibly robust and efficient hardware and firmware testing platform.
+The _Binho Nova Multi-Protocol USB Host Adapter_ pairs elegantly with [pytest ](https://docs.pytest.org/en/latest/)to implement an incredibly robust and efficient hardware and firmware testing platform.
 
 We'll leave discussion of the features of pytest for their own very-thorough documentation, and just hit on a few tips to make it fast and easy to get started using it with your host adatper.
 
-In order for the serial connection with your Binho Multi-Protocol USB Host Adapter to persist through the entire test plan, you'll want to use a fixture. This is as easy as creating a `conftest.py` file in the test directory. Additionally, allow it accept command line parameters for device IDs, as this makes it easy to use multiple adapters on the same host computer.
+In order for the serial connection with your Binho Nova to persist through the entire test plan, you'll want to use a fixture. This is as easy as creating a `conftest.py` file in the test directory. Additionally, allow it accept command line parameters for device IDs, as this makes it easy to use multiple adapters on the same host computer.
 
-Here's an example of a conftest.py file which creates two fixtures, one for each Binho Multi-Protocol USB Host Adapter used in the testing:
+Here's an example of a conftest.py file which creates two fixtures, one for each Binho Nova used in the testing:
 
 ```python
 from binhoHostAdapter import binhoHostAdapter

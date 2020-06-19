@@ -2,7 +2,7 @@
 
 The following script can be used to repeat I2C transactions captured and exported from Saleae Logic. After the capture is completed, export the I2C analyzer results as a csv file. You can follow [this guide](https://support.saleae.com/user-guide/using-logic/saving-loading-and-exporting-data#exporting-analyzer-results) to export the file. The exported data should be in `HEX`-- Note that the base/radix of the exported data will match the current setting for display in the software.
 
-Simply modify the parameters in lines 9-15 in the script below and then everything is ready to play back the file from the _Binho Multi-Protocol USB Host Adapter_.
+Simply modify the parameters in lines 9-15 in the script below and then everything is ready to play back the file from the _Binho Nova Multi-Protocol USB Host Adapter_.
 
 For easy testing, here's an example export file from Saleae Logic that works with this script:
 

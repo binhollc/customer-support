@@ -1,6 +1,6 @@
 # UART Bridge with I2C
 
-The example below provides a basic demonstration of how to use the _Binho Multi-Protocol USB Host Adapter_ as both a UART bridge and an I2C master to interact with the same DUT with both protocols.
+The example below provides a basic demonstration of how to use the _Binho Nova Multi-Protocol USB Host Adapter_ as both a UART bridge and an I2C controller to interact with the same DUT with both protocols.
 
 ```python
 from binhoHostAdapter import binhoHostAdapter

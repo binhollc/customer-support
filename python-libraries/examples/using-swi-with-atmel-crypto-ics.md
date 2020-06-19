@@ -1,6 +1,6 @@
 # SWI with Atmel Crypto ICs
 
-The following python script demonstrates how to use the SWI master functionality of the Binho Multi-Protocol USB Host Adapter with the Atmel \(now Microchip\) [ATSHA204A ](https://www.microchip.com/wwwproducts/en/ATsha204a)CryptoAuthentication IC. Communication with other devices from this family will be strikingly similar.
+The following python script demonstrates how to use the SWI host Nova functionality of the Binho Multi-Protocol USB Host Adapter with the Atmel \(now Microchip\) [ATSHA204A ](https://www.microchip.com/wwwproducts/en/ATsha204a)CryptoAuthentication IC. Communication with other devices from this family will be strikingly similar.
 
 ```python
 from binhoHostAdapter import binhoHostAdapter
