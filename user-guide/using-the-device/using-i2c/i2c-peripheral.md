@@ -17,8 +17,8 @@ The following use of Master/Slave terminology is considered obsolete. Controller
 | Command | Description | Details |
 | :--- | :--- | :--- |
 | **PULL** | Gets/sets the current state of the on-board pull-up resistors. | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#pull) |
-| **SLAVE** | Gets/sets the Slave Device Address | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave) |
-| **SLAVE MODE** | Gets/sets the mode of operation of slave device | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) |
+| **SLAVE** | Gets/sets the peripheral device Address | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave) |
+| **SLAVE MODE** | Gets/sets the mode of operation of peripheral device | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) |
 | **SLAVE REGCNT** | Gets/sets the number of registers in the device register bank | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-regcnt) |
 | **SLAVE REG** | Gets/sets the value contained in a register in the device register bank | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-reg) |
 | **SLAVE READMASK** | Gets/sets the read permissions for the bits in a given register | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-readmask) |
@@ -41,7 +41,7 @@ The first step in using the _Binho Nova Multi-Protocol USB Host Adapter_ as an I
 -OK
 ```
 
-Now the host adapter is in I2C communication mode. The next step is to instruct the Binho Nova to behave as an I2C peripheral device. This is achieved by assigning it a slave device address to respond to as shown below, where `0xA0` is assigned as the peripheral address.
+Now the host adapter is in I2C communication mode. The next step is to instruct the Binho Nova to behave as an I2C peripheral device. This is achieved by assigning it a peripheral device address to respond to as shown below, where `0xA0` is assigned as the peripheral address.
 
 ```text
 I2C0 SLAVE 0xA0
@@ -140,7 +140,7 @@ It's very common that I2C peripheral devices will have some data which is read-o
 The Host PC will always have the ability to read and write all registers. The access controls for the registers are only applicable to communication over the I2C bus. For example, a register that is configured to be Read-Only will still be write-able by the host PC without needing to change the access settings.
 {% endhint %}
 
-Each register in the slave device memory bank has a corresponding `READMASK` and `WRITEMASK`, which are used to configure the bit-level access. 
+Each register in the peripheral device memory bank has a corresponding `READMASK` and `WRITEMASK`, which are used to configure the bit-level access. 
 
 For example, a register with a `READMASK` of 0x3F means that the bits 5 through 0 are readable, and bits 6 and 7 would always be read as 0. The following snippet demonstrates using the `READMASK` command to configure the read access for the bits of register 0:
 
