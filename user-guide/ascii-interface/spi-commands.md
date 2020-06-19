@@ -183,7 +183,7 @@ SPI0 TXBITS 16
 
 ### BEGIN
 
-Starts the SPI Master. This command must be issued before sending/receiving any data on the SPI bus.
+Starts the SPI Controller. This command must be issued before sending/receiving any data on the SPI bus.
 
 Start the SPI transmission: `SPI0 BEGIN`
 
@@ -193,7 +193,7 @@ This command has no parameters.
 
 **Response:**
 
-This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the SPI master. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the SPI controller. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
 
 **Example Usage:**
 
@@ -211,7 +211,7 @@ To transfer data using the buffer: `SPI0 TXRX BUF[n] [count]`
 To transfer data directly: `SPI0 TXTX [data]`
 
 {% hint style="warning" %}
-Before sending the **TXRX** command, be sure you've selected the target device on your SPI bus. The CS pin of the target device should be driven to the correct logical value using the [IO commands](https://support.binho.io/user-guide/ascii-interface/io-commands).
+Before sending the **TXRX** command, be sure you've selected the target peripheral device on your SPI bus. The CS pin of the target device should be driven to the correct logical value using the [IO commands](https://support.binho.io/user-guide/ascii-interface/io-commands).
 {% endhint %}
 
 **Parameters:**
@@ -266,9 +266,9 @@ SPI0 END
 
 ### END
 
-Stops the SPI Master. This command ends the SPI session until a BEGIN command restarts the SPI Master.
+Stops the SPI controller. This command ends the SPI session until a BEGIN command restarts the SPI Master.
 
-Stop the SPI Master: `SPI0 END`
+Stop the SPI controller: `SPI0 END`
 
 **Parameters:**
 
@@ -276,7 +276,7 @@ This command has no parameters.
 
 **Response:**
 
-This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in stopping the SPI master. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in stopping the SPI controller. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
 
 **Example Usage:**
 

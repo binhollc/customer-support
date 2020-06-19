@@ -62,7 +62,7 @@ You're ready to hit the ground running. Check out the full User Guide to learn h
 
 {% page-ref page="../user-guide/using-the-device/using-spi.md" %}
 
-{% page-ref page="../user-guide/using-the-device/using-i2c.md" %}
+{% page-ref page="../user-guide/using-the-device/using-i2c/" %}
 
 {% page-ref page="../user-guide/using-the-device/using-1-wire.md" %}
 

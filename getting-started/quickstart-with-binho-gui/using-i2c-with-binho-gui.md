@@ -14,11 +14,11 @@ The _Binho Nova_ supports I2C bus clock frequencies from 100kHz up to 3.4MHz, wh
 
 ### Scanning for Devices
 
-If you already know the address of your target I2C slave device, you can type it directly into the Address textbox \(in either decimal or hex, preceded by "0x"\). However, Binho makes it easy to discover devices on the I2C bus -- simply leave the "Address" textbox empty and click the "Scan Entire Bus..." button and the host adapter will check for devices on the bus. Any devices that are found will then be displayed in a listbox. Simply select the address of the device that you'd like to interact with from the list.
+If you already know the address of your target I2C peripheral device, you can type it directly into the Address textbox \(in either decimal or hex, preceded by "0x"\). However, Binho makes it easy to discover devices on the I2C bus -- simply leave the "Address" textbox empty and click the "Scan Entire Bus..." button and the host adapter will check for devices on the bus. Any devices that are found will then be displayed in a listbox. Simply select the address of the device that you'd like to interact with from the list.
 
 ![](../../.gitbook/assets/scan-i2c.gif)
 
-The remainder of the commands in this guide require that the "Target Address" has already been set, either by scanning the bus or via directly typing the slave address.
+The remainder of the commands in this guide require that the "Target Address" has already been set, either by scanning the bus or via directly typing the peripheral I2C device address.
 
 {% hint style="success" %}
 It's now possible to use both 7bit or 8bit formatted I2C addresses by selecting the preferred address formatting in the Target Device section.
@@ -34,7 +34,7 @@ Note that the results of this action are displayed in the transaction list at th
 
 ### Writing Data
 
-Writing data to the slave device can be done by entering the data into the "Write" textbox and clicking the "Write \[n\] Byte\(s\)" button. An option checkbox can be selected to immediately send a repeated start bit after writing the data. Data can be typed in binary, decimal, or hex formats. In the case of binary, the 8bit value should be preceded by a prefix of "0b", likewise a hex value should be preceded by "0x". Numbers without a prefix will be evaluated as a decimal number.
+Writing data to a peripheral device on the I2C bus can be done by entering the data into the "Write" textbox and clicking the "Write \[n\] Byte\(s\)" button. An option checkbox can be selected to immediately send a repeated start bit after writing the data. Data can be typed in binary, decimal, or hex formats. In the case of binary, the 8bit value should be preceded by a prefix of "0b", likewise a hex value should be preceded by "0x". Numbers without a prefix will be evaluated as a decimal number.
 
 For clarity, here is an example of a valid data transfer displayed in each of the three supported bases:
 
@@ -54,7 +54,7 @@ While not an official part of the I2C specification, a very common implementatio
 
 ![](../../.gitbook/assets/read-register-i2c.gif)
 
-The Read Register command supports both 8bit and 16bit register addresses. When targeting a 16bit register on a slave device, simply use the hex address padded with leading zeros as necessary.
+The Read Register command supports both 8bit and 16bit register addresses. When targeting a 16bit register on an I2C peripheral device, simply use the hex address padded with leading zeros as necessary.
 
 For example, to address register `32` on a device which is expecting a 16-bit address, enter `0x0020` in the Register Address textbox.
 

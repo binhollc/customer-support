@@ -4,7 +4,7 @@ The _Binho Multi-Protocol USB Host Adapter_ currently supports SPI, I2C, UART, D
 
 {% page-ref page="../user-guide/using-the-device/using-spi.md" %}
 
-{% page-ref page="../user-guide/using-the-device/using-i2c.md" %}
+{% page-ref page="../user-guide/using-the-device/using-i2c/" %}
 
 {% page-ref page="../user-guide/using-the-device/using-uart.md" %}
 

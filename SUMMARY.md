@@ -25,8 +25,9 @@
     * [Using the Buffer](user-guide/using-the-device/using-the-buffer.md)
     * [Using IO](user-guide/using-the-device/using-io.md)
     * [Using SPI](user-guide/using-the-device/using-spi.md)
-    * [Using I2C Master](user-guide/using-the-device/using-i2c.md)
-    * [Using I2C Slave](user-guide/using-the-device/using-i2c-slave.md)
+    * [Using I2C](user-guide/using-the-device/using-i2c/README.md)
+      * [I2C Controller](user-guide/using-the-device/using-i2c/i2c-controller.md)
+      * [I2C Peripheral](user-guide/using-the-device/using-i2c/i2c-peripheral.md)
     * [Using 1-Wire](user-guide/using-the-device/using-1-wire.md)
     * [Using SWI](user-guide/using-the-device/using-swi.md)
     * [Using UART](user-guide/using-the-device/using-uart.md)
@@ -110,6 +111,7 @@
 
 ## Learn & Grow
 
+* [Dropping Legacy Terminology](learn-and-grow/dropping-legacy-terminology.md)
 * [What is a host adapter?](learn-and-grow/what-is-a-host-adapter.md)
 * [Binho + CircuitPython](learn-and-grow/binho-+-circuitpython.md)
 * [Binho + Sparkfun Qwiic\_Py](learn-and-grow/binho-sparkfun-qwiic-py.md)

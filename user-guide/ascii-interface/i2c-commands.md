@@ -248,21 +248,25 @@ I2C0 END R
 -OK
 ```
 
+{% hint style="warning" %}
+The following use of Master/Slave terminology is considered obsolete. Controller/Peripheral is now used. These firmware commands will be deprecated in an upcoming firmware release.
+{% endhint %}
+
 ### SLAVE
 
-Configures Binho Nova to behave as an I2C Slave device. This command is also used to get and set the slave device address.
+Configures Binho Nova to behave as an I2C peripheral device. This command is also used to get and set the peripheral device address.
 
-Configure the I2C Slave to start with the given device address : `I2C0 SLAVE [address]`
+Configure the I2C peripheral to start with the given device address : `I2C0 SLAVE [address]`
 
 Get the current device address: `I2C0 SLAVE ?`
 
 **Parameters:**
 
-The `address` parameter can be any valid 8-bit I2C slave device address.
+The `address` parameter can be any valid 8-bit I2C peripheral device address.
 
 **Response:**
 
-This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the device as an I2C Slave. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the device as an I2C peripheral. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
 
 **Example Usage:**
 
@@ -273,13 +277,13 @@ I2C0 SLAVE 0xA0
 
 ### SLAVE MODE
 
-Configures the behavior of the emulated I2C Slave device.
+Configures the behavior of the emulated I2C peripheral device.
 
-The _Binho Nova_ I2C Slave device has two modes of operation which allow it to behave like some of the most common I2C slave devices:
+The _Binho Nova_ I2C peripheral device has two modes of operation which allow it to behave like some of the most common I2C peripheral devices:
 
 #### USEPTR - Use Pointer Register
 
-In this mode of operation, a "pointer register" is used to keep track of the current register index in the device memory bank. This pointer will auto-increment each time a register is read from or written to. This allows successive reads and writes. This is a common approach for advanced I2C devices with rich configuration settings and multiple data parameters that are interesting to be sampled/read at the same time. In this mode, the I2C master can set the value in the pointer register by performing a 1-byte Write of the desired register index before performing an I2C read operation. This is typically referred to as a "read register" operation. Note that this is the default mode upon I2C Slave initialization.
+In this mode of operation, a "pointer register" is used to keep track of the current register index in the device memory bank. This pointer will auto-increment each time a register is read from or written to. This allows successive reads and writes. This is a common approach for advanced I2C devices with rich configuration settings and multiple data parameters that are interesting to be sampled/read at the same time. In this mode, the I2C controller can set the value in the pointer register by performing a 1-byte Write of the desired register index before performing an I2C read operation. This is typically referred to as a "read register" operation. Note that this is the default mode upon I2C peripheral initialization.
 
 #### STARTZERO - Start At Zero
 
@@ -295,7 +299,7 @@ The `mode`parameter can be either `USEPTR` or `STARTZERO`.
 
 **Response:**
 
-This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in configuring the I2C Slave mode. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in configuring the I2C peripheral mode. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
 
 **Example Usage:**
 
@@ -318,7 +322,7 @@ I2C0 SLAVE MODE ?
 
 ### SLAVE REGCNT
 
-Gets/sets the number of registers in the I2C Slave device memory bank.
+Gets/sets the number of registers in the I2C peripheral device memory bank.
 
 Set the number of registers: `I2C0 SLAVE REGCNT [count]`
 
@@ -330,7 +334,7 @@ The `count` ****parameter can be any integer value from 1 to 256.
 
 **Response:**
 
-This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in configuring the I2C Slave to have the desired number of registers in it's memory bank. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in configuring the I2C peripheral to have the desired number of registers in it's memory bank. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
 
 **Example Usage:**
 
@@ -347,11 +351,11 @@ I2C0 SLAVE REGCNT ?
 
 ### SLAVE REG
 
-Gets/sets the value of any of the registers in the I2C Slave device, including the pointer register.
+Gets/sets the value of any of the registers in the I2C peripheral device, including the pointer register.
 
-Set the value of a slave register: `I2C0 SLAVE REG [register] [value]`
+Set the value of a peripheral register: `I2C0 SLAVE REG [register] [value]`
 
-Get the value of a slave register: `I2C0 SLAVE REG [register] ?`
+Get the value of a peripheral register: `I2C0 SLAVE REG [register] ?`
 
 **Parameters:**
 
@@ -389,9 +393,9 @@ I2C0 SLAVE REG PTR ?
 
 Gets/sets the value of any of the register's readmask.
 
-Set the value of a slave register: `I2C0 SLAVE READMASK [register] [value]`
+Set the value of a peripheral register: `I2C0 SLAVE READMASK [register] [value]`
 
-Get the value of a slave register: `I2C0 SLAVE READMASK [register] ?`
+Get the value of a peripheral register: `I2C0 SLAVE READMASK [register] ?`
 
 **Parameters:**
 
@@ -417,9 +421,9 @@ I2C0 SLAVE READMASK 0x00 ?
 
 Gets/sets the value of any of the register's writemask.
 
-Set the value of a slave register: `I2C0 SLAVE WRITEMASK [register] [value]`
+Set the value of a peripheral register: `I2C0 SLAVE WRITEMASK [register] [value]`
 
-Get the value of a slave register: `I2C0 SLAVE WRITEMASK [register] ?`
+Get the value of a peripheral register: `I2C0 SLAVE WRITEMASK [register] ?`
 
 **Parameters:**
 

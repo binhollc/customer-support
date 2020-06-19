@@ -2,9 +2,9 @@
 
 ### BEGIN
 
-Starts the Atmel SWI master on the given IO pin. The SWI protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pullup resistor can be used thus eliminating the need for an external pullup resistor.
+Starts the Atmel SWI host on the given IO pin. The SWI protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pullup resistor can be used thus eliminating the need for an external pullup resistor.
 
-Start the SWI Master: `SWI0 BEGIN [pin] [pull]`
+Start the SWI host: `SWI0 BEGIN [pin] [pull]`
 
 **Parameters:**
 
@@ -14,7 +14,7 @@ The `pull` parameter can be omitted if not using the internal pullup resistors o
 
 **Response:**
 
-This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the SWI master on the desired IO pin. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the SWI host on the desired IO pin. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
 
 **Example Usage:**
 

@@ -2,7 +2,7 @@
 
 ### setClockI2C\(i2cIndex, frequency\)
 
-This function sets the clock frequency of the I2C bus. This binho Multi-Protocol USB Host Adapter supports I2C bus speeds from 100kHz to 4MHz. Per the I2C specification, the common clock frequencies are 100kHz, 400kHz, and 1MHz, although it's possible to run the bus at other frequencies.
+This function sets the clock frequency of the I2C bus. The Binho _Nova Multi-Protocol USB Host Adapter_ supports I2C bus speeds from 100kHz to 4MHz. Per the I2C specification, the common clock frequencies are 100kHz, 400kHz, and 1MHz, although it's possible to run the bus at other frequencies.
 
 **Inputs:**
 
@@ -31,7 +31,7 @@ binhoDevice.setClockI2C(0, 1000000)
 
 ### getClockI2C\(i2cIndex\)
 
-This function gets the clock frequency of the I2C bus. This binho Multi-Protocol USB Host Adapter supports I2C bus speeds from 100kHz to 4MHz. Per the I2C specification, the common clock frequencies are 100kHz, 400kHz, and 1MHz, although it's possible to run the bus at other frequencies.
+This function gets the clock frequency of the I2C bus. The _Binho Nova_ supports I2C bus speeds from 100kHz to 4MHz. Per the I2C specification, the common clock frequencies are 100kHz, 400kHz, and 1MHz, although it's possible to run the bus at other frequencies.
 
 **Inputs:**
 
@@ -145,7 +145,7 @@ This function is used to scan a single address to determine if a slave device is
 This function takes two parameters:
 
 * `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
-* `address`, which is the address of the target slave device on the I2C bus.
+* `address`, which is the address of the target peripheral device on the I2C bus.
 
 #### Outputs:
 
@@ -171,7 +171,7 @@ print(binhoDevice.scanAddrI2C(0, 0x42))
 
 ### writeByteI2C\(i2cIndex, data\)
 
-This function is used to write a single byte to a slave device on the I2C bus.
+This function is used to write a single byte to a peripheral device on the I2C bus.
 
 #### Inputs:
 
@@ -205,14 +205,14 @@ binhoDevice.endI2C(0)
 
 ### readByteI2C\(i2cIndex, address\)
 
-This function is used to request a single byte from a slave device on the I2C bus.
+This function is used to request a single byte from a peripheral device on the I2C bus.
 
 #### Inputs:
 
 This function takes two parameters:
 
 * `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
-* `address`, which is the address of the target slave device on the I2C bus.
+* `address`, which is the address of the target peripheral device on the I2C bus.
 
 #### Outputs:
 
@@ -238,15 +238,15 @@ print(binhoDevice.readByteI2C(0, 0x42))
 
 ### readBytesI2C\(i2cIndex, address, numBytes\)
 
-This function is used to request data from a slave device on the I2C bus. The maximum number of bytes in a single request is 256.
+This function is used to request data from a peripheral device on the I2C bus. The maximum number of bytes in a single request is 256.
 
 #### Inputs:
 
 This function takes three parameters:
 
 * `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
-* `address`, which is the address of the target slave device on the I2C bus.
-* `numBytes`, which is the number of bytes to request from the slave device.
+* `address`, which is the address of the target peripheral device on the I2C bus.
+* `numBytes`, which is the number of bytes to request from the peripheral device.
 
 #### Outputs:
 
@@ -272,7 +272,7 @@ print(binhoDevice.readBytesI2C(0, 0x42, 4))
 
 ### writeFromBufferI2C\(i2cIndex, numBytes\)
 
-This function is used to send data to a slave device on the I2C bus from the internal buffer.
+This function is used to send data to a peripheral device on the I2C bus from the internal buffer.
 
 #### Inputs:
 
@@ -310,15 +310,15 @@ binhoDevice.writeFromBufferI2C(0, 4)
 
 ### readToBufferI2C\(i2cIndex, address, numBytes\)
 
-This function is used to request data from a slave device on the I2C bus and receive it into BUF0. The maximum number of bytes in a single request is 256.
+This function is used to request data from a peripheral device on the I2C bus and receive it into BUF0. The maximum number of bytes in a single request is 256.
 
 #### Inputs:
 
 This function takes three parameters:
 
 * `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
-* `address`, which is the address of the target slave device on the I2C bus.
-* `numBytes`, which is the number of bytes to request from the slave device.
+* `address`, which is the address of the target peripheral device on the I2C bus.
+* `numBytes`, which is the number of bytes to request from the peripheral device.
 
 #### Outputs:
 
@@ -345,7 +345,7 @@ print(binhoDevice.readBuffer(0, 4))
 
 ### startI2C\(i2cIndex, address\)
 
-This function is used to start an I2C transmission to a target slave device on the I2C bus.
+This function is used to start an I2C transmission to a target peripheral device on the I2C bus.
 
 #### Inputs:
 

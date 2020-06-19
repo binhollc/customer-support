@@ -2,7 +2,7 @@
 
 ### beginSWI\(swiIndex, pin, pullup\)
 
-The function starts the Atmel SWI Master on the given IO pin. The SWI protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
+The function starts the Atmel SWI host on the given IO pin. The SWI protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
 
 #### Inputs:
 

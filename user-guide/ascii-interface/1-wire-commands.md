@@ -2,9 +2,9 @@
 
 ### BEGIN
 
-Starts the 1-Wire Master on the given IO pin. The 1-Wire protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
+Starts the 1-Wire Host on the given IO pin. The 1-Wire protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.
 
-Start the 1-WIRE Master: `1WIRE0 BEGIN [pin] [pull]`
+Start the 1-WIRE Host: `1WIRE0 BEGIN [pin] [pull]`
 
 **Parameters:**
 
@@ -14,7 +14,7 @@ The `pull` parameter can be omitted if not using the internal pull-up resistors 
 
 **Response:**
 
-This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the 1-Wire master on the desired IO pin. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
+This function returns an [ACK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#ack-response) if the command succeeds in starting the 1-Wire host on the desired IO pin. If the command fails, the function will return a [NAK Response](https://support.binho.io/user-guide/using-the-device/receiving-responses#nak-response).
 
 **Example Usage:**
 
@@ -222,15 +222,15 @@ Syntax: `1WIRE0 WHR [cmd] [bytesToRead] [bytesToWrite] [hexPayload]`
 
 The `cmd` parameter instructs Nova to optionally begin the transaction with a SKIP or SELECT command. The possible values for this parameter are `SKIP`, `SELECT`, or `NONE`.
 
-The `bytesToRead` parameter indicates the number of bytes to read after writing the hexPayload to the 1Wire bus. This value can be from `0` to `1024`.
+The `bytesToRead` parameter indicates the number of bytes to read after writing the hexPayload to the 1-Wire bus. This value can be from `0` to `1024`.
 
-The `bytesToWrite` parameter indicates the number of bytes to read to the 1Wire bus. This value can be from `0` to `1024` and must match the length of the `hexPayload` parameter.
+The `bytesToWrite` parameter indicates the number of bytes to read to the 1-Wire bus. This value can be from `0` to `1024` and must match the length of the `hexPayload` parameter.
 
-The `hexPayload` parameter is the data that will be written to the 1Wire bus. This parameter should be entered as a string of hex values without a leading "0x" and no spaces. The length must match the bytesToWrite parameter.
+The `hexPayload` parameter is the data that will be written to the 1-Wire bus. This parameter should be entered as a string of hex values without a leading "0x" and no spaces. The length must match the bytesToWrite parameter.
 
 **Response:**
 
-This function returns either `OK` or `NG` when the WHR command is used only to write data \(_bytesToRead_ = 0\) to the 1Wire bus. When the WHR command is used to perform a read operation, the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
+This function returns either `OK` or `NG` when the WHR command is used only to write data \(_bytesToRead_ = 0\) to the 1-Wire bus. When the WHR command is used to perform a read operation, the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
 
 **Example Usage:**
 

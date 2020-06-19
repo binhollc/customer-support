@@ -20,7 +20,7 @@ If you're on Ubuntu or another Linux distro and running into issues with your de
 
 ### Binho GUI Software Installation
 
-The easiest way to get familiar with your _Binho Nova Multi-Protocol USB Host Adapter_ is by taking it for a test drive with our cross-platform desktop GUI software. Even if you intend to use it in automated environments and applications, the GUI is a great starting point before diving in to writing scripts. Check out the QuickStart guide here to learn how to install and use it:
+The easiest way to get familiar with your _Binho Nova Multi-Protocol USB Host Adapter_ is by taking it for a test drive with our cross-platform desktop GUI software called Mission Control. Even if you intend to use it in automated environments and applications, Mission Control is a great starting point before diving in to writing scripts. Check out the QuickStart guide here to learn how to install and use it:
 
 {% page-ref page="../../getting-started/quickstart-with-binho-gui/" %}
 

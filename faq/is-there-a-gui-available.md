@@ -4,5 +4,5 @@ Yes! Our desktop GUI software is called _Mission Control_. It is fully cross-pla
 
 {% page-ref page="../software/" %}
 
-We've also got big plans to further improve the UI/UX of _Mission Control_ as well as add in some additional features in early 2020.
+We've also got big plans to further improve the UI/UX of _Mission Control_ as well as add in some additional features in the near future.
 

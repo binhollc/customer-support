@@ -316,7 +316,7 @@ binhoDevice.getBitsPerTransferSPI(0)
 
 ### beginSPI\(spiIndex\)
 
-This function starts the SPI Master peripheral. This command must be issued before sending/receiving any data on the SPI bus.
+This function starts the SPI Controller. This command must be issued before sending/receiving any data on the SPI bus.
 
 #### Inputs:
 
@@ -368,7 +368,7 @@ This function takes two parameters:
 
 #### Outputs:
 
-The host adapter will respond with 'SPI0' followed by 'RXD' followed by the byte of data received from the SPI slave device during the transfer.
+The host adapter will respond with 'SPI0' followed by 'RXD' followed by the byte of data received from the SPI peripheral device during the transfer.
 
 #### Example Usage:
 
@@ -460,7 +460,7 @@ print(binhoDevice.readBuffer(0, 5))
 
 ### endSPI\(spiIndex\)
 
-This function stops the SPI Master peripheral. The command ends the SPI session until a BEGIN command restarts the SPI Master.
+This function stops the SPI Controller. The command ends the SPI session until a BEGIN command restarts the SPI controller.
 
 #### Inputs:
 
