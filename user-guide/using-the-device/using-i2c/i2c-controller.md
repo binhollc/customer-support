@@ -111,7 +111,7 @@ I2C0 END
 
 Unlike SPI controller mode, the I2C transactions are only sent out on the bus after sending the `END` command. This is great because it means there's no rush to enter data in the serial console when manually interacting with I2C devices.
 
-Requesting data from the I2C peripheral device is also quite simple. When requesting data from the slave device, there's no need to manually issue the `START` command, it's handled automatically:
+Requesting data from the I2C peripheral device is also quite simple. When requesting data from the peripheral device, there's no need to manually issue the `START` command, it's handled automatically:
 
 ```text
 I2C0 REQ 0x50 2
