@@ -12,5 +12,5 @@ These are available for purchase on our website [here](https://binho.io/collecti
 
 ### Breadboard Breakout Pin Diagram
 
-![](../../.gitbook/assets/breadboard-breakout-pins.png)
+![](../../.gitbook/assets/20200619_nova_pinouts.png)
 
