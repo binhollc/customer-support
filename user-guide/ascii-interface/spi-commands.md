@@ -285,5 +285,31 @@ SPI0 END
 -OK
 ```
 
+### WHR
 
+This command performs a transfer of 0 to 1024 bytes in a single SPI transaction.
+
+Stop the SPI controller: `SPI0 WHR [writeOnlyFlag] [byteCount] [hexPayload]`
+
+**Parameters:**
+
+The `writeOnlyFlag` parameter indicates if the transfer is a write-only operation. If the writeOnlyFlag is set, Nova will not return any data that may be transferred back from the SPI peripheral device. This value can be either`0` or `1`.
+
+The `byteCount` parameter indicates the number of bytes to transfer on the SPI bus. This value can be from `0` to `1024` and must match the length of the `hexPayload` parameter.
+
+The `hexPayload` parameter is the data that will be written to the SPI bus. This parameter should be entered as a string of hex values without a leading "0x" and no spaces. The length must match the byteCount parameter.
+
+**Response:**
+
+This function returns either `OK` or `NG` when the WHR command is used only to write data \(_writeOnlyFlag_ = 1\) to the SPI bus. When the WHR command is used to perform a read operation \(writeOnlyFlag = 0\), the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
+
+**Example Usage:**
+
+```text
+SPI0 WHR 1 4 DEADBEEF
+-OK
+
+SPI0 WHR 0 4 00000000
+-SPI0 RXD DEADBEEF
+```
 
