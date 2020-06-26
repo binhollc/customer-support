@@ -289,7 +289,7 @@ SPI0 END
 
 This command performs a transfer of 0 to 1024 bytes in a single SPI transaction.
 
-Stop the SPI controller: `SPI0 WHR [writeOnlyFlag] [byteCount] [hexPayload]`
+Transfer bytes: `SPI0 WHR [writeOnlyFlag] [byteCount] [hexPayload]`
 
 **Parameters:**
 
