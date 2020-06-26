@@ -17,6 +17,7 @@ The following table gives a brief overview of the available SPI commands.
 | **BEGIN** | Starts the SPI Controller. | [Details](https://support.binho.io/user-guide/ascii-interface/spi-commands#begin) |
 | **TXRX** | Sends/Receives data on the SPI bus. | [Details](https://support.binho.io/user-guide/ascii-interface/spi-commands#txrx) |
 | **END** | Stops the SPI Controller. | [Details](https://support.binho.io/user-guide/ascii-interface/spi-commands#end) |
+| **WHR** | Transfer 0 to 1024 bytes in a single SPI transaction | [Details](https://support.binho.io/user-guide/ascii-interface/spi-commands#whr) |
 
 Feel free to jump ahead to the ASCII Command Set reference to learn the specifics of each command, or continue below to see an example of how to use these commands to achieve communication on the SPI bus.
 
