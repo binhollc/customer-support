@@ -145,5 +145,9 @@ Feel free to take a look in the examples section to see how to use the python li
 
 {% page-ref page="../../python-libraries/examples/" %}
 
+{% hint style="success" %}
+For use cases where a lot of data is being read/written and speed is important, the WHR command should be utilized to minimize the amount of communication between the Nova and the host PC. You can learn all the details about this [here](https://support.binho.io/user-guide/ascii-interface/spi-commands#whr).
+{% endhint %}
+
 Otherwise, stick around here and move to the next page to see a similar tutorial on an I2C bus.
 
