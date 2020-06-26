@@ -248,6 +248,40 @@ I2C0 END R
 -OK
 ```
 
+### WHR
+
+This command performs a write of 0 to 1024 bytes followed by a read of 0 to 1024 bytes in a single transaction.
+
+WHR: `I2C0 WHR [hex7BitAddress] [endStop] [bytesToRead] [bytesToWrite] [hexPayload]`
+
+**Parameters:**
+
+This command has 5 parameters:
+
+The `hex7BitAddress` is the address of the I2C peripheral device. This parameter should be entered in hex without a leading "0x".
+
+The `endStop` parameter is used to send a repeated start bit if desired. This parameter can be either `0` to follow the transaction with a repeated start bit, or `1` to send an I2C stop bit.
+
+The `bytesToRead` parameter instructs Nova how many bytes to read from the target I2C peripheral device after the write operation has completed. This can be `0` to `1024`.
+
+The `bytesToWrite` parameter indicates the number of bytes to write to the target I2C peripheral device on the bus. This value can be from `0` to `1024` and must match the length of the `hexPayload` parameter.
+
+The `hexPayload` parameter is the data that will be written to the I2C peripheral device. This parameter should be entered as a string of hex values without a leading "0x" and no spaces. The length must match the bytesToWrite parameter.
+
+**Response:**
+
+This function returns either `OK` or `NG` when the WHR command is used only to write data \(_bytesToRead_ = 0\) to an I2C Peripheral device. When the WHR command is used to perform a read operation \(bytesToRead &gt; 0\), the response will contain the requested number of data bytes read from the I2C peripheral device, or `NG` indicating that command failed to execute successfully.
+
+**Example Usage:**
+
+```text
+I2C0 WHR 76 0 1 1 0F
+-I2C0 RXD 01
+
+I2C0 WHR 76 0 6 1 02
+-I2C0 RXD 0006E8FE9422
+```
+
 {% hint style="warning" %}
 The following use of Master/Slave terminology is considered obsolete. Controller/Peripheral is now used. These firmware commands will be deprecated in an upcoming firmware release.
 {% endhint %}

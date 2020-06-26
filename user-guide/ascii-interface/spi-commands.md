@@ -293,6 +293,8 @@ Transfer bytes: `SPI0 WHR [writeOnlyFlag] [byteCount] [hexPayload]`
 
 **Parameters:**
 
+This command has 3 parameters:
+
 The `writeOnlyFlag` parameter indicates if the transfer is a write-only operation. If the writeOnlyFlag is set, Nova will not return any data that may be transferred back from the SPI peripheral device. This value can be either`0` or `1`.
 
 The `byteCount` parameter indicates the number of bytes to transfer on the SPI bus. This value can be from `0` to `1024` and must match the length of the `hexPayload` parameter.
