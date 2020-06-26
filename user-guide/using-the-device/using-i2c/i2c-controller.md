@@ -18,6 +18,7 @@ The following table gives a brief overview of the available I2C controller comma
 | **REQ** | Requests n bytes from a given I2C device. | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#req) |
 | **START** | Starts an I2C transmission to a given device. | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#start) |
 | **END** | Ends an I2C transmission. It can be used to send a stop bit or a repeated start bit. | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#end) |
+| **WHR** | Writes 0 to 1024 bytes followed by reading 0 to 1024 bytes in one transaction. | [Details](https://support.binho.io/user-guide/ascii-interface/i2c-commands#whr) |
 
 Feel free to jump ahead to the ASCII Command Set reference to learn the specifics of each command, or continue below to see an example of how to use these commands to achieve communication on the I2C bus.
 
