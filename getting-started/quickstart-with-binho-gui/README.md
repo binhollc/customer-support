@@ -4,7 +4,7 @@
 
 Our cross-platform software, called Mission Control, is available for Windows, Mac, and Linux and provides an easy-to-use GUI interface for your _Binho Nova_. Download the appropriate release for your operating system here:
 
-{% page-ref page="../../software/releases/v1.0.6-release.md" %}
+{% page-ref page="../../software/releases/v1.1.0-release.md" %}
 
 ![](../../.gitbook/assets/download-gui-software.gif)
 
