@@ -2,7 +2,7 @@
 
 ![](../.gitbook/assets/hostadapterad_v4.png)
 
-In general terms, a [host adapter](https://en.wikipedia.org/wiki/Host_adapter) is a device which connects a computer \(the host system\) to other peripheral devices. Within the computer, there are many ICs on the motherboard communicating using various protocols, such as PCIe, SATA, SMBus, USB, etc. But within the world of electronics, interesting sensors, actuators, and application-specific ICs use several different standard protocols such as SPI, I2C, 1-WIRE, and SWI. These protocols are not typically supported directly by the motherboard chipset or otherwise exposed, either physically or programmatically, for user access.
+In general terms, a _host adapter_ \(also sometimes called a _host bus adapter_\) is a device which connects a computer \(the host system\) to other peripheral devices. Within the computer, there are many ICs on the motherboard communicating using various protocols, such as PCIe, SATA, SMBus, USB, etc. But within the world of electronics, interesting sensors, actuators, and application-specific ICs use several different standard protocols such as SPI, I2C, 1-WIRE, and SWI. These protocols are not typically supported directly by the motherboard chipset or otherwise exposed, either physically or programmatically, for user access.
 
 So what happens when you want to connect one of the devices that communicates via SPI, I2C, 1-WIRE, or SWI to your computer? Well, you’ll need to use an adapter to interface between one of the protocols on the host computer to the desired new protocol. That’s where the the _Binho Multi-Protocol Host Adapter_ comes in.
 
