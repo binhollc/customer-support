@@ -6,6 +6,10 @@ The _Binho Nova Multi-Protocol USB Host Adapter_ is designed for ease of use in 
 While we do not detail how to do it below, it is also possible to update the Nova firmware programmatically if you so desire!
 {% endhint %}
 
+{% hint style="warning" %}
+Please note that disk drive encryption software \(such as BitLocker\) will likely prevent the firmware update process of completing successfully. An upcoming release of Mission Control will include the necessary functionality to resolve this issue. 
+{% endhint %}
+
 ## Updating Firmware through Mission Control
 
 The easiest way to update your Nova device is through our Mission Control GUI software, which allows you to both automatically and manually update the device firmware. Watch the video below where we show how to automatically and manually update the device firmware through our Mission Control software.
