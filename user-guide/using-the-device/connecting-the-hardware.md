@@ -20,6 +20,8 @@ The figure below shows the connector pinout and channel functions:
 
 Use the link below to download a printable PDF version of this image for easy reference:
 
+{% file src="../../.gitbook/assets/printable-binho-nova-pinout.pdf" caption="Binho Nova Pinout PDF" %}
+
 {% hint style="success" %}
 Dallas 1-WIRE and Atmel SWI \(Single-Wire Interface\) protocol can be configured to work with any of the five IO pins. It is especially convenient to use with IO0 or IO2 as it’s possible to engage a suitable internal pull up resistor on these channels.
 {% endhint %}
