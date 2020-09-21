@@ -107,6 +107,7 @@
 * [Returns & Warranty](returns-and-warranty/README.md)
   * [90-Day Return Policy](returns-and-warranty/180-day-return-policy.md)
   * [2-Year Warranty](returns-and-warranty/2-year-warranty.md)
+* [Contact Us](contact-us.md)
 
 ## Learn & Grow
 
