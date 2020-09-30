@@ -26,7 +26,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 ```
 
 ### getClockSPI\(spiIndex\)
@@ -54,7 +54,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 
 binhoDevice.getClockSPI(0)
 ```
@@ -85,7 +85,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 ```
 
@@ -114,7 +114,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 
 binhoDevice.getOrderSPI(0)
@@ -146,7 +146,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 
 binhoDevice.setModeSPI(0, 0)
@@ -177,7 +177,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 
 binhoDevice.setModeSPI(0, 0)
@@ -209,7 +209,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 
 binhoDevice.setModeSPI(0, 0)
@@ -241,7 +241,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 
 binhoDevice.setModeSPI(0, 0)
@@ -274,7 +274,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 
@@ -306,7 +306,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 
@@ -339,7 +339,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 binhoDevice.setBitsPerTransferSPI(0, 8)
@@ -381,7 +381,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 binhoDevice.setBitsPerTransferSPI(0, 8)
@@ -429,7 +429,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 binhoDevice.setBitsPerTransferSPI(0, 8)
@@ -483,7 +483,7 @@ default_commport = "COM22"
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 binhoDevice.setBitsPerTransferSPI(0, 8)
@@ -531,7 +531,7 @@ binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
 # configure the SPI Bus
 binhoDevice.setOperationMode(0, 'SPI')
-binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 binhoDevice.setBitsPerTransferSPI(0, 8)
