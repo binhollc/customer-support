@@ -545,7 +545,8 @@ print(binhoDevice.writeToReadFromSPI(0, 0, 1, 1024, 0))
 hostAdapter.setIOpinValue(0, 'HIGH')
 
 hostAdapter.setIOpinValue(0, 'LOW')
-print(binhoDevice.writeToReadFromSPI(0, 1, 1, 1024, 0))
+# Write 4 bytes and then read 4 bytes (8 total bytes)
+print(binhoDevice.writeToReadFromSPI(0, 1, 1, 8, 'DEADBEEF00000000'))
 hostAdapter.setIOpinValue(0, 'HIGH')
 ```
 
