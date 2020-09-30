@@ -411,3 +411,489 @@ binhoDevice.writeByteI2C(0, 0xFA)
 binhoDevice.endI2C(0)
 ```
 
+### writeToReadFromI2C\(i2cIndex, addr, stop, numRBytes, numWBytes, data\)
+
+This function performs a write of 0 to 1024 bytes followed by a read of 0 to 1024 bytes in a single transaction. This function minimizes the number of round-trips between the PC and Nova in order to maximize I2C throughput. This function is highly recommended for reading/writing I2C memory devices or in any other application where multibyte transactions are frequently used. 
+
+#### Inputs:
+
+This function takes two parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `addr`, which is the address of the target I2C peripheral device on the bus. Note the address must be formatted as 7bit address in hex, without the leading "0x".
+* `stop`, which is used to indicate a stop bit should be sent at the end of the transaction. 0 = no stop bit sent, 1 = terminate transaction with stop bit.
+* `numRBytes`, which is the number of bytes to read, from 0 to 1024.
+* `numWBytes`, which is the number of bytes to write, from 0 to 1024.
+* `data`, which is a string of hex characters that matches the length specified by numWBytes parameter.
+
+#### Outputs:
+
+The host adapter will respond with '-OK' upon successful execution of the command if numRBytes is 0. If numRBytes &gt; 0, then the response will be 'I2C0 RXD' followed by the received data in Hex. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setClockI2C(0, 1000000)
+binhoDevice.setPullUpStateI2C(0, 'EN')
+
+#write 4 bytes, no read
+binhoDevice.writeToReadFromI2C(0, 'A0', 1, 0, 4, 'DEADBEEF')
+
+#write 2 bytes, read back 8 bytes
+binhoDevice.writeToReadFromI2C(0, 'A0', 1, 8, 2, 'ABCD') 
+
+```
+
+### setSlaveAddressI2C\(i2cIndex, address\)
+
+This function configures _Nova_ to behave as an I2C peripheral device assigned to the provided address. 
+
+#### Inputs:
+
+This function takes two parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `address`, which can be any valid 8-bit I2C peripheral device address.
+
+#### Outputs:
+
+The host adapter will respond with '-OK' upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+```
+
+### getSlaveAddressI2C\(i2cIndex\)
+
+This function returns the address assigned to Nova while operating in I2C peripheral mode. 
+
+#### Inputs:
+
+This function takes one parameter:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+
+#### Outputs:
+
+The host adapter will respond with 'I2C0 SLAVE' followed by the configured device address upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+print(binhoDevice.getSlaveAddressI2C(0))
+```
+
+### setSlaveModeI2C\(i2cIndex, mode\)
+
+This function configures the behavior of the emulated I2C peripheral device. At this time, the Binho Nova I2C peripheral supports two modes of operation which allow it to behave like some of the most common I2C peripheral devices. Please see the description of the modes on the [I2C Slave Mode command documentation](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) page. 
+
+#### Inputs:
+
+This function takes two parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `mode`, which can be either _USEPTR_ or _STARTZERO_.
+
+#### Outputs:
+
+The host adapter will respond with '-OK' upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+```
+
+### getSlaveModeI2C\(i2cIndex\)
+
+This function returns the configured mode of the emulated I2C peripheral device. At this time, the Binho Nova I2C peripheral supports two modes of operation which allow it to behave like some of the most common I2C peripheral devices. Please see the description of the modes on the [I2C Slave Mode command documentation](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) page. 
+
+#### Inputs:
+
+This function takes one parameter:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+
+#### Outputs:
+
+The host adapter will respond with 'I2C0 SLAVE MODE' followed by either _USEPTR_ or _STARTZERO_ upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+print(binhoDevice.getSlaveModeI2C(0))
+```
+
+### setSlaveRegisterCount\(i2cIndex, registerCount\)
+
+This function configures the number of registers to emulate in the I2C peripheral device memory bank while operating in I2C peripheral mode. 
+
+#### Inputs:
+
+This function takes two parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `registerCount`, which can be any integer value from 1 to 256.
+
+#### Outputs:
+
+The host adapter will respond with '-OK' upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+
+binhoDevice.setSlaveRegisterCount(0, 128)
+```
+
+### getSlaveRegisterCount\(i2cIndex\)
+
+This function returns the number of registers being emulated in the I2C peripheral device memory bank while operating in I2C peripheral mode. 
+
+#### Inputs:
+
+This function takes one parameter:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+
+#### Outputs:
+
+The host adapter will respond with 'I2C0 SLAVE REGCNT' followed by the number of registers upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+
+binhoDevice.setSlaveRegisterCount(0, 128)
+print(binhoDevice.getSlaveRegisterCount(0))
+```
+
+### setSlaveRegister\(i2cIndex, register, value\)
+
+This function sets the value stored in a given register in the emulated I2C peripheral device to the provided value while operating in I2C peripheral mode. 
+
+#### Inputs:
+
+This function takes three parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `register`, which can be any integer value from 0 to the number of registers configured in the device.
+* `value`, which can be any integer value from 0 to 255
+
+#### Outputs:
+
+The host adapter will respond with '-OK' upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+binhoDevice.setSlaveRegisterCount(0, 128)
+
+binhoDevice.setSlaveRegisterI2C(0, 0, 0xDE)
+binhoDevice.setSlaveRegisterI2C(0, 1, 0xAD)
+binhoDevice.setSlaveRegisterI2C(0, 2, 0xBE)
+binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
+```
+
+### getSlaveRegisterI2C\(i2cIndex, register\)
+
+This function returns the value stored in a given register in the emulated I2C peripheral device while operating in I2C peripheral mode. 
+
+#### Inputs:
+
+This function takes two parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `register`, which can be any integer value from 0 to the number of registers configured in the device.
+
+#### Outputs:
+
+The host adapter will respond with 'I2C0 SLAVE REG' followed by the register number and the value stored in that register. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+binhoDevice.setSlaveRegisterCount(0, 128)
+
+binhoDevice.setSlaveRegisterI2C(0, 0, 0xDE)
+binhoDevice.setSlaveRegisterI2C(0, 1, 0xAD)
+binhoDevice.setSlaveRegisterI2C(0, 2, 0xBE)
+binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
+
+print(binhoDevice.getSlaveRegisterI2C(0,2))
+```
+
+### setSlaveWriteMaskI2C\(i2cIndex, register, mask\)
+
+This function sets the value of any register's writemask which is used to determine which bits in a register can be written to by an I2C controller on the bus.
+
+#### Inputs:
+
+This function takes three parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `register`, which can be any integer value from 0 to the number of registers configured in the device.
+* `mask`, which can be any integer value from 0 to 255, where a 1 corresponds to granting write ****access to the corresponding bit in the register.
+
+#### Outputs:
+
+The host adapter will respond with '-OK' upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+binhoDevice.setSlaveRegisterCount(0, 128)
+
+binhoDevice.setSlaveRegisterI2C(0, 0, 0xDE)
+binhoDevice.setSlaveRegisterI2C(0, 1, 0xAD)
+binhoDevice.setSlaveRegisterI2C(0, 2, 0xBE)
+binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
+
+# Only the lower byte of register 1 is writeable
+binhoDevice.setSlaveWriteMaskI2C(0, 1, 0x0F)
+
+# Make Registers 2 and 3 READ-ONLY
+binhoDevice.setSlaveWriteMaskI2C(0, 2, 0x00)
+binhoDevice.setSlaveWriteMaskI2C(0, 3, 0x00)
+```
+
+### getSlaveWriteMaskI2C\(i2cIndex, register\)
+
+This function returns the value of any register's writemask which is used to determine which bits in a register can be written to by an I2C controller on the bus.
+
+#### Inputs:
+
+This function takes two parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `register`, which can be any integer value from 0 to the number of registers configured in the device.
+
+#### Outputs:
+
+The host adapter will respond with '-I2C0 SLAVE WRITEMASK' followed by the mask value upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+binhoDevice.setSlaveRegisterCount(0, 128)
+
+binhoDevice.setSlaveRegisterI2C(0, 0, 0xDE)
+binhoDevice.setSlaveRegisterI2C(0, 1, 0xAD)
+binhoDevice.setSlaveRegisterI2C(0, 2, 0xBE)
+binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
+
+# Only the lower byte of register 1 is writeable
+binhoDevice.setSlaveWriteMaskI2C(0, 1, 0x0F)
+print(binhoDevice.getSlaveWriteMaskI2C(0, 1))
+```
+
+### setSlaveReadMaskI2C\(i2cIndex, register, mask\)
+
+This function sets the value of any register's readmask which is used to determine which bits in a register can be read from by an I2C controller on the bus. This can be used to emulate _strobe_ bits in a register.
+
+#### Inputs:
+
+This function takes three parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `register`, which can be any integer value from 0 to the number of registers configured in the device.
+* `mask`, which can be any integer value from 0 to 255, where a 1 corresponds to granting read access to the corresponding bit in the register.
+
+#### Outputs:
+
+The host adapter will respond with '-OK' upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+binhoDevice.setSlaveRegisterCount(0, 128)
+
+binhoDevice.setSlaveRegisterI2C(0, 0, 0xDE)
+binhoDevice.setSlaveRegisterI2C(0, 1, 0xAD)
+binhoDevice.setSlaveRegisterI2C(0, 2, 0xBE)
+binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
+
+# Only the lower byte of register 1 is readable
+binhoDevice.setSlaveReadMaskI2C(0, 1, 0x0F)
+```
+
+### getSlaveReadMaskI2C\(i2cIndex, register\)
+
+This function returns the value of any register's readmask which is used to determine which bits in a register can be read from by an I2C controller on the bus.
+
+#### Inputs:
+
+This function takes two parameters:
+
+* `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `register`, which can be any integer value from 0 to the number of registers configured in the device.
+
+#### Outputs:
+
+The host adapter will respond with '-I2C0 SLAVE READMASK' followed by the mask value upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'I2C')
+binhoDevice.setPullUpStateI2C(0, "EN")
+
+binhoDevice.setSlaveAddressI2C(0, 0xA0)
+binhoDevice.setSlaveModeI2C(0, "USEPTR")
+binhoDevice.setSlaveRegisterCount(0, 128)
+
+binhoDevice.setSlaveRegisterI2C(0, 0, 0xDE)
+binhoDevice.setSlaveRegisterI2C(0, 1, 0xAD)
+binhoDevice.setSlaveRegisterI2C(0, 2, 0xBE)
+binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
+
+# Only the lower byte of register 1 is readable
+binhoDevice.setSlaveReadMaskI2C(0, 1, 0x0F)
+print(binhoDevice.getSlaveReadMaskI2C(0,1))
+```
+

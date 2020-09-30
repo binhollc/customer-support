@@ -501,5 +501,36 @@ binhoDevice.setIOpinValue(0, 'HIGH')
 binhoDevice.endSPI(0)
 ```
 
+### writeToReadFromSPI\(spiIndex,\)
 
+This function performs a SPI transfer up to 1024 bytes in a single transaction. This function minimizes the number of round-trips between the PC and Nova in order to maximize SPI throughput. This function is highly recommended for reading/writing SPI memory devices or in any other application where multibyte transactions are frequently used.
+
+#### Inputs:
+
+This function takes one parameter:
+
+* `spiIndex`, which is always 0 on _Binho Nova_ host adapter.
+
+#### Outputs:
+
+The host adapter will respond with '-OK' upon successful execution of the command.
+
+#### Example Usage:
+
+```python
+from binhoHostAdapter import binhoHostAdapter
+
+# Change this to match your COMPort
+default_commport = "COM22"
+
+binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
+
+binhoDevice.setOperationMode(0, 'SPI')
+binhoDevice.setClockSPI(0, 5000000)
+binhoDevice.setOrderSPI(0, 'MSBFIRST')
+binhoDevice.setModeSPI(0, 0)
+binhoDevice.setBitsPerTransferSPI(0, 8)
+
+
+```
 
