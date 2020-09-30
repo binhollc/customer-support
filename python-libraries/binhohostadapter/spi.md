@@ -501,19 +501,23 @@ binhoDevice.setIOpinValue(0, 'HIGH')
 binhoDevice.endSPI(0)
 ```
 
-### writeToReadFromSPI\(spiIndex,\)
+### writeToReadFromSPI\(spiIndex, writeFlag, readFlag, numBytes, data\)
 
 This function performs a SPI transfer up to 1024 bytes in a single transaction. This function minimizes the number of round-trips between the PC and Nova in order to maximize SPI throughput. This function is highly recommended for reading/writing SPI memory devices or in any other application where multibyte transactions are frequently used.
 
 #### Inputs:
 
-This function takes one parameter:
+This function takes five parameters:
 
 * `spiIndex`, which is always 0 on _Binho Nova_ host adapter.
+* `writeFlag`, which should be 1 if the transaction includes writing data to the SPI bus, or 0 if the transaction is only reading data.
+* `readFlag`, which should be 1 if the transaction includes reading data from the SPI bus, or 0 if the transaction is only writing data.
+* `numBytes`, which indicates the number of bytes to be transferred on the SPI bus and must match the length of the _data_ parameter.
+* `data`, which is a string of hex characters without the leading '0x' and no spaces indicating the data to be written to the bus, and must match the length specified by the numBytes parameter.
 
 #### Outputs:
 
-The host adapter will respond with '-OK' upon successful execution of the command.
+The host adapter will respond with '-OK' upon successful execution of the command when the _readFlag_ is 0. If _readFlag_ is 1, the host adapter will respond with '-SPI0 RXD' followed by the data read from the SPI bus. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
 
 #### Example Usage:
 
@@ -525,12 +529,23 @@ default_commport = "COM22"
 
 binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 
+# configure the SPI Bus
 binhoDevice.setOperationMode(0, 'SPI')
 binhoDevice.setClockSPI(0, 5000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 binhoDevice.setBitsPerTransferSPI(0, 8)
+hostAdapter.setIOpinValue(0, 'HIGH')
 
+# Assert CS pin
+hostAdapter.setIOpinValue(0, 'LOW')
+# Read 1024 bytes
+print(binhoDevice.writeToReadFromSPI(0, 0, 1, 1024, 0))
+# DeAssert CS pin
+hostAdapter.setIOpinValue(0, 'HIGH')
 
+hostAdapter.setIOpinValue(0, 'LOW')
+print(binhoDevice.writeToReadFromSPI(0, 1, 1, 1024, 0))
+hostAdapter.setIOpinValue(0, 'HIGH')
 ```
 
