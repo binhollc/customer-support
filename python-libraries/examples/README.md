@@ -8,6 +8,8 @@ This section shows the _Binho Multi-Protocol USB Host Adapter_ in use in a numbe
 
 {% page-ref page="eeprom-programming.md" %}
 
+{% page-ref page="i2c-peripheral-mode.md" %}
+
 {% page-ref page="spi-fram-reading-and-writing.md" %}
 
 {% page-ref page="i2c-fram.md" %}
