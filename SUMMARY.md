@@ -60,6 +60,7 @@
   * [binhoUtilities](python-libraries/binhoutilities.md)
   * [Examples](python-libraries/examples/README.md)
     * [I2C EEPROM Reading And Writing](python-libraries/examples/eeprom-programming.md)
+    * [I2C Peripheral Mode](python-libraries/examples/i2c-peripheral-mode.md)
     * [SPI FRAM Reading And Writing](python-libraries/examples/spi-fram-reading-and-writing.md)
     * [I2C FRAM Reading And Writing](python-libraries/examples/i2c-fram.md)
     * [1-Wire Communication](python-libraries/examples/1-wire-communication.md)
