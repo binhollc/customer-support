@@ -258,7 +258,7 @@ WHR: `I2C0 WHR [hex7BitAddress] [endStop] [bytesToRead] [bytesToWrite] [hexPaylo
 
 This command has 5 parameters:
 
-The `hex7BitAddress` is the address of the I2C peripheral device. This parameter should be entered in hex without a leading "0x".
+The `hex7BitAddress` is the address of the I2C peripheral device. This parameter should be entered in hex with a leading "0x".
 
 The `endStop` parameter is used to send a repeated start bit if desired. This parameter can be either `0` to follow the transaction with a repeated start bit, or `1` to send an I2C stop bit.
 
