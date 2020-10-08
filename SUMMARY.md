@@ -86,6 +86,7 @@
   * [V0.1.12 - Stable](firmware-releases/v0.1.12-stable.md)
 * [Troubleshooting](troubleshooting/README.md)
   * [Windows 7 Driver Installation](troubleshooting/windows-driver-installation.md)
+  * [Windows 8 Driver Problems](troubleshooting/windows-8-driver-problems.md)
   * [Linux Permissions](troubleshooting/linux-permissions.md)
   * [MacOS Permissions](troubleshooting/macos-permissions.md)
 * [FAQ](faq/README.md)
