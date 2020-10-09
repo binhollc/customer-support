@@ -6,6 +6,8 @@ This section addresses some common issues and how to resolve them. If you find y
 
 {% page-ref page="windows-driver-installation.md" %}
 
+{% page-ref page="windows-8-driver-problems.md" %}
+
 {% page-ref page="linux-permissions.md" %}
 
 {% page-ref page="macos-permissions.md" %}
