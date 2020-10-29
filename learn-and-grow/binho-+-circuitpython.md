@@ -4,7 +4,7 @@ The _Binho Nova_ host adapter works seamlessly with [CircuitPython](https://circ
 
 {% embed url="https://www.youtube.com/watch?v=aTzU04I9W1M" %}
 
-The same instructions presented in the video can be found below for easy reference.
+The same instructions presented in the video can be found below for easy reference, along with some additional examples.
 
 ### **Setup**
 
