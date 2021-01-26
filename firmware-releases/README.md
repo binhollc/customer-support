@@ -10,7 +10,9 @@ It's now possible to automatically update device firmware when using it with our
 
 ### Releases
 
-{% page-ref page="v0.2.2-stable.md" %}
+{% page-ref page="v0.2.2-stable-1.md" %}
+
+
 
 
 
