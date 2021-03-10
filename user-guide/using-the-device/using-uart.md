@@ -95,7 +95,7 @@ Now let's close the UART bridge and go back to command mode. Simply send the esc
 
 Feel free to take a look in the examples section to see how to use the python library to use this in an automated way:
 
-{% page-ref page="../../python-libraries/examples/" %}
+{% page-ref page="../../python-libraries/python-wrapper/examples/" %}
 
 That's it for guides through the various supported protocols. Congratulations on making it this far through the User Guide. The next and final chapter will show you how to perform a device firmware update so that you always have the latest and greatest features on your _Binho Multi-Protocol USB Host Adapter_.
 

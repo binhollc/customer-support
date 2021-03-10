@@ -172,7 +172,7 @@ BUF0 READ 4
 
 That's all there is to I2C communication with the _Binho Nova Multi-Protocol USB Host Adapter_. You can take some time to learn all the details about the I2C commands or skip ahead and look at some of the examples that use I2C in an automated fashion:
 
-{% page-ref page="../../../python-libraries/examples/" %}
+{% page-ref page="../../../python-libraries/python-wrapper/examples/" %}
 
 {% hint style="success" %}
 For use cases where a lot of data is being read/written and speed is important, the WHR command should be utilized to minimize the amount of communication between the Nova and the host PC. You can learn all the details about this [here](https://support.binho.io/user-guide/ascii-interface/i2c-commands#whr).

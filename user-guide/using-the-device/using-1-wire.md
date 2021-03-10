@@ -114,7 +114,7 @@ That's all there is to it! Of course getting the transaction complete before any
 
 Check out the examples section to see how to use 1-Wire in an automated way:
 
-{% page-ref page="../../python-libraries/examples/" %}
+{% page-ref page="../../python-libraries/python-wrapper/examples/" %}
 
 1-Wire is just one of the common protocols which utilizes just one signal for bi-directional communication. On the next page we'll look at Atmel's Single-Wire Interface which is another similar protocol.
 

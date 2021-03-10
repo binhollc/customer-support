@@ -96,7 +96,7 @@ More than likely, you'll need to use the same "Send String..." trick from above 
 
 Check out the examples section for a demonstration of how to automate SWI communication with an ATSHA204A device:
 
-{% page-ref page="../../python-libraries/examples/" %}
+{% page-ref page="../../python-libraries/python-wrapper/examples/" %}
 
 Moving on to the next topic, we'll cover UART, which certainly lends itself to manual interaction much more so than SWI.
 

@@ -4,7 +4,7 @@
 
 There are some nuances to identifying devices associated with each COM port, however the binhoUtilities python library provides an elegant example of device management that can easily be implemented in any language.
 
-{% page-ref page="../python-libraries/binhoutilities.md" %}
+{% page-ref page="../python-libraries/python-wrapper/binhoutilities.md" %}
 
 Device management is made easier by querying the unique device ID of each Binho Multi-Protocol USB Host Adapter. For easy visual identification of multiple devices, the RGB LED can be programmatically set to particular colors to identify the devices.
 

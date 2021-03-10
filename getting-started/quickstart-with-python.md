@@ -24,7 +24,7 @@ This library is cross-platform and is intended for use with Python 3.x. Source c
 
 ### Step \#2: Find Connected Devices
 
-Let's use the [binhoUtilities ](../python-libraries/binhoutilities.md)class to find devices attached to this computer. Start by creating a new python script, call it `binhoDemo.py`, and enter the following code:
+Let's use the [binhoUtilities ](../python-libraries/python-wrapper/binhoutilities.md)class to find devices attached to this computer. Start by creating a new python script, call it `binhoDemo.py`, and enter the following code:
 
 {% code title="binhoDemo.py" %}
 ```python
@@ -160,5 +160,5 @@ We've just covered the most basic case of using the Python libraries to automate
 
 And example Python scripts which demonstrate all of the various protocols and features of the _Binho Nova_ can be found here:
 
-{% page-ref page="../python-libraries/examples/" %}
+{% page-ref page="../python-libraries/python-wrapper/examples/" %}
 
