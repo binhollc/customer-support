@@ -1,12 +1,14 @@
 # Python Wrapper \(legacy\)
 
+## Notice!
+
 Our initial python library was actually what would best be described as a 'wrapper'. It simply wrapped our ASCII commands into a set of equivalent Python functions. This served as well, but was a temporary solution to buy us time to produce a much more powerful library. We highly encourage everyone to use our new Python package which is packed with features:
 
 {% page-ref page="../binho-python-package.md" %}
 
 This page and the others in this section are left for historical purposes. This 'wrapper' library remains available and we'll continue to support customers using it, however all future improvements will be implemented only in our new library.
 
-### Documentation
+## Documentation
 
 The packaged releases contains two libraries:
 
