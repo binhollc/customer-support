@@ -1,5 +1,9 @@
 # UART Bridge with I2C
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 The example below provides a basic demonstration of how to use the _Binho Nova Multi-Protocol USB Host Adapter_ as both a UART bridge and an I2C controller to interact with the same DUT with both protocols.
 
 ```python

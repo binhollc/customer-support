@@ -1,5 +1,9 @@
 # Using Binho with Pytest
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 The _Binho Nova Multi-Protocol USB Host Adapter_ pairs elegantly with [pytest ](https://docs.pytest.org/en/latest/)to implement an incredibly robust and efficient hardware and firmware testing platform.
 
 We'll leave discussion of the features of pytest for their own very-thorough documentation, and just hit on a few tips to make it fast and easy to get started using it with your host adatper.

@@ -1,5 +1,9 @@
 # SWI Functions
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 ### beginSWI\(swiIndex, pin, pullup\)
 
 The function starts the Atmel SWI host on the given IO pin. The SWI protocol can be used on any of the IO pins, however it is especially convenient to use it on IO0 and IO2 as the internal pull-up resistor can be used thus eliminating the need for an external pull-up resistor.

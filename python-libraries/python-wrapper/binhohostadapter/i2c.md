@@ -1,5 +1,9 @@
 # I2C Functions
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 ### setClockI2C\(i2cIndex, frequency\)
 
 This function sets the clock frequency of the I2C bus. The Binho _Nova Multi-Protocol USB Host Adapter_ supports I2C bus speeds from 100kHz to 4MHz. Per the I2C specification, the common clock frequencies are 100kHz, 400kHz, and 1MHz, although it's possible to run the bus at other frequencies.

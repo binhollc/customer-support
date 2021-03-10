@@ -1,5 +1,9 @@
 # IO Functions
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 ### setIOpinMode\(_ioNumber_, _mode_\) 
 
 This function sets the operation mode of a specific pin.

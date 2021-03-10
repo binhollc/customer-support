@@ -1,5 +1,9 @@
 # I2C Peripheral Mode
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 This example demonstrates how to use _Binho Nova_ as an I2C Peripheral device, with a device address of 0xA0 and operating in USEPTR mode of emulation.
 
 ```python

@@ -1,5 +1,9 @@
 # Device Functions
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 ### echo\(\)
 
 This function toggles whether or not the device echos back all the commands it receives. This really has no practical use in automation, but was included in the python library for the sake of completion. Turning the echo on is best for manual use in a terminal application which doesn't support local echo. Aside from this use case, it is not recommended to turn on echo. The default state of the device is with echo turned off. 

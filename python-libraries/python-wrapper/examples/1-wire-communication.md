@@ -1,5 +1,9 @@
 # 1-Wire Communication
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 The python script below demonstrates how to communicate with a [DS2413](https://www.maximintegrated.com/en/products/interface/controllers-expanders/DS2413.html), a dual-channel addressable switch IC. You can get one on an easy-to-use [breakout board](https://www.adafruit.com/product/1551) from our friends at Adafruit.
 
 ```python

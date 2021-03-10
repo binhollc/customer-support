@@ -1,5 +1,9 @@
 # Buffer Functions
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 The host adapter includes a 256-byte buffer which can be used to optimize multi-byte read and writes using any of the supported communication protocols.
 
 ### clearBuffer\(_index_\)

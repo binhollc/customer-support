@@ -1,5 +1,9 @@
 # SPI FRAM Reading And Writing
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 This example is a very brief demonstration of using SPI to read from and write to a SPI FRAM device. This particular examples uses the [64Kbit FRAM Breakout Board](https://www.adafruit.com/product/1897) from Adafruit.
 
 ```python

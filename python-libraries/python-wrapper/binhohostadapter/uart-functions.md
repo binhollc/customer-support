@@ -1,5 +1,9 @@
 # UART Functions
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 {% hint style="warning" %}
 The UART functionality is different than the other supported protocols, as it operates as a bridge, rather than transmitting commands only when functions are called. More information about this can be found in the [User Guide](https://support.binho.io/user-guide/using-the-device/using-uart).
 {% endhint %}

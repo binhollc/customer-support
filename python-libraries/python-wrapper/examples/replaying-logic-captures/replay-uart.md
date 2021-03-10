@@ -1,5 +1,9 @@
 # Replay UART
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 The following script can be used to repeat UART streams captured and exported from Saleae Logic. After the capture is completed, export the Async Serial analyzer results as a csv file. You can follow [this guide](https://support.saleae.com/user-guide/using-logic/saving-loading-and-exporting-data#exporting-analyzer-results) to export the file. The exported data should be in `HEX`-- Note that the base/radix of the exported data will match the current setting for display in the software.
 
 Simply modify the parameters in lines 9-18 in the script below and then everything is ready to play back the file from the _Binho Multi-Protocol USB Host Adapter_.

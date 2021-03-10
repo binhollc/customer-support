@@ -1,5 +1,11 @@
 # I2C FRAM Reading And Writing
 
+
+
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 The example below demonstrates how to read from and write to an I2C FRAM. Beyond that, it's also an excellent example of how to port an open-source Arduino library into a python script that can utilize the Binho Multi-Protocol USB Host Adapter.
 
 This example is uses a 256Kbit I2C FRAM \(MB85RC256V / Fujitsu\) breakout board from our friends over at Adafruit. You can purchase it [here](https://www.adafruit.com/product/1895).
