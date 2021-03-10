@@ -1,7 +1,7 @@
 # Examples
 
 {% hint style="success" %}
-Many more examples are on the way, this list will be growing .
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
 {% endhint %}
 
 This section shows the _Binho Multi-Protocol USB Host Adapter_ in use in a number of typical applications:

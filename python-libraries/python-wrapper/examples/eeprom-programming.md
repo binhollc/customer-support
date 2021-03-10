@@ -1,5 +1,9 @@
 # I2C EEPROM Reading And Writing
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 The example below demonstrates how to read from and write to an I2C EEPROM. This particular demo uses the [SparkX Qwiic 512Kbit EEPROM](https://www.sparkfun.com/products/14764) from Sparkfun.
 
 ```python

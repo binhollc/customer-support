@@ -1,5 +1,9 @@
 # binhoUtilities
 
+{% hint style="success" %}
+We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
+{% endhint %}
+
 The _binhoUtilities_ class contains several functions which help with managing serial ports, discovering devices, and connecting to specific devices. This class can be included in your code as show below.
 
 ```python
