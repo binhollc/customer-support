@@ -1,6 +1,6 @@
 # Is there a GUI available?
 
-Yes! Our desktop GUI software is called _Mission Control_. It is fully cross-platform, supporting Windows, MacOS, and Ubuntu \(and select other Linux distributions\). It can be downloaded here:
+**Yes!** Our desktop GUI software is called _Mission Control_. It is fully cross-platform, supporting Windows, MacOS, and Ubuntu \(and select other Linux distributions\). It can be downloaded here:
 
 {% page-ref page="../software/" %}
 
