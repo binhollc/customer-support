@@ -1,6 +1,78 @@
 # QuickStart with Python
 
-We've released python libraries to make it lighting fast to start automating test and development tasks with a _Binho Nova Multi-Protocol USB Host Adapter._ The packaged releases contains two libraries:
+We've released python libraries to make it lighting fast to start automating test and development tasks with a _Binho Nova Multi-Protocol USB Host Adapter._ 
+
+### Step \#1: Download and Install Binho Python Package
+
+The easiest way to get started is to install this library using pip:
+
+```text
+pip install binho
+```
+
+### Step \#2: Try out the Command Line Interface
+
+The installation of this library also includes the new command line interface which makes it possible to perform a lot of common functions without needing to write any code. The format of the commands is as follows:
+
+```text
+binho <<subcommand>> [arguments]
+```
+
+The first command we'll try is the 'binho info' command, as it will look for any connected Binho host adapter and display it's COM port, device ID, and firmware version:
+
+```python
+PS C:\Users\Jonathan> binho info
+Found a Binho Nova
+  Port: COM3
+  Device ID: 0X1C4780B050515950362E3120FF141C2A
+  Firmware Version: 0.2.5 [Up To Date]
+
+```
+
+This is a great way to ensure everything is setup and working as expected. There are command line tools for nearly every feature of Binho Nova including performing I2C, SPI, and 1-Wire transactions right from the terminal. You can learn all about them [here](https://support.binho.io/python-libraries/binho-python-package#command-line-interface).
+
+### Step \#3: Run and review example scripts
+
+Take a look in the [/binho/examples](https://github.com/binhollc/binho-python-package/tree/main/binho/examples) folder of the codebase \(hosted on github\) to see example scripts which demonstrate how to use this library in your own scripts to automate Nova. These example scripts feature a lot of commentary and serve as a tutorial for using this library.
+
+The [Hello World LED](https://github.com/binhollc/binho-python-package/blob/main/binho/examples/00_hello_world_led.py) example is a perfect place to start, as it demonstrates how to connect to the device as well as look for exceptions making it very robust. 
+
+### Step \#4: Write a custom script
+
+Using Nova in your scripts is as simple as importing the library:
+
+```python
+import binho
+```
+
+Then initialize a connection to the binho device as such:
+
+```python
+# grab the first device found the system finds
+binho = binhoHostAdapter()
+```
+
+When working on setups with multiple devices, you can specify the device to connect to in the following 3 ways:
+
+1. grab the device with a specific index `binho = binhoHostAdapter(index=0)`
+2. or get the device using the COM port `binho = binhoHostAdapter(port=targetComport)`
+3. or get the device using the deviceID number `binho = binhoHostAdapter(deviceID = targetDeviceID)`
+
+At this point it's possible to control the device as desired. Examples of common use cases are included in this library and are briefly discussed below. When you're done with the device, be sure to close out the connection with the following:
+
+```text
+binho.close()
+```
+
+That's all there is to it. The example scripts are introduced below, but it may also make sense to review the new Command line interface as well, as it may be possible to achieve your goals without writing any code at all.
+
+You can find more in-depth details about our Python library here:
+
+{% page-ref page="../python-libraries/binho-python-package.md" %}
+
+## Using our Legacy Python Wrapper
+
+The packaged releases contains two libraries:
 
 #### binhoHostAdapter
 
