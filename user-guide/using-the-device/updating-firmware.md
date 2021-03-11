@@ -58,6 +58,10 @@ After reconnecting to the newly updated device, you can verify the firmware vers
 
 ## Updating Firmware through Python CLI
 
+{% hint style="success" %}
+The Python command line interface shown below is part of our new library. Details [here](https://support.binho.io/python-libraries/binho-python-package).
+{% endhint %}
+
 ### Step \#1: Issue the firmware update command
 
 With the Nova connected to your computer, simply issue the following command in a terminal/shell:
