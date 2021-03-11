@@ -87,6 +87,8 @@
   * [V0.2.1 - Stable](firmware-releases/v0.2.1-stable.md)
   * [V0.2.0 - Stable](firmware-releases/v0.2.0-stable.md)
   * [V0.1.12 - Stable](firmware-releases/v0.1.12-stable.md)
+* [Experimental Features](experimental-features/README.md)
+  * [DAPLink Mode](experimental-features/daplink-mode.md)
 * [Troubleshooting](troubleshooting/README.md)
   * [Windows 7 Driver Installation](troubleshooting/windows-driver-installation.md)
   * [Windows 8 Driver Problems](troubleshooting/windows-8-driver-problems.md)
