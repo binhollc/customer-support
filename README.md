@@ -4,6 +4,10 @@ Welcome to our customer support site! You can browse the articles from the conte
 
 The best way to get familiar with the _Binho Nova Multi-Protocol USB Host Adapter_, whether you own one or not, is to have a read through our Getting Started guide:
 
+{% hint style="success" %}
+Our documentation is now updated to demonstrate our _NEW_ Python library. Details [here](https://support.binho.io/python-libraries/binho-python-package).
+{% endhint %}
+
 {% page-ref page="getting-started/" %}
 
 There's also the complete product User Guide here which provides in-dept explanations on all of the devices functionality:
