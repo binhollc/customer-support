@@ -2,10 +2,6 @@
 
 The _Binho Nova Multi-Protocol USB Host Adapter_ is designed for ease of use in every aspect, and that's especially true when it comes to updating the device firmware. In an effort to provide the greatest flexibility in accommodating our different customers' development and testing environments, we offer a variety of ways to update the Nova device firmware. Below we detail how to update the firmware through three main methods: Automatic Update in Mission Control, Manual Update in Mission Control, and Manual Update through a Serial Terminal.
 
-{% hint style="info" %}
-While we do not detail how to do it below, it is also possible to update the Nova firmware programmatically if you so desire!
-{% endhint %}
-
 {% hint style="warning" %}
 Please note that disk drive encryption software \(such as BitLocker\) will likely prevent the firmware update process of completing successfully. An upcoming release of Mission Control will include the necessary functionality to resolve this issue. 
 {% endhint %}
@@ -59,6 +55,43 @@ Now that the _Binho Nova Multi-Protocol USB Host Adapter_ looks like a storage d
 ### Step \#5: Verify the Update
 
 After reconnecting to the newly updated device, you can verify the firmware version in the Device tab of Mission Control.
+
+## Updating Firmware through Python CLI
+
+### Step \#1: Issue the firmware update command
+
+With the Nova connected to your computer, simply issue the following command in a terminal/shell:
+
+```text
+binho dfu -v --latest
+```
+
+This command will starts by querying our servers to see if there's a newer firmware version available. If the latest firmware is already installed, the command returns with a message confirming that the latest firmware is already on the device. Otherwise, it will downloaded the latest firmware file, reboot Nova into it's bootloader, and then load the new firmware onto the device automatically.
+
+**Note 1**: This command can also be used to load a specific firmware version onto the device by removing the `--latest` flag and providing a version number using the `-r` parameter as shown below:
+
+```text
+binho dfu -v -r 0.2.2
+```
+
+**Note 2**: Depending on your OS / configuration, you may see a file explorer pop up when Nova enters bootloader mode. This is because Nova's bootloader implements a mass storage device which looks like a removable drive was connected to the OS temporarily. 
+
+### Step \#2: Verify the firmware version
+
+The firmware version can be verified with the `binho info` command:
+
+```text
+binho info
+```
+
+This will return the firmware version currently running on the device, as show below:
+
+```text
+Found a Binho Nova
+  Port: COM3
+  Device ID: 0X1C4780B050515950362E3120FF141C2A
+  Firmware Version: 0.2.5 [Up To Date]
+```
 
 ## Updating Firmware through Serial Terminal
 
