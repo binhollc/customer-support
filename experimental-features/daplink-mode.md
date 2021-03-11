@@ -22,11 +22,28 @@ binho daplink
 
 This will then download our DAPLink-capable firmware to the device. Note that the device cannot be used as a host adapter while in DAPLink mode. \(One of the big limitations is that the pins for the SWD interface are the same as other protocols\).  Note that you can confirm that your device is in DAPLink mode by using the `binho info` command:
 
-
+```text
+PS C:\Users\Jonathan> binho info
+Found a Binho Nova [in DAPLink Mode]
+  Port: COM3
+  Device ID: 0X1C4780B050515950362E3120FF141C2A
+  Note: This device is in DAPlink Mode! It can be returned to host adapter (normal) mode
+        by issuing 'binho daplink -q' command.
+```
 
 ### Step \#2: Connect to the target device SWD bus
 
+The pinout of the wire harness for Nova when in DAPLink mode is as shown in the table below:
 
+| Pin Number | Function |
+| :--- | :--- |
+| IO0 | SWDIO |
+| IO1 | nRESET |
+| IO2 | SWCLK |
+| IO3 | UART RX \(same as normal mode\) |
+| IO4 | UART TX \(same as normal mode\) |
+
+It's only necessary to connect the SWDIO and SWCLK signals to the target MCU, most can be reset without the reset signal through various commands. At Binho, we've tested this on ARM-M0 devices from Atmel, Nordic Semiconductor, and Nuvoton.
 
 ### Step \#3: Try out pyOCD / OpenOCD
 
@@ -94,6 +111,16 @@ When you're finished using the device in DAPLink mode, issue the following comma
 
 ```text
 binho daplink -q
+```
+
+You can verify that your device is back in normal mode using the `binho info` command, just as we did above:
+
+```text
+PS C:\Users\Jonathan> binho info
+Found a Binho Nova
+  Port: COM3
+  Device ID: 0X1C4780B050515950362E3120FF141C2A
+  Firmware Version: 0.2.5 [Up To Date]
 ```
 
 ## Feedback & Suggestions 
