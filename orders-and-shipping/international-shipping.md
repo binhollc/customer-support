@@ -17,6 +17,7 @@ All Binho products and accessories are classified as **EAR99.**
 | BIN004 | Breadboard Breakout | 8543.90.68.00 |
 | BIN005 | Qwiic Interface Board | 8543.90.68.00 |
 | BIN008 | Feather Interface Board | 8543.90.68.00 |
+| BIN010 | Socket Station  | 8543.90.68.00 |
 
 ### Country of Origin
 
@@ -24,7 +25,8 @@ All Binho products and accessories are classified as **EAR99.**
 | :--- | :--- | :--- |
 | BIN002 | Binho Multi-Protocol USB Host Adapter | China \(Mainland\) |
 | BIN003 | Total Retrofitter | USA |
-| BIN004 | Breadboard Breakout | USA |
-| BIN005 | Qwiic Interface Board | USA |
-| BIN008 | Feather Interface Board | USA |
+| BIN004 | Breadboard Breakout | China \(Mainland\) |
+| BIN005 | Qwiic Interface Board | China \(Mainland\) |
+| BIN008 | Feather Interface Board | China \(Mainland\) |
+| BIN010 | Socket Station | USA |
 
