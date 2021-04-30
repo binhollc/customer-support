@@ -1,5 +1,11 @@
 # Releases
 
+## V1.1.3
+
+{% page-ref page="v1.1.3-release.md" %}
+
+1. Improved device discovery and connection management on Win, MacOS, and Linux.
+
 ## V1.1.0
 
 {% page-ref page="v1.1.0-release.md" %}
