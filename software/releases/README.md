@@ -1,5 +1,12 @@
 # Releases
 
+## V1.1.4
+
+{% page-ref page="v1.1.4-release.md" %}
+
+1. Implements the new SPI CS pin control command, available in firmware version 0.2.7 and up, to have tighter timings on CS pin edges.
+2. Fixed crash on old Nova FW on SPI tab when sending more than 256 bytes of data to old FW.
+
 ## V1.1.3
 
 {% page-ref page="v1.1.3-release.md" %}
