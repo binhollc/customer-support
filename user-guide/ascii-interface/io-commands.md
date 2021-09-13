@@ -80,9 +80,9 @@ IO1 INT NONE
 
 Gets/sets the current value of a specific IO signal. The meaning of the value is dependent on the current mode setting of the signal. The acceptable units for value depends on the current pin mode of operation. 
 
-Set Interrupt configuration: `IO[n] VALUE [val]`
+Set value: `IO[n] VALUE [val]`
 
-Get Interrupt configuration: `IO[n] VALUE ?`
+Get value: `IO[n] VALUE ?`
 
 **Parameters:**
 
