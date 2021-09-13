@@ -145,9 +145,9 @@ IO0 VALUE ?
 
 Gets/sets the current value of the PWM frequency of a specific IO signal. This is only applicable when in PWM Mode. Note that IO0 and IO2 share a PWM Frequency, and IO3 and IO4 share a PWM Frequency. The default PWM frequency is 10kHz.
 
-Set Interrupt configuration: `IO[n] PWMFREQ [frequency]`
+Set Frequency: `IO[n] PWMFREQ [frequency]`
 
-Get Interrupt configuration: `IO[n] PWMFREQ ?`
+Get Frequency: `IO[n] PWMFREQ ?`
 
 **Parameters:**
 
