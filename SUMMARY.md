@@ -84,6 +84,7 @@
   * [How-To](software/how-to/README.md)
     * [How To Update Firmware](software/how-to/how-to-update-firmware.md)
 * [Firmware Releases](firmware-releases/README.md)
+  * [V0.2.8 - Stable](firmware-releases/v0.2.8-stable.md)
   * [V0.2.7 - Stable](firmware-releases/v0.2.7-stable.md)
   * [V0.2.5 - Stable](firmware-releases/v0.2.5-stable.md)
   * [V0.2.2 - Stable](firmware-releases/v0.2.2-stable.md)

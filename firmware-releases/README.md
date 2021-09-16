@@ -8,7 +8,7 @@ Please see the following guide to learn how to update the device firmware using 
 
 ### Releases
 
-{% page-ref page="v0.2.7-stable.md" %}
+{% page-ref page="v0.2.8-stable.md" %}
 
 
 
