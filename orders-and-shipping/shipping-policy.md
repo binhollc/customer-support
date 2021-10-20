@@ -2,7 +2,7 @@
 
 ### In-Stock Items
 
-Normally, orders placed before 12pm PST on business days are shipped the same day. The stock status \(in-stock / out-of-stock\) is displayed under each item in your cart. Orders after the the 12pm PST cut-off time will ship on the next business day.
+Normally, orders placed before 12pm PST on business days are shipped the same day. The stock status (in-stock / out-of-stock) is displayed under each item in your cart. Orders after the the 12pm PST cut-off time will ship on the next business day.
 
 ### Out-of-Stock Items
 
@@ -22,12 +22,12 @@ All orders placed on www.binho.io as well as orders placed via PO are shipped fr
 
 There are few national holidays in the USA on which Binho will not be shipping any orders:
 
-* New Years Day \(January 1\)
-* Memorial Day \(last Monday in May\)
-* Independence Day \(July 4\)
-* Labor Day \(first Monday in September\)
-* Thanksgiving Day \(fourth Thursday in November\)
-* Christmas Day \(December 25\)
+* New Years Day (January 1)
+* Memorial Day (last Monday in May)
+* Independence Day (July 4)
+* Labor Day (first Monday in September)
+* Thanksgiving Day (fourth Thursday in November)
+* Christmas Day (December 25)
 
 ### International Shipping - Duties and Taxes
 
@@ -38,4 +38,3 @@ If you are having your order shipped outside of the USA, there will likely be ad
 You'll receive an order confirmation email as soon as your order is placed. If you find that you need to make any changes to your order, please contact us as soon as possible.
 
 After your order has been shipped, you will receive a second email with tracking information for your purchase. Please note that tracking information may not appear in the system for up to 24 hours.
-

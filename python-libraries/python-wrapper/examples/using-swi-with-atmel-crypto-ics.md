@@ -4,7 +4,7 @@
 We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
 {% endhint %}
 
-The following python script demonstrates how to use the SWI host Nova functionality of the Binho Multi-Protocol USB Host Adapter with the Atmel \(now Microchip\) [ATSHA204A ](https://www.microchip.com/wwwproducts/en/ATsha204a)CryptoAuthentication IC. Communication with other devices from this family will be strikingly similar.
+The following python script demonstrates how to use the SWI host Nova functionality of the Binho Multi-Protocol USB Host Adapter with the Atmel (now Microchip) [ATSHA204A ](https://www.microchip.com/wwwproducts/en/ATsha204a)CryptoAuthentication IC. Communication with other devices from this family will be strikingly similar.
 
 ```python
 from binhoHostAdapter import binhoHostAdapter
@@ -130,5 +130,4 @@ print(binhoTester.receiveBytesSWI(swiIndex, 0x23))
 binhoTester.close()
 ```
 
-A special shout out to our friends at [Sparkfun ](https://www.sparkfun.com/)who produced a similar example above for their ATSHA204 Arduino Library many, many moons ago. This demo is built to match their example.
-
+A special shout out to our friends at [Sparkfun ](https://www.sparkfun.com)who produced a similar example above for their ATSHA204 Arduino Library many, many moons ago. This demo is built to match their example.

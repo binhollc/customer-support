@@ -8,7 +8,7 @@ We highly encourage everyone to use our[ new Python package](https://support.bin
 
 The example below demonstrates how to read from and write to an I2C FRAM. Beyond that, it's also an excellent example of how to port an open-source Arduino library into a python script that can utilize the Binho Multi-Protocol USB Host Adapter.
 
-This example is uses a 256Kbit I2C FRAM \(MB85RC256V / Fujitsu\) breakout board from our friends over at Adafruit. You can purchase it [here](https://www.adafruit.com/product/1895).
+This example is uses a 256Kbit I2C FRAM (MB85RC256V / Fujitsu) breakout board from our friends over at Adafruit. You can purchase it [here](https://www.adafruit.com/product/1895).
 
 ```python
 from binhoHostAdapter import binhoHostAdapter
@@ -158,5 +158,4 @@ else:
 
 ```
 
-For comparison's sake, you can see the Adafruit Arduino library that this example was ported from [here](https://github.com/adafruit/Adafruit_FRAM_I2C).
-
+For comparison's sake, you can see the Adafruit Arduino library that this example was ported from [here](https://github.com/adafruit/Adafruit\_FRAM\_I2C).

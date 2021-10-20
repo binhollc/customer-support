@@ -67,4 +67,3 @@ print(hostAdapter.endSPI(0))
 
 print(hostAdapter.readBuffer(0, 5))
 ```
-

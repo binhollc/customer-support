@@ -4,9 +4,7 @@ On MacOS, you'll need to ensure that your user account is added to the `wheel` g
 
 Simply run the following command:
 
-```text
+```
 sudo dscl . -append /groups/wheel GroupMembership <username>
 ```
-
-
 

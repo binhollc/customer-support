@@ -2,7 +2,7 @@
 
 The five IO pins of the _Binho Nova Multi-Protocol USB Host Adapter_ can be used in a variety of modes, and unassigned pins can be used for their IO functions even when other pins are used for SPI or I2C operation. The image below shows the pinout and functionality of each of the pins:
 
-![](../../.gitbook/assets/20200619_novapinout.png)
+![](../../.gitbook/assets/20200619\_novaPinout.png)
 
 ### Digital Input
 
@@ -37,4 +37,3 @@ IO0, IO2, IO3, and IO4 pins have PWM output capabilities. The duty cycle and fre
 {% hint style="info" %}
 Please disregard the "%" label next to the duty-cycle value display in the animations above. This bug was fixed in V1.0.5 release of our software.
 {% endhint %}
-

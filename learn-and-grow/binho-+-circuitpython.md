@@ -1,6 +1,6 @@
 # Binho + CircuitPython
 
-The _Binho Nova_ host adapter works seamlessly with [CircuitPython](https://circuitpython.org/). You can leverage all of the open-source device drivers and example code right from your PC. In the video below, Shannon Morse walks through the process of setting this up from scratch, starting with Python installation, and shows how simple it is to use with Nova.
+The _Binho Nova_ host adapter works seamlessly with [CircuitPython](https://circuitpython.org). You can leverage all of the open-source device drivers and example code right from your PC. In the video below, Shannon Morse walks through the process of setting this up from scratch, starting with Python installation, and shows how simple it is to use with Nova.
 
 {% embed url="https://www.youtube.com/watch?v=aTzU04I9W1M" %}
 
@@ -21,13 +21,15 @@ pip 19.3.1 from c:\program files (x86)\python38-32\lib\site-packages\pip (python
 
 ### Step 1: Setup Binho Nova Host Adapter Hardware
 
-The _Binho Nova Multi-Protocol USB Host Adapter_ utilizes the standardized USB Communications Device Class driver in order to achieve maximum compatibility with as many systems as possible. As such, there's no driver to download and install for most operating systems. 
+The _Binho Nova Multi-Protocol USB Host Adapter_ utilizes the standardized USB Communications Device Class driver in order to achieve maximum compatibility with as many systems as possible. As such, there's no driver to download and install for most operating systems.&#x20;
 
-Certain operating systems like Mac and Ubuntu may require additional permissions to start using _Binho Nova_. In addition, Windows 7 does not have the standard USB CDC driver included as default. 
+Certain operating systems like Mac and Ubuntu may require additional permissions to start using _Binho Nova_. In addition, Windows 7 does not have the standard USB CDC driver included as default.&#x20;
 
 Please check the following guide to setup permissions on Mac/Ubuntu and Windows 7 driver setup:
 
-{% page-ref page="../user-guide/using-the-device/software-installation.md" %}
+{% content-ref url="../user-guide/using-the-device/software-installation.md" %}
+[software-installation.md](../user-guide/using-the-device/software-installation.md)
+{% endcontent-ref %}
 
 ### Step 2: Install the Binho Host Adapter Libraries
 
@@ -97,7 +99,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 For the examples shown below, it may make sense to review the Connecting the Hardware guide which includes the pinout of the _Binho Nova_ connector for easy reference.
 
-{% page-ref page="../user-guide/using-the-device/connecting-the-hardware.md" %}
+{% content-ref url="../user-guide/using-the-device/connecting-the-hardware.md" %}
+[connecting-the-hardware.md](../user-guide/using-the-device/connecting-the-hardware.md)
+{% endcontent-ref %}
 
 ### Bosch BME280 Temperature, Barometic Pressure, and Humidity Sensor
 
@@ -138,7 +142,7 @@ while True:
 
 #### I2C Bus Example:
 
-![Pin Connections: IO0 to SDI, IO2 to SCK, 3V3 to VIN, GND to GND](https://lh6.googleusercontent.com/4HlSRGApfGKvcUuhNCL_UxqLf6T_5JqAlRyXxUkJ1yYahM3TYn_5tC5a8piux1LIkvJoSNwkNqkBXbLj_NilWrljazSdTTkTCIq2-6nNZG_Dv2K3qLQjvFfr55OVTddSrJhmZX29)
+![Pin Connections: IO0 to SDI, IO2 to SCK, 3V3 to VIN, GND to GND](https://lh6.googleusercontent.com/4HlSRGApfGKvcUuhNCL\_UxqLf6T\_5JqAlRyXxUkJ1yYahM3TYn\_5tC5a8piux1LIkvJoSNwkNqkBXbLj\_NilWrljazSdTTkTCIq2-6nNZG\_Dv2K3qLQjvFfr55OVTddSrJhmZX29)
 
 This example uses Adafruit’s **busio** package to create an **I2C** object.
 
@@ -165,11 +169,11 @@ while True:
 
 Running the example code:
 
-![](https://lh4.googleusercontent.com/W1T9UsdRcsSfsBrJT83ableWiv1L6ixeuJ-Q0KDPNnDt6anJUMvwNsv60NsmTo8Eyc5ZtrH4dVnVMezwm1yZ10yxLjcWSEOPWNB0FzO1_TwjSeI87mA_U8jrm35Bb0WdJtfPkux1)
+![](https://lh4.googleusercontent.com/W1T9UsdRcsSfsBrJT83ableWiv1L6ixeuJ-Q0KDPNnDt6anJUMvwNsv60NsmTo8Eyc5ZtrH4dVnVMezwm1yZ10yxLjcWSEOPWNB0FzO1\_TwjSeI87mA\_U8jrm35Bb0WdJtfPkux1)
 
 ### Blinking and Pulsing LED
 
-![IO0 to LED Anode\(+\), LED Cathode\(-\) to Resistor, Resistor to GND ](https://lh4.googleusercontent.com/ngqrUuAKwqy3MgCtfkf4WEvyBm5OF6dV8RnUsUc1eOLM-Yq1GCMIpDg6QVAj68WJOAQz1FeNUMsQAglHGzEVigkSK7-LgA00PcqyS0KYemzjpAIbh7zfN9SSJ1epyXRGGR3tZh6W)
+![IO0 to LED Anode(+), LED Cathode(-) to Resistor, Resistor to GND ](https://lh4.googleusercontent.com/ngqrUuAKwqy3MgCtfkf4WEvyBm5OF6dV8RnUsUc1eOLM-Yq1GCMIpDg6QVAj68WJOAQz1FeNUMsQAglHGzEVigkSK7-LgA00PcqyS0KYemzjpAIbh7zfN9SSJ1epyXRGGR3tZh6W)
 
 #### GPIO Example:
 
@@ -215,7 +219,7 @@ while True:
 
 Running the example code:
 
-![](https://lh4.googleusercontent.com/Eqj3rye1GWxHzACyud0Tx1dMelwsaEvrBbp_HBGTPKHOzBh8VfyL2-8KoDTkgt8rQ6Rd1dnK4DAYiP4mZRoP3ZGUujylCjwjGHTp-Yj3b2eM-hVqQcHbGOKFZzVjx3l1-1QqL395)
+![](https://lh4.googleusercontent.com/Eqj3rye1GWxHzACyud0Tx1dMelwsaEvrBbp\_HBGTPKHOzBh8VfyL2-8KoDTkgt8rQ6Rd1dnK4DAYiP4mZRoP3ZGUujylCjwjGHTp-Yj3b2eM-hVqQcHbGOKFZzVjx3l1-1QqL395)
 
 ### UART Bridge
 
@@ -238,5 +242,4 @@ uart.deinit()
 
 Running the example code:
 
-![](https://lh6.googleusercontent.com/5hjrF_ijMa8hqQFvlbNCvReqTUpKx2AaxpW8Q7esXbOZS-o3KtOvHb1SLQAKdrWdFRAKF8WZhqgHcNCCnCFbr45TPj8sKUj6ke7dfk_fcr23s8Ggb3-U1nWOzDw9XN5qvV-4vFuK)
-
+![](https://lh6.googleusercontent.com/5hjrF\_ijMa8hqQFvlbNCvReqTUpKx2AaxpW8Q7esXbOZS-o3KtOvHb1SLQAKdrWdFRAKF8WZhqgHcNCCnCFbr45TPj8sKUj6ke7dfk\_fcr23s8Ggb3-U1nWOzDw9XN5qvV-4vFuK)

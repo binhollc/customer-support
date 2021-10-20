@@ -1,14 +1,14 @@
 # UART in Mission Control
 
-The diagram below shows the pin assignments \(in green\) for the TX and RX pins on the _Binho Nova Multi-Protocol USB Host Adapter_ when it is in UART mode.
+The diagram below shows the pin assignments (in green) for the TX and RX pins on the_ Binho Nova Multi-Protocol USB Host Adapter_ when it is in UART mode.
 
-![](../../.gitbook/assets/20200619_novapinout.png)
+![](../../.gitbook/assets/20200619\_novaPinout.png)
 
 ### Configuring the UART Settings
 
 Once the UART mode of operation has been activated by clicking the "Activate UART Mode" button on the UART tab, the UART settings will be unlocked and ready for configuration.
 
-The _Binho Nova_ supports UART baud rates from 300bps up to 1000000bps. The UART bus can be configured for 5, 6, 7, or 8 bit data packets; Even, Odd, or no Parity bit; and to use 1 or 2 stopbits. 
+The _Binho Nova_ supports UART baud rates from 300bps up to 1000000bps. The UART bus can be configured for 5, 6, 7, or 8 bit data packets; Even, Odd, or no Parity bit; and to use 1 or 2 stopbits.&#x20;
 
 ### Starting & Stopping the UART Bridge
 
@@ -25,6 +25,4 @@ Data can be transmitted on the UART bus by typing it into the text box and click
 ### Receiving Data
 
 Data received on the UART bus will be displayed in the console as it arrives.
-
-
 

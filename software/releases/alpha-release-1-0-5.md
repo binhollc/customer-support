@@ -22,7 +22,7 @@ Our MacOS build is a 64-bit application which runs on Apple computers with the f
 * OS X El Capitan 10.11.x
 * OS X Yosemite 10.10.5
 
-#### Download [Binho V1.0.5 Alpha MacOS](https://cdn.binho.io/sw/missioncontrol/1.0.5/macos/binho_MacOS64_v1.0.5.zip)
+#### Download [Binho V1.0.5 Alpha MacOS](https://cdn.binho.io/sw/missioncontrol/1.0.5/macos/binho\_MacOS64\_v1.0.5.zip)
 
 ### Linux
 
@@ -35,7 +35,6 @@ We provide Linux builds for 32-bit and 64-bit system architectures. Our applicat
 * OpenSUSE 11.3 or later
 * Fedora 13 Desktop or later
 
-#### Download [Binho V1.0.5 Alpha Linux32](https://cdn.binho.io/sw/missioncontrol/1.0.5/linux32/binho_Linux32_v1.0.5.zip)
+#### Download [Binho V1.0.5 Alpha Linux32](https://cdn.binho.io/sw/missioncontrol/1.0.5/linux32/binho\_Linux32\_v1.0.5.zip)
 
-#### Download [Binho V1.0.5 Alpha Linux64](https://cdn.binho.io/sw/binho-gui/1.0.5/linux64/binho_Linux64_v1.0.5.zip)
-
+#### Download [Binho V1.0.5 Alpha Linux64](https://cdn.binho.io/sw/binho-gui/1.0.5/linux64/binho\_Linux64\_v1.0.5.zip)

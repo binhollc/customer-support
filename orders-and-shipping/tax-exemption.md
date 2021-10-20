@@ -5,4 +5,3 @@ If your company is except from paying taxes and our product will ship within the
 ### Refund of Tax Charges
 
 If your order has already been shipped, then the sales has already been collected. We'll do our best to refund the tax charges after you provide us with your certificate of exemption. Note that we can only process tax refunds for orders placed directly on our website.
-

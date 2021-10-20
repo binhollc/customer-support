@@ -10,7 +10,7 @@ Start the 1-WIRE Host: `1WIRE0 BEGIN [pin] [pull]`
 
 The `pin` parameter can be set to any of the IO pins `0`, `1`, `2`, `3`, or `4`.
 
-The `pull` parameter can be omitted if not using the internal pull-up resistors or set to `PULL` to enable the pull-up resistor \(available on channels 0 and 2\).
+The `pull` parameter can be omitted if not using the internal pull-up resistors or set to `PULL` to enable the pull-up resistor (available on channels 0 and 2).
 
 **Response:**
 
@@ -18,7 +18,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 BEGIN 0 PULL
 -OK
 
@@ -42,7 +42,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 RESET
 -OK
 ```
@@ -55,7 +55,7 @@ Write byte: `1WIRE0 WRITE [data] [power]`
 
 **Parameters:**
 
-The `data` parameter is the 8-bit integer \(byte\) to write on the bus.
+The `data` parameter is the 8-bit integer (byte) to write on the bus.
 
 The `power` parameter indicates whether or not to leave the power applied to the device after the write has completed. This parameter is optional and will turn off power by default. To leave power on after the write, set power equal to `PWR`.
 
@@ -65,7 +65,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 WRITE 0xAB
 -OK
 
@@ -85,11 +85,11 @@ This command has no parameters.
 
 **Response:**
 
-This function returns a Data Response containing the received byte in the format of `1WIRE0 READ [data]` 
+This function returns a Data Response containing the received byte in the format of `1WIRE0 READ [data] `
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 READ
 -1WIRE0 READ 0xAB
 ```
@@ -110,7 +110,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 SELECT
 -OK
 ```
@@ -131,7 +131,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 SKIP
 -OK
 ```
@@ -156,7 +156,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 SEARCH
 -OK
 
@@ -186,7 +186,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 DEPOWER
 -OK
 ```
@@ -207,7 +207,7 @@ This function returns a Data Response containing the address of the device found
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 ADDR ?
 -1WIRE0 ADDR 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 ```
@@ -222,7 +222,7 @@ Syntax: `1WIRE0 WHR [cmd] [bytesToRead] [bytesToWrite] [hexPayload]`
 
 The `cmd` parameter instructs Nova to optionally begin the transaction with a SKIP or SELECT command. The possible values for this parameter are `SKIP`, `SELECT`, or `NONE`.
 
-The `bytesToRead` parameter indicates the number of bytes to read after writing the hexPayload to the 1-Wire bus. This value can be from `0` to `1024`.
+The `bytesToRead` parameter indicates the number of bytes to read after writing the hexPayload to the 1-Wire bus. This value can be from `0 `to `1024`.
 
 The `bytesToWrite` parameter indicates the number of bytes to read to the 1-Wire bus. This value can be from `0` to `1024` and must match the length of the `hexPayload` parameter.
 
@@ -230,11 +230,11 @@ The `hexPayload` parameter is the data that will be written to the 1-Wire bus. T
 
 **Response:**
 
-This function returns either `OK` or `NG` when the WHR command is used only to write data \(_bytesToRead_ = 0\) to the 1-Wire bus. When the WHR command is used to perform a read operation, the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
+This function returns either `OK` or `NG` when the WHR command is used only to write data (_bytesToRead _= 0) to the 1-Wire bus. When the WHR command is used to perform a read operation, the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
 
 **Example Usage:**
 
-```text
+```
 1WIRE0 WHR SKIP 4 3 F00000
 -1WIRE0 RXD DEADBEEF
 ```
@@ -242,4 +242,3 @@ This function returns either `OK` or `NG` when the WHR command is used only to w
 {% hint style="success" %}
 We've produced a video tutorial demonstrating how to use this command [here](https://www.youtube.com/watch?v=cAAF-zOJbJo).
 {% endhint %}
-

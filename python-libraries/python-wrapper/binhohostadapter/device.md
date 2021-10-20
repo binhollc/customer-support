@@ -4,9 +4,9 @@
 We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
 {% endhint %}
 
-### echo\(\)
+### echo()
 
-This function toggles whether or not the device echos back all the commands it receives. This really has no practical use in automation, but was included in the python library for the sake of completion. Turning the echo on is best for manual use in a terminal application which doesn't support local echo. Aside from this use case, it is not recommended to turn on echo. The default state of the device is with echo turned off. 
+This function toggles whether or not the device echos back all the commands it receives. This really has no practical use in automation, but was included in the python library for the sake of completion. Turning the echo on is best for manual use in a terminal application which doesn't support local echo. Aside from this use case, it is not recommended to turn on echo. The default state of the device is with echo turned off.&#x20;
 
 **Inputs:**
 
@@ -33,7 +33,7 @@ binhoDevice.echo()
 binhoDevice.echo()
 ```
 
-### ping\(\)
+### ping()
 
 This function provides for a simple way to solicit a response from the device. This can be useful when verifying the connection status with the device.
 
@@ -58,17 +58,17 @@ binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 binhoDevice.ping()
 ```
 
-### setOperationMode\(_index_, _mode_\)
+### setOperationMode(_index_, _mode_)
 
 This function sets the mode of operation of the given adapter interface. This determines which protocol is being used, and therefore the pin functions. Any IO pins which are not assigned a function for the set protocol will continue to be available for concurrent use. The default operation mode on power up is _IO._
 
 **Inputs:**
 
-This function takes 2 parameters, _index_, as an integer, and _mode_, as a string. 
+This function takes 2 parameters, _index_, as an integer, and _mode_, as a string.&#x20;
 
-Note that for _Binho Multi-Protocol USB Host Adapter_, the only valid _index_ is 0. This aspect of the protocol is design to support future products which may have more than one adapter interface.
+Note that for _Binho Multi-Protocol USB Host Adapter_, the only valid _index _is 0. This aspect of the protocol is design to support future products which may have more than one adapter interface.
 
-The following list of values are valid values for _mode_ parameter:
+The following list of values are valid values for _mode _parameter:
 
 * 'I2C'
 * 'SPI'
@@ -105,19 +105,19 @@ binhoDevice.setOperationMode(0, 'SPI')
 binhoDevice.setOperationMode(0, 'IO')
 ```
 
-### getOperationMode\(_index_\)
+### getOperationMode(_index_)
 
 This function gets the host adapter operation mode. This determines which protocol is being used, and therefore the pin functions. Any IO pins which are not assigned a function for the set protocol will continue to be available for concurrent use. The default operation mode on power up is _IO._
 
 **Inputs:**
 
-This function takes 1 parameters, _index_, as an integer. Note that for Binho Multi-Protocol USB Host Adapter, the only valid _index_ is 0. This aspect of the protocol is design to support future products which may have more than one adapter interface.
+This function takes 1 parameters, _index_, as an integer. Note that for Binho Multi-Protocol USB Host Adapter, the only valid _index _is 0. This aspect of the protocol is design to support future products which may have more than one adapter interface.
 
 **Outputs:**
 
 The host adapter will respond with one of the following responses:
 
-* `-MODE [index] IO` when the host adapter is in IO mode \(default\).
+* `-MODE [index] IO` when the host adapter is in IO mode (default).
 * `-MODE [index] I2C` when the host adapter is in I2C mode.
 * `-MODE [index] SPI` when the host adapter is in SPI mode.
 * `-MODE [index] 1WIRE` when the host adapter is in 1-WIRE mode.
@@ -152,7 +152,7 @@ print(binhoDevice.getOperationMode(0))
 #-MODE SPI
 ```
 
-### setNumericalBase\(_base_\)
+### setNumericalBase(_base_)
 
 This function sets the host adapter display base. This determines which radix is being used when data is sent back as ASCII characters. The supported numerical bases are binary, decimal, and hexadecimal. The default numerical base on power up is _hex._
 
@@ -160,9 +160,9 @@ This function sets the host adapter display base. This determines which radix is
 
 This function takes 1 parameter, _base_, as a string. The following list of values are valid for this parameter:
 
-* 'BIN' or '2' sets the numerical base to base-2 \(binary\).
-* 'DEC' or '10' sets the numerical base to base-10 \(decimal\).
-* 'HEX' or '16' sets the numerical base to base-16 \(hexadecimal\).
+* 'BIN' or '2' sets the numerical base to base-2 (binary).
+* 'DEC' or '10' sets the numerical base to base-10 (decimal).
+* 'HEX' or '16' sets the numerical base to base-16 (hexadecimal).
 
 **Outputs:**
 
@@ -189,7 +189,7 @@ binhoDevice.setNumericalBase('10')
 binhoDevice.setNumericalBase('16')
 ```
 
-### getNumericalBase\(\)
+### getNumericalBase()
 
 This function gets the host adapter display base. This determines which radix is being used when data is sent back as ASCII characters. The supported numerical bases are binary, decimal, and hexadecimal. The default numerical base on power up is _hex._
 
@@ -201,9 +201,9 @@ This function takes no parameters.
 
 The host adapter will respond with one of the following responses:
 
-* '-BASE BIN' when the host adapter is set to base-2 \(binary\).
-* '-BASE DEC' when the host adapter is set to base-10 \(decimal\).
-* '-BASE HEX' when the host adapter is set to base-16 \(hexadecimal, default\).
+* '-BASE BIN' when the host adapter is set to base-2 (binary).
+* '-BASE DEC' when the host adapter is set to base-10 (decimal).
+* '-BASE HEX' when the host adapter is set to base-16 (hexadecimal, default).
 
 **Example Usage:**
 
@@ -229,7 +229,7 @@ print(binhoDevice.getNumericalBase())
 #-BASE DEC
 ```
 
-### setLEDRGB\(_r_, _g_, _b_\)
+### setLEDRGB(_r_, _g_, _b_)
 
 This function sets the color of the internal RGB LED by setting the 8-bit red, green, and blue values.
 
@@ -260,7 +260,7 @@ binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 binhoDevice.setLEDRGB(128,64,128)
 ```
 
-### setLEDColor\(_color_\)
+### setLEDColor(_color_)
 
 This function sets the color of the internal RGB LED by passing the name of a common color.
 
@@ -307,7 +307,7 @@ binhoDevice.setLEDColor('FUCHSIA')
 binhoDevice.setLEDColor('PURPLE')
 ```
 
-### getFirmwareVer\(\)
+### getFirmwareVer()
 
 This function returns the firmware version information of the host adapter.
 
@@ -332,7 +332,7 @@ print(binhoDevice.getFirmwareVer())
 #-FWVER 0.3
 ```
 
-### getHardwareVer\(\)
+### getHardwareVer()
 
 This function returns the hardware version information of the host adapter.
 
@@ -357,7 +357,7 @@ print(binhoDevice.getHardwareVer())
 #-HWVER 1.0
 ```
 
-### resetToBtldr\(\)
+### resetToBtldr()
 
 This function performs a reset but will remain in the bootloader upon power-up. This will cause the USB connection to drop and re-enumerate. The host adapter will remain in the bootloader until a new firmware image is loaded, or until it is power cycled by unplugging it from USB and plugging it back in. Note that while the device is in the bootloader, it will act as a USB mass storage device, and will not respond to any of protocol commands.
 
@@ -382,7 +382,7 @@ print(binhoDevice.resetToBtldr())
 #-BTLDR OK
 ```
 
-### reset\(\)
+### reset()
 
 This function performs a reset. This will cause the USB connection to drop and re-enumerate. This also restores all device settings to their defaults.
 
@@ -407,9 +407,9 @@ print(binhoDevice.reset())
 #-RESET OK
 ```
 
-### getDeviceID\(\)
+### getDeviceID()
 
-This function returns the globally-unique device identifier. This deviceID can be particularly useful to reference the device when using multiple host adapters on the same computer. 
+This function returns the globally-unique device identifier. This deviceID can be particularly useful to reference the device when using multiple host adapters on the same computer.&#x20;
 
 **Inputs:**
 
@@ -431,4 +431,3 @@ binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 print(binhoDevice.getDeviceID())
 #-ID 0xc59bb495504e5336362e3120ff041d2c
 ```
-

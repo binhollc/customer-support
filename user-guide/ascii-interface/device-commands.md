@@ -14,7 +14,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 +ECHO
 -OK
 ```
@@ -33,14 +33,14 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 +PING
 -OK
 ```
 
 ### **+BASE**
 
-Gets/Sets the display base. The host adapter is able to use binary, decimal, or hex numeric bases for displaying values. The default value is `HEX` \(Base-16\).
+Gets/Sets the display base. The host adapter is able to use binary, decimal, or hex numeric bases for displaying values. The default value is `HEX` (Base-16).
 
 Set display base value: `+BASE [base]`
 
@@ -48,9 +48,9 @@ Get display base value: `+BASE ?`
 
 **Parameters:**
 
-* For Binary \(Base-2\) display, set _base_ to `BIN` or `2`
-* For Decimal \(Base-10\) display, set _base_ to`DEC` or `10`
-* For Hexadecimal \(Base-16\) display, set _base_ to `HEX` or `16`
+* For Binary (Base-2) display, set _base_ to `BIN` or `2`
+* For Decimal (Base-10) display, set _base_ to`DEC` or `10`
+* For Hexadecimal (Base-16) display, set _base_ to `HEX` or `16`
 * To query the current setting value, set _base_ to `?`
 
 **Response:**
@@ -61,7 +61,7 @@ Get: This function returns `-BASE` followed by either `BIN`, `DEC`, or `HEX`
 
 **Example Usage:**
 
-```text
+```
 +BASE BIN
 -OK
 
@@ -116,7 +116,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 +LED RED
 -OK
 
@@ -141,7 +141,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 ### **+MODE**
 
-Gets/Sets the mode of operation \(protocol\) for a given "core" of the _Binho Multi-Protocol USB Host Adapter_. The default value is `IO`.
+Gets/Sets the mode of operation (protocol) for a given "core" of the _Binho Multi-Protocol USB Host Adapter_. The default value is `IO`.
 
 Set display base value: `+MODE [coreIndex] [opMode]`
 
@@ -150,7 +150,7 @@ Get display base value: `+MODE [coreIndex] ?`
 **Parameters:**
 
 {% hint style="info" %}
-The _Binho Multi-Protocol USB Host Adapter_ only has one "core". The \[`coreIndex`\] parameter is implemented to ensure the command set can be easily expanded. As such, `coreIndex` = 0 for all usage of this command.
+The _Binho Multi-Protocol USB Host Adapter_ only has one "core". The \[`coreIndex`] parameter is implemented to ensure the command set can be easily expanded. As such, `coreIndex` = 0 for all usage of this command.
 {% endhint %}
 
 * For IO operating mode, set _opMode_ to `IO`
@@ -169,7 +169,7 @@ Get: This function returns `-MODE` followed by `[coreIndex]` followed by either 
 
 **Example Usage:**
 
-```text
+```
 +MODE 0 IO
 -OK
 
@@ -199,11 +199,11 @@ This function takes no parameters.
 
 **Response:**
 
-This function returns `-ID` followed by the 256-bit globally-unique device identifier. Note that the response is always displayed in base-16 \(hexadecimal\) regardless of the base setting.
+This function returns `-ID` followed by the 256-bit globally-unique device identifier. Note that the response is always displayed in base-16 (hexadecimal) regardless of the base setting.
 
 **Example Usage:**
 
-```text
+```
 +ID
 -ID 0xc59bb495504e5336362e3120ff042d2a
 ```
@@ -218,11 +218,11 @@ This function takes no parameters.
 
 **Response:**
 
-This function returns `-FWVER` followed by the `[major].[minor].[build]` number of the firmware . Note that the response is always displayed in base-10 \(decimal\) regardless of the base setting.
+This function returns `-FWVER` followed by the `[major].[minor].[build]` number of the firmware . Note that the response is always displayed in base-10 (decimal) regardless of the base setting.
 
 **Example Usage:**
 
-```text
+```
 +FWVER
 -FWVER 1.0.0
 ```
@@ -237,11 +237,11 @@ This function takes no parameters.
 
 **Response:**
 
-This function returns `-HWVER` followed by the `[major].[minor]` identifier of the hardware . Note that the response is always displayed in base-10 \(decimal\) regardless of the base setting.
+This function returns `-HWVER` followed by the `[major].[minor]` identifier of the hardware . Note that the response is always displayed in base-10 (decimal) regardless of the base setting.
 
 **Example Usage:**
 
-```text
+```
 +HWVER
 -HWVER 1.0
 ```
@@ -264,7 +264,7 @@ Depending on the implementation of the serial console application, an Error may 
 
 **Example Usage:**
 
-```text
+```
 +RESET
 -OK
 ```
@@ -287,8 +287,7 @@ Depending on the implementation of the serial console application, an Error may 
 
 **Example Usage:**
 
-```text
+```
 +BTLDR
 -OK
 ```
-

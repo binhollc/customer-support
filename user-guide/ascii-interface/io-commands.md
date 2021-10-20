@@ -26,7 +26,7 @@ Get: This function returns `-IO[n]` followed by `MODE` followed by the current m
 
 **Example Usage:**
 
-```text
+```
 INT0 MODE DOUT
 -OK
 
@@ -62,7 +62,7 @@ Get: This function returns `-IO[n]` followed by `INT` followed by the current in
 
 **Example Usage:**
 
-```text
+```
 IO1 INT FALL
 -OK
 
@@ -78,7 +78,7 @@ IO1 INT NONE
 
 ### VALUE
 
-Gets/sets the current value of a specific IO signal. The meaning of the value is dependent on the current mode setting of the signal. The acceptable units for value depends on the current pin mode of operation. 
+Gets/sets the current value of a specific IO signal. The meaning of the value is dependent on the current mode setting of the signal. The acceptable units for value depends on the current pin mode of operation.&#x20;
 
 Set value: `IO[n] VALUE [val]`
 
@@ -115,7 +115,7 @@ Get: This function returns `-IO[n]` followed by `VALUE` followed by the current 
 
 **Example Usage:**
 
-```text
+```
 IO0 MODE DIN
 -OK
 
@@ -161,7 +161,7 @@ Get: This function returns `-IO[n]` followed by `PWMFREQ` followed by the curren
 
 **Example Usage:**
 
-```text
+```
 IO3 MODE PWM
 -OK
 
@@ -177,4 +177,3 @@ IO3 PWMFREQ 99000
 IO3 PWMFREQ ?
 -IO3 PWMFREQ 33000
 ```
-

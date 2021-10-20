@@ -5,7 +5,7 @@ Before using your _Binho Nova Multi-Protocol USB Host Adapter,_ let's review som
 ### Electrical Isolation
 
 {% hint style="warning" %}
-The _Binho Nova Multi-Protocol USB Host Adapter_ is **not** electrically isolated from the PC.
+The _Binho Nova Multi-Protocol USB Host Adapter_ is **not **electrically isolated from the PC.
 {% endhint %}
 
 ### Ground Current Safety
@@ -14,7 +14,7 @@ Caution should be taken when using the host adapter in the presence of a ground 
 
 **Common Ways a Ground Loop Can Exist:**
 
-* Other USB devices \(such as programmers\) are connected to the test circuit, or the test circuit itself is plugged into the USB port on your computer. In addition to the host adapter's ground connection, the test circuit's ground is also connected to the PC's ground through another USB port.
+* Other USB devices (such as programmers) are connected to the test circuit, or the test circuit itself is plugged into the USB port on your computer. In addition to the host adapter's ground connection, the test circuit's ground is also connected to the PC's ground through another USB port.
 * Non-isolated power supplies. Most AC power supplies with 3-prong plugs will short the MAINS earth ground pin to the power supply ground output. That includes your PC's ground. If your test circuit is powered from a 3-prong wall power supply and your PC is also plugged in, that will form another ground path. Keep in mind that if you're using a laptop that's not plugged in, even an attached external monitor or printer will create a ground loop.
 
 **Common Ways Damage Can Occur:**
@@ -30,7 +30,7 @@ To identify a potential ground loop between the host adapter and the test circui
 If a ground loop is present, extra care should be taken, as highlighted below, before connecting the host adapter ground to the test circuit ground.
 {% endhint %}
 
-If you believe there is a ground loop between the test circuit and the host PC but you are uncertain if the grounds on both sides you plan to use are at the same potential, there is a quick test you can perform with a multi-meter. If you happen to have a large resistor \(&gt; 10K ohm\), there is an additional test you can perform.
+If you believe there is a ground loop between the test circuit and the host PC but you are uncertain if the grounds on both sides you plan to use are at the same potential, there is a quick test you can perform with a multi-meter. If you happen to have a large resistor (> 10K ohm), there is an additional test you can perform.
 
 1. Connect the host adapter to the PC but not the test circuit.
 2. Measure the voltage between the ground pin on the host adapter and the ground pin on the test circuit.
@@ -38,7 +38,7 @@ If you believe there is a ground loop between the test circuit and the host PC b
 4. If there is a ground loop and you measure a voltage smaller than about +/- 100mV, then it is safe to connect the ground pins.
 5. If there is not a ground loop or you are not sure there is a ground loop, then the voltage may drift significantly. If you are SURE there is no ground loop, then it is safe to connect the grounds.
 
-If you are not sure there is a ground loop or would like to perform another test anyway, connect the resistor \(~10K\) between the two grounds and then measure the voltage across the resistor.
+If you are not sure there is a ground loop or would like to perform another test anyway, connect the resistor (\~10K) between the two grounds and then measure the voltage across the resistor.
 
 * If you see a voltage that indicates a noticeable current, then there is a ground loop between devices and you should not connect the grounds together.
 * If you see an insignificant voltage across the resistor, then either there is no ground loop or there is a ground loop, but both grounds are at the same reference. It is safe to connect the host adapter.
@@ -48,7 +48,7 @@ If you are not sure there is a ground loop or would like to perform another test
 The test circuit's local ground is isolated from the host PC when one of the following is true:
 
 * The test circuit is battery-powered and has no other electrical connections to the host PC or devices powered from MAINS power.
-* The test circuit is powered from an isolated power supply that does NOT short MAINS earth ground to the output ground. Bench top supplies with a separate green earth ground terminal do this. USB wall adapters also do this. Common AC power adapters \(chargers, "wall warts"\) with 2-prong plugs are also isolated. Most power supplies do have transformers that can provide isolation if implemented properly.
+* The test circuit is powered from an isolated power supply that does NOT short MAINS earth ground to the output ground. Bench top supplies with a separate green earth ground terminal do this. USB wall adapters also do this. Common AC power adapters (chargers, "wall warts") with 2-prong plugs are also isolated. Most power supplies do have transformers that can provide isolation if implemented properly.
 * The Host PC is a laptop running from a battery or is plugged into an instrumentation isolation transformer. Note that normal isolation transformers connect earth ground for human safety reasons.
 
 {% hint style="warning" %}
@@ -62,4 +62,3 @@ Using isolated wall adapters such as USB wall adapters to power the test circuit
 ### **Is the Binho Host Adapter Safe to Use in the Presence of Ground Loops?**
 
 Yes, it is completely safe to use the _Binho Nova Multi-Protocol USB Host Adapter_ as long as both grounds are at the same voltage level and as long as you only connect the host adapter ground to the ground of the test circuit.
-

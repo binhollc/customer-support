@@ -14,33 +14,48 @@ This class contains a multitude of functions split into several different catego
 
 ### Device
 
-{% page-ref page="device.md" %}
+{% content-ref url="device.md" %}
+[device.md](device.md)
+{% endcontent-ref %}
 
 ### Buffer
 
-{% page-ref page="buffer.md" %}
+{% content-ref url="buffer.md" %}
+[buffer.md](buffer.md)
+{% endcontent-ref %}
 
 ### IO
 
-{% page-ref page="io.md" %}
+{% content-ref url="io.md" %}
+[io.md](io.md)
+{% endcontent-ref %}
 
 ### SPI
 
-{% page-ref page="../../../user-guide/ascii-interface/spi-commands.md" %}
+{% content-ref url="../../../user-guide/ascii-interface/spi-commands.md" %}
+[spi-commands.md](../../../user-guide/ascii-interface/spi-commands.md)
+{% endcontent-ref %}
 
 ### I2C
 
-{% page-ref page="i2c.md" %}
+{% content-ref url="i2c.md" %}
+[i2c.md](i2c.md)
+{% endcontent-ref %}
 
 ### 1-WIRE
 
-{% page-ref page="../../../user-guide/ascii-interface/1-wire-commands.md" %}
+{% content-ref url="../../../user-guide/ascii-interface/1-wire-commands.md" %}
+[1-wire-commands.md](../../../user-guide/ascii-interface/1-wire-commands.md)
+{% endcontent-ref %}
 
 ### SWI
 
-{% page-ref page="swi-functions.md" %}
+{% content-ref url="swi-functions.md" %}
+[swi-functions.md](swi-functions.md)
+{% endcontent-ref %}
 
 ### UART
 
-{% page-ref page="uart-functions.md" %}
-
+{% content-ref url="uart-functions.md" %}
+[uart-functions.md](uart-functions.md)
+{% endcontent-ref %}

@@ -6,7 +6,7 @@ We highly encourage everyone to use our[ new Python package](https://support.bin
 
 The host adapter includes a 256-byte buffer which can be used to optimize multi-byte read and writes using any of the supported communication protocols.
 
-### clearBuffer\(_index_\)
+### clearBuffer(_index_)
 
 This function clears the entire buffer, setting all bytes to 0.
 
@@ -31,7 +31,7 @@ binhoDevice = binhoHostAdapter.binhoHostAdapter(default_commport)
 binhoDevice.clearBuffer(0)
 ```
 
-### addByteToBuffer\(_index_, _val_\)
+### addByteToBuffer(_index_, _val_)
 
 This function adds a single byte to the buffer. Note that the buffer automatically keeps track of / auto-increments the index as data is loaded.
 
@@ -40,7 +40,7 @@ This function adds a single byte to the buffer. Note that the buffer automatical
 This function takes two parameters:
 
 * `index`, the index of the buffer. There is only one buffer, so this will always be zero.
-*  `val`, as 8-bit integer value.
+* &#x20;`val`, as 8-bit integer value.
 
 **Outputs:**
 
@@ -62,9 +62,9 @@ binhoDevice.addByteToBuffer(0, 0)
 binhoDevice.addByteToBuffer(0, 255)
 ```
 
-### readBuffer\(_index_, _numBytes_\)
+### readBuffer(_index_, _numBytes_)
 
-This function reads out a given number of bytes from the buffer. Note that the bytes are **not** cleared out of the buffer after the read. They will remain in the buffer until they are overwritten or when the buffer is cleared.
+This function reads out a given number of bytes from the buffer. Note that the bytes are **not **cleared out of the buffer after the read. They will remain in the buffer until they are overwritten or when the buffer is cleared.
 
 **Inputs:**
 
@@ -96,7 +96,7 @@ print(binhoDevice.readBuffer(0, 4))
 #BUF0 12 136 0 255
 ```
 
-### writeToBuffer\(_index_, _startIndex_, _values_\)
+### writeToBuffer(_index_, _startIndex_, _values_)
 
 This function writes up to 32 bytes into the buffer in a single transaction, beginning at the startIndex index in the buffer. This provides for a faster way to fill the buffer when the data is predetermined, such as when programming memory devices.
 
@@ -130,6 +130,4 @@ for y in range(8):
 
 	binhoDevice.writeToBuffer(0, y*32, data)
 ```
-
-
 

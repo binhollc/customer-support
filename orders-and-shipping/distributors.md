@@ -28,15 +28,14 @@ _Also serving Malaysia, Singapore, and Vietnam_
 
 ### Europe
 
-![The Lab eShop](../.gitbook/assets/logo_lab_noshadow_notext.jpg)
+![The Lab eShop](../.gitbook/assets/Logo\_LAB\_noshadow\_notext.jpg)
 
 Serving the EU and nearby markets including the UK and Russia.
 
 ### Israel
 
-![Pertech Embedded Solutions](../.gitbook/assets/pertech.png)
+![Pertech Embedded Solutions](../.gitbook/assets/Pertech.png)
 
 ### United Kingdom
 
 ![Pimoroni](../.gitbook/assets/distlogo-pimoroni.svg)
-

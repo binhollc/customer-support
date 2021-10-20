@@ -13,7 +13,7 @@ To receive an official quotation, please send an email to **support@binho.io** w
 * Products and Quantity
 * Shipping Address
 * Shipping Method
-  * Use your own shipping account \(only possible with orders placed via PO\)
+  * Use your own shipping account (only possible with orders placed via PO)
   * Shipping costs will be added to the quote
 * Shipping Carrier and Account Number if placing a PO to ship on your own account
 
@@ -21,5 +21,6 @@ We'll process your request as soon as possible and follow up with you by email, 
 
 If you'll be placing a Purchase Order to complete the transaction, please have a look at the following page:
 
-{% page-ref page="placing-a-purchase-order.md" %}
-
+{% content-ref url="placing-a-purchase-order.md" %}
+[placing-a-purchase-order.md](placing-a-purchase-order.md)
+{% endcontent-ref %}

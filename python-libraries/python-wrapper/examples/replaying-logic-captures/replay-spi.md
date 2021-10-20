@@ -10,7 +10,7 @@ Simply modify the parameters in lines 9-17 in the script below and then everythi
 
 For easy testing, here's an example export file from Saleae Logic that works with this script:
 
-{% file src="../../../../.gitbook/assets/spi\_example.csv" %}
+{% file src="../../../../.gitbook/assets/spi_example.csv" %}
 
 ```python
 from binhoHostAdapter import binhoHostAdapter
@@ -171,4 +171,3 @@ binho.setLEDColor('BLUE')
 binho.close()
 print('Goodbye!')
 ```
-

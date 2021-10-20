@@ -2,7 +2,7 @@
 
 To use _Binho Multi-Protocol USB Host Adapters_ with most modern Linux distributions, you'll want to ensure a few udev rules are applied. These rules apply special configuration for USB devices like this to workaround or fix common issues. The rules also fix an issue with ModemManager hanging on to /dev/ttyACM devices.
 
-To install the rules you;ll want to download them and copy to the location of udev rules on your system. For most Linux systems like Ubuntu, etc. udev rules are stored in the /etc/udev/rules.d/ \(check your distribution's documentation / help forums if you don't see this folder existing in your file system\). Run the following commands:
+To install the rules you;ll want to download them and copy to the location of udev rules on your system. For most Linux systems like Ubuntu, etc. udev rules are stored in the /etc/udev/rules.d/ (check your distribution's documentation / help forums if you don't see this folder existing in your file system). Run the following commands:
 
 ```bash
 wget 'https://bitbucket.org/!api/2.0/snippets/binho-llc/eanz95/ae0b3f04efccb0ec3b3de11fd068d7af6d6e12dd/files/binhoHostAdapter.rules'
@@ -33,4 +33,3 @@ sudo usermod -a -G plugdev $USER
 ```
 
 Finally, I'd to send out a special thank you to the team at [Adafruit ](https://www.adafruit.com)for putting together a similar set of instructions for their boards which really reduced the burden in figuring this out.
-

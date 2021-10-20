@@ -18,7 +18,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 BUF0 CLEAR
 -OK
 ```
@@ -31,7 +31,7 @@ Add value to buffer: `BUF[n] ADD [data]`
 
 **Parameters:**
 
-This function takes one parameter, _data_. This is the 8-bit unsigned integer \(byte\) value that will be written to the buffer. Values outside of this range will be truncated to 8 bits.
+This function takes one parameter, _data_. This is the 8-bit unsigned integer (byte) value that will be written to the buffer. Values outside of this range will be truncated to 8 bits.
 
 **Response:**
 
@@ -39,7 +39,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 BUF0 ADD 0xAA
 -OK
 
@@ -55,9 +55,9 @@ Add _n_ bytes into the buffer beginning at _startIndex_: `BUF[n] WRITE [startInd
 
 **Parameters:**
 
-_startIndex_ is the 8-bit integer index of the location that the first byte should be written to the buffer.
+_startIndex _is the 8-bit integer index of the location that the first byte should be written to the buffer.
 
-_data\_n_ is the 8-bit integer \(byte\) that will be written to the buffer. Values outside of this range will be truncated to 8 bits.
+_data\_n _is the 8-bit integer (byte) that will be written to the buffer. Values outside of this range will be truncated to 8 bits.
 
 **Response:**
 
@@ -65,7 +65,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 BUF0 WRITE 0 10 15 20
 -OK
 
@@ -75,13 +75,13 @@ BUF0 READ 4
 
 ### READ
 
-Reads n bytes of data from the buffer beginning at the start of the buffer, up to a maximum of 256 bytes at a time \(the entire buffer\).
+Reads n bytes of data from the buffer beginning at the start of the buffer, up to a maximum of 256 bytes at a time (the entire buffer).
 
 `BUF[n] READ [byteCount]`
 
 **Parameters:**
 
-_byteCount_ is the 8-bit integer number of bytes to read from the buffer. Valid range is from 1 to 256 bytes.
+_byteCount _is the 8-bit integer number of bytes to read from the buffer. Valid range is from 1 to 256 bytes.
 
 **Response:**
 
@@ -89,8 +89,7 @@ This function returns a [Data Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 BUF0 READ 16
 -BUF0 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 ```
-

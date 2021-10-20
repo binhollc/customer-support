@@ -10,7 +10,7 @@ Start the SWI host: `SWI0 BEGIN [pin] [pull]`
 
 The `pin` parameter can be set to any of the IO pins 0, 1, 2, 3, or 4.
 
-The `pull` parameter can be omitted if not using the internal pullup resistors or set to PULL to enable the pullup resistor \(available on channels 0 and 2\).
+The `pull` parameter can be omitted if not using the internal pullup resistors or set to PULL to enable the pullup resistor (available on channels 0 and 2).
 
 **Response:**
 
@@ -18,7 +18,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 BEGIN 0 PULL
 -OK
 
@@ -46,7 +46,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 TOKEN WAKE
 -OK
 
@@ -73,7 +73,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 FLAG COMMAND
 -OK
 
@@ -125,7 +125,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 PACKET OPCODE INFO
 -OK
 ```
@@ -136,7 +136,7 @@ This subcommand is used to set the PARAM1 byte of the packet: `SWI0 PACKET PARAM
 
 **Parameters:**
 
-The `data` parameter accepts an 8-bit integer \(byte\) value.
+The `data` parameter accepts an 8-bit integer (byte) value.
 
 **Response:**
 
@@ -144,7 +144,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 PACKET PARAM1 0xAB
 -OK
 ```
@@ -163,7 +163,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 PACKET PARAM2 0xABCD
 -OK
 ```
@@ -174,13 +174,13 @@ This subcommand is used to set the payload data of the packet.
 
 To load 1 byte of data: `SWI0 PACKET DATA [data]`
 
-To load up to 64 bytes of data from BUF\[n\] into the payload: `SWI0 PACKET DATA BUF[n] [count]`
+To load up to 64 bytes of data from BUF\[n] into the payload: `SWI0 PACKET DATA BUF[n] [count]`
 
 **Parameters:**
 
-The `data` parameter accepts an 8-bit integer \(byte\) value.
+The `data` parameter accepts an 8-bit integer (byte) value.
 
-In the case of using the buffer to load data, the `count` parameter can be from 1 to 64.
+In the case of using the buffer to load data, the `count `parameter can be from 1 to 64.
 
 **Response:**
 
@@ -188,7 +188,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 PACKET DATA 0xBB
 -OK
 
@@ -213,7 +213,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 PACKET CLEAR
 -OK
 ```
@@ -232,20 +232,20 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 PACKET SEND
 -OK
 ```
 
 ### TX
 
-This command transmits a byte of data as defined by the Atmel SWI protocol. 
+This command transmits a byte of data as defined by the Atmel SWI protocol.&#x20;
 
 Transmit a byte: `SWI0 TX [data]`
 
 **Parameters:**
 
-The `data` parameter is the 8-bit integer \(byte\) value to be transmitted.
+The `data` parameter is the 8-bit integer (byte) value to be transmitted.
 
 **Response:**
 
@@ -253,14 +253,14 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 TX 0xAA
 -OK
 ```
 
 ### RX
 
-This command receives n bytes of data as defined by the Atmel SWI protocol. 
+This command receives n bytes of data as defined by the Atmel SWI protocol.&#x20;
 
 Transmit a byte: `SWI0 RX [count]`
 
@@ -274,8 +274,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SWI0 RX 5
 -SWI0 RXD 0x0A 0x0B 0x0C 0x0D 0x0E
 ```
-

@@ -4,7 +4,7 @@
 We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
 {% endhint %}
 
-### setClockSPI\(spiIndex, clock\)
+### setClockSPI(spiIndex, clock)
 
 This function sets the clock frequency of the SPI bus. The default clock frequency is 2MHz.
 
@@ -33,7 +33,7 @@ binhoDevice.setOperationMode(0, 'SPI')
 binhoDevice.setClockSPI(0, 4000000)
 ```
 
-### getClockSPI\(spiIndex\)
+### getClockSPI(spiIndex)
 
 This function gets the currently configured clock frequency of the SPI bus.
 
@@ -63,7 +63,7 @@ binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.getClockSPI(0)
 ```
 
-### setOrderSPI\(spiIndex, order\)
+### setOrderSPI(spiIndex, order)
 
 This function sets the SPI bus bit order. The bit order can be configured to either LSB first or MSB first. The default bit order setting is MSB first.
 
@@ -74,7 +74,7 @@ This function takes two parameters:
 * `spiIndex`, which is always 0 on _Binho Nova_ host adapter.
 * `order`, which is the desired bit order, can be either `LSBFIRST` or `MSBFIRST`.
 
-####  Outputs:
+#### &#x20;Outputs:
 
 The host adapter will respond with '-OK' upon successful execution of the command.
 
@@ -93,7 +93,7 @@ binhoDevice.setClockSPI(0, 4000000)
 binhoDevice.setOrderSPI(0, 'MSBFIRST')
 ```
 
-### getOrderSPI\(spiIndex\)
+### getOrderSPI(spiIndex)
 
 This function gets the currently configured SPI bus bit order.
 
@@ -124,7 +124,7 @@ binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.getOrderSPI(0)
 ```
 
-### setModeSPI\(spiIndex, mode\)
+### setModeSPI(spiIndex, mode)
 
 This function sets the SPI bus mode of operation. SPI Modes 0, 1, 2, or 3 are determined by CPOL and CPHA. It's possible to set the mode directly, or to configure CPOL and CPHA independently to determine the mode setting. The default mode is 0.
 
@@ -156,7 +156,7 @@ binhoDevice.setOrderSPI(0, 'MSBFIRST')
 binhoDevice.setModeSPI(0, 0)
 ```
 
-### getModeSPI\(spiIndex\)
+### getModeSPI(spiIndex)
 
 This function gets the currently configured SPI bus mode.
 
@@ -188,7 +188,7 @@ binhoDevice.setModeSPI(0, 0)
 binhoDevice.getModeSPI(0)
 ```
 
-### getCpolSPI\(spiIndex\)
+### getCpolSPI(spiIndex)
 
 This function gets the current SPI bus Clock Polarity. Clock polarity indicates the idle condition of the clock signal. This is related to the SPI mode. It's possible to configure the CPOL setting directly by using this command, or indirectly by using the MODE command. The default value of CPOL is 0.
 
@@ -220,7 +220,7 @@ binhoDevice.setModeSPI(0, 0)
 binhoDevice.getCpolSPI(0)
 ```
 
-### getCphaSPI\(spiIndex\)
+### getCphaSPI(spiIndex)
 
 This function gets the current SPI bus Clock Phase. Clock Phase indicates when the data is valid in relation to the clock edges. This is related to the SPI mode. It's possible to configure the CPHA setting directly by using this command, or indirectly by using the MODE command. The default value of CPHA is 0.
 
@@ -252,7 +252,7 @@ binhoDevice.setModeSPI(0, 0)
 binhoDevice.getCphaSPI(0)
 ```
 
-### setBitsPerTransferSPI\(spiIndex, bits\)
+### setBitsPerTransferSPI(spiIndex, bits)
 
 This function sets the number of bits per transmission. The SPI bus can be configured to either 8 or 16 bits per transfer. The default setting is 8 bits per transfer.
 
@@ -285,7 +285,7 @@ binhoDevice.setModeSPI(0, 0)
 binhoDevice.setBitsPerTransferSPI(0, 8)
 ```
 
-### getBitsPerTransferSPI\(spiIndex\)
+### getBitsPerTransferSPI(spiIndex)
 
 This function gets the number of bits per transmission.
 
@@ -318,7 +318,7 @@ binhoDevice.setBitsPerTransferSPI(0, 8)
 binhoDevice.getBitsPerTransferSPI(0)
 ```
 
-### beginSPI\(spiIndex\)
+### beginSPI(spiIndex)
 
 This function starts the SPI Controller. This command must be issued before sending/receiving any data on the SPI bus.
 
@@ -355,9 +355,9 @@ binhoDevice.setIOpinValue(0, 'HIGH')
 binhoDevice.beginSPI(0)
 ```
 
-### transferSPI\(spiIndex, data\)
+### transferSPI(spiIndex, data)
 
-This function is used to send and receive data on the SPI bus. 
+This function is used to send and receive data on the SPI bus.&#x20;
 
 {% hint style="warning" %}
 Before sending the **TXRX** command, be sure you've selected the target device on your SPI bus. The CS pin of the target device should be driven to the correct logical value using the [IO commands](https://support.binho.io/user-guide/ascii-interface/io-commands).
@@ -407,7 +407,7 @@ binhoDevice.setIOpinValue(0, 'HIGH')
 binhoDevice.endSPI(0)
 ```
 
-### transferBufferSPI\(spiIndex, numBytes\)
+### transferBufferSPI(spiIndex, numBytes)
 
 This function is used to send and receive data on the SPI bus using the buffer.
 
@@ -462,7 +462,7 @@ binhoDevice.endSPI(0)
 print(binhoDevice.readBuffer(0, 5))
 ```
 
-### endSPI\(spiIndex\)
+### endSPI(spiIndex)
 
 This function stops the SPI Controller. The command ends the SPI session until a BEGIN command restarts the SPI controller.
 
@@ -505,7 +505,7 @@ binhoDevice.setIOpinValue(0, 'HIGH')
 binhoDevice.endSPI(0)
 ```
 
-### writeToReadFromSPI\(spiIndex, writeFlag, readFlag, numBytes, data\)
+### writeToReadFromSPI(spiIndex, writeFlag, readFlag, numBytes, data)
 
 This function performs a SPI transfer up to 1024 bytes in a single transaction. This function minimizes the number of round-trips between the PC and Nova in order to maximize SPI throughput. This function is highly recommended for reading/writing SPI memory devices or in any other application where multibyte transactions are frequently used.
 
@@ -516,12 +516,12 @@ This function takes five parameters:
 * `spiIndex`, which is always 0 on _Binho Nova_ host adapter.
 * `writeFlag`, which should be 1 if the transaction includes writing data to the SPI bus, or 0 if the transaction is only reading data.
 * `readFlag`, which should be 1 if the transaction includes reading data from the SPI bus, or 0 if the transaction is only writing data.
-* `numBytes`, which indicates the number of bytes to be transferred on the SPI bus and must match the length of the _data_ parameter.
+* `numBytes`, which indicates the number of bytes to be transferred on the SPI bus and must match the length of the _data _parameter.
 * `data`, which is a string of hex characters without the leading '0x' and no spaces indicating the data to be written to the bus, and must match the length specified by the numBytes parameter.
 
 #### Outputs:
 
-The host adapter will respond with '-OK' upon successful execution of the command when the _readFlag_ is 0. If _readFlag_ is 1, the host adapter will respond with '-SPI0 RXD' followed by the data read from the SPI bus. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+The host adapter will respond with '-OK' upon successful execution of the command when the _readFlag _is 0. If _readFlag _is 1, the host adapter will respond with '-SPI0 RXD' followed by the data read from the SPI bus. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
 
 #### Example Usage:
 
@@ -553,4 +553,3 @@ hostAdapter.setIOpinValue(0, 'LOW')
 print(binhoDevice.writeToReadFromSPI(0, 1, 1, 8, 'DEADBEEF00000000'))
 hostAdapter.setIOpinValue(0, 'HIGH')
 ```
-

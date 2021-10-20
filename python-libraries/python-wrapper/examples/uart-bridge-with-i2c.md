@@ -55,4 +55,3 @@ binhoTester.writeBridgeUART("And a whole lot wurst")
 print(binhoTester.stopBridgeUART("+++UART0"))
 print(binhoTester.ping())
 ```
-

@@ -2,17 +2,30 @@
 
 ### Table of Contents
 
-{% page-ref page="product-overview.md" %}
+{% content-ref url="product-overview.md" %}
+[product-overview.md](product-overview.md)
+{% endcontent-ref %}
 
-{% page-ref page="safety.md" %}
+{% content-ref url="safety.md" %}
+[safety.md](safety.md)
+{% endcontent-ref %}
 
-{% page-ref page="system-requirements.md" %}
+{% content-ref url="system-requirements.md" %}
+[system-requirements.md](system-requirements.md)
+{% endcontent-ref %}
 
-{% page-ref page="using-the-device/" %}
+{% content-ref url="using-the-device/" %}
+[using-the-device](using-the-device/)
+{% endcontent-ref %}
 
-{% page-ref page="ascii-interface/" %}
+{% content-ref url="ascii-interface/" %}
+[ascii-interface](ascii-interface/)
+{% endcontent-ref %}
 
-{% page-ref page="../python-libraries/" %}
+{% content-ref url="../python-libraries/" %}
+[python-libraries](../python-libraries/)
+{% endcontent-ref %}
 
-{% page-ref page="accessories/" %}
-
+{% content-ref url="accessories/" %}
+[accessories](accessories/)
+{% endcontent-ref %}

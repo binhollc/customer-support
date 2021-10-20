@@ -2,7 +2,7 @@
 
 ### CFG
 
-Gets/sets the UART configuration by passing a configuration string. This allows for the configuration of databits, parity, and stopbits using a single command. The default configuration is 8 \(databits\), N \(no parity\), 1 \(stopbits\).
+Gets/sets the UART configuration by passing a configuration string. This allows for the configuration of databits, parity, and stopbits using a single command. The default configuration is 8 (databits), N (no parity), 1 (stopbits).
 
 Set the UART configuration: `UART0 CFG [databits] [parity] [stopbits]`
 
@@ -28,7 +28,7 @@ Get: This function returns `-UART0` followed by `CFG` followed by the current da
 
 **Example Usage:**
 
-```text
+```
 UART0 CFG ?
 -UART0 CFG 8 N 1
 
@@ -56,7 +56,7 @@ Get: This function returns `-UART0` followed by `BAUD` followed by the current b
 
 **Example Usage:**
 
-```text
+```
 UART0 BAUD ?
 -UART0 BAUD 9600
 
@@ -84,7 +84,7 @@ Get: This function returns `-UART0` followed by `DATABITS` followed by the curre
 
 **Example Usage:**
 
-```text
+```
 UART0 DATABITS ?
 -UART0 DATABITS 8
 
@@ -116,7 +116,7 @@ Get: This function returns `-UART0` followed by `PARITY` followed by the current
 
 **Example Usage:**
 
-```text
+```
 UART0 PARITY ?
 -UART0 PARITY NONE
 
@@ -147,7 +147,7 @@ Get: This function returns `-UART0` followed by `STOPBITS` followed by the curre
 
 **Example Usage:**
 
-```text
+```
 UART0 STOPBITS ?
 -UART0 STOPBITS 1
 
@@ -175,7 +175,7 @@ Get: This function returns `-UART0` followed by `ESC` followed by the current es
 
 **Example Usage:**
 
-```text
+```
 UART0 ESC ?
 -UART0 ESC +++UART0
 
@@ -199,7 +199,7 @@ Set: This function returns an [ACK Response](https://support.binho.io/user-guide
 
 **Example Usage:**
 
-```text
+```
 UART0 ESC ?
 -UART0 ESC +++UART0
 
@@ -213,4 +213,3 @@ Ascii Bridge Content
 -OK
 
 ```
-

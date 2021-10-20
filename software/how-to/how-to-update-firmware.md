@@ -5,7 +5,7 @@ Mission Control automatically detects the firmware version of a connected Binho 
 ![](../../.gitbook/assets/fwupdate-missioncontroll.gif)
 
 {% hint style="warning" %}
-Disk Drive Encryption Software \(such as BitLocker\) will likely prevent the firmware update process of completing successfully. An upcoming release of Mission Control will include the necessary functionality to resolve this issue. 
+Disk Drive Encryption Software (such as BitLocker) will likely prevent the firmware update process of completing successfully. An upcoming release of Mission Control will include the necessary functionality to resolve this issue.&#x20;
 {% endhint %}
 
 {% hint style="info" %}
@@ -14,5 +14,6 @@ The automatic firmware update process shown above will only work on computers wh
 
 This process is described in more detail, along with a brief video demonstration of this process on the following support page:
 
-{% page-ref page="../../user-guide/using-the-device/updating-firmware.md" %}
-
+{% content-ref url="../../user-guide/using-the-device/updating-firmware.md" %}
+[updating-firmware.md](../../user-guide/using-the-device/updating-firmware.md)
+{% endcontent-ref %}

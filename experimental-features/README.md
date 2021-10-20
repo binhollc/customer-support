@@ -4,7 +4,8 @@ Interested in trying out some of our newest features? This is the place for you!
 
 The following features are currently available for public usage:
 
-{% page-ref page="daplink-mode.md" %}
+{% content-ref url="daplink-mode.md" %}
+[daplink-mode.md](daplink-mode.md)
+{% endcontent-ref %}
 
 If you're using any of our experimental features, we want to hear from you! Please write in to **support@binho.io** and let us know your thoughts and feedback so we can continue to improve them. Experimental features may eventually graduate and be assimilated into our standard feature set, or abandoned entirely.
-

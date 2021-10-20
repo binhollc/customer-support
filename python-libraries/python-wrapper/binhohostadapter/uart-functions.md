@@ -8,7 +8,7 @@ We highly encourage everyone to use our[ new Python package](https://support.bin
 The UART functionality is different than the other supported protocols, as it operates as a bridge, rather than transmitting commands only when functions are called. More information about this can be found in the [User Guide](https://support.binho.io/user-guide/using-the-device/using-uart).
 {% endhint %}
 
-### setBaudRateUART\(uartIndex, baud\)
+### setBaudRateUART(uartIndex, baud)
 
 This function sets the baudrate of the UART bridge. The default baudrate is 9600bps.
 
@@ -37,7 +37,7 @@ binhoDevice.setOperationMode(0, 'UART')
 binhoDevice.setBaudRateUART(0, 115200)
 ```
 
-### getBaudRateUART\(uartIndex\)
+### getBaudRateUART(uartIndex)
 
 This function gets the baudrate of the UART bridge.
 
@@ -66,7 +66,7 @@ binhoDevice.setBaudRateUART(0, 115200)
 binhoDevice.getBaudRateUART(0)
 ```
 
-### setDataBitsUART\(uartIndex, databits\)
+### setDataBitsUART(uartIndex, databits)
 
 This function sets the number of databits for the UART connection. The default databits setting is 8 bits.
 
@@ -96,9 +96,9 @@ binhoDevice.setBaudRateUART(0, 115200)
 binhoDevice.setDataBitsUART(0, 8)
 ```
 
-### getDataBitsUART\(uartIndex\)
+### getDataBitsUART(uartIndex)
 
-This function gets the number of databits for the UART connection. 
+This function gets the number of databits for the UART connection.&#x20;
 
 #### Inputs:
 
@@ -126,7 +126,7 @@ binhoDevice.setDataBitsUART(0, 8)
 binhoDevice.getDataBitsUART(0)
 ```
 
-### setParityUART\(uartIndex, parity\)
+### setParityUART(uartIndex, parity)
 
 This function sets the Parity bit configuration for the UART connection. The default setting is None.
 
@@ -157,7 +157,7 @@ binhoDevice.setDataBitsUART(0, 8)
 binhoDevice.setParityUART(0, 'NONE')
 ```
 
-### getParityUART\(uartIndex\)
+### getParityUART(uartIndex)
 
 This function gets the Parity bit configuration for the UART connection.
 
@@ -189,7 +189,7 @@ binhoDevice.setParityUART(0, 'NONE')
 binhoDevice.getParityUART(0)
 ```
 
-### setStopBitsUART\(uartIndex, stopbits\)
+### setStopBitsUART(uartIndex, stopbits)
 
 This function sets the Stop bit configuration for the UART connection. The default number of stop bits is 1.
 
@@ -222,7 +222,7 @@ binhoDevice.setParityUART(0, 'NONE')
 binhoDevice.setStopBitsUART(0, 1)
 ```
 
-### getStopBitsUART\(uartIndex\)
+### getStopBitsUART(uartIndex)
 
 This function sets the Stop bit configuration for the UART connection.
 
@@ -255,9 +255,9 @@ binhoDevice.setStopBitsUART(0, 1)
 binhoDevice.getStopBitsUART(0)
 ```
 
-### setEscapeSequenceUART\(uartIndex, escape\)
+### setEscapeSequenceUART(uartIndex, escape)
 
-This function sets the escape sequence that can be used to break out of the UART bridge mode. The default escape sequence is `+++UART0`. 
+This function sets the escape sequence that can be used to break out of the UART bridge mode. The default escape sequence is `+++UART0`.&#x20;
 
 #### Inputs:
 
@@ -289,7 +289,7 @@ binhoDevice.setStopBitsUART(0, 1)
 binhoDevice.setEscapeSequenceUART(0, '++ESCAPE++')
 ```
 
-### getEscapeSequenceUART\(uartIndex\)
+### getEscapeSequenceUART(uartIndex)
 
 This function gets the currently configured escape sequence which can be used to close the UART bridge once it's been opened.
 
@@ -323,7 +323,7 @@ binhoDevice.setEscapeSequenceUART(0, '++ESCAPE++')
 binhoDevice.getEscapeSequenceUART(0)
 ```
 
-### beginBridgeUART\(uartIndex\)
+### beginBridgeUART(uartIndex)
 
 This function opens up the UART bridge. Note that once the bridge is open, only reading and writing UART commands can be used until the UART bridge is closed.
 
@@ -357,9 +357,9 @@ binhoDevice.beginBridgeUART(0)
 
 ```
 
-### stopBridgeUART\(sequence\)
+### stopBridgeUART(sequence)
 
-This function closes an opened UART bridge. 
+This function closes an opened UART bridge.&#x20;
 
 #### Inputs:
 
@@ -392,7 +392,7 @@ binhoDevice.beginBridgeUART(0)
 binhoDevice.stopBridgeUART('+++UART0')
 ```
 
-### writeBridgeUART\(data\)
+### writeBridgeUART(data)
 
 This function is used to transmit data over an open UART bridge. Note that this command does not directly communicate with the Binho Nova host adapter. Instead, it's writing the data to a transmit buffer within the python library. The python library will then transmit the data placed in the buffer.
 
@@ -430,7 +430,7 @@ binhoDevice.writeBridgeUART('more testing...')
 binhoDevice.stopBridgeUART('+++UART0')
 ```
 
-### readBridgeUART\(\)
+### readBridgeUART()
 
 This function is used to read data over an open UART bridge. Note that this command does not directly communicate with the Binho Nova host adapter. Instead, it's reading from the received data buffer within the python library.
 
@@ -467,4 +467,3 @@ print(binhoDevice.readBridgeUART())
 
 binhoDevice.stopBridgeUART('+++UART0')
 ```
-

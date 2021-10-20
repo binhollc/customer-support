@@ -4,7 +4,7 @@
 We highly encourage everyone to use our[ new Python package](https://support.binho.io/python-libraries/binho-python-package) which is packed with features. This library is still supported, but is not recommended for new design.
 {% endhint %}
 
-### setClockI2C\(i2cIndex, frequency\)
+### setClockI2C(i2cIndex, frequency)
 
 This function sets the clock frequency of the I2C bus. The Binho _Nova Multi-Protocol USB Host Adapter_ supports I2C bus speeds from 100kHz to 4MHz. Per the I2C specification, the common clock frequencies are 100kHz, 400kHz, and 1MHz, although it's possible to run the bus at other frequencies.
 
@@ -33,7 +33,7 @@ binhoDevice.setOperationMode(0, 'I2C')
 binhoDevice.setClockI2C(0, 1000000)
 ```
 
-### getClockI2C\(i2cIndex\)
+### getClockI2C(i2cIndex)
 
 This function gets the clock frequency of the I2C bus. The _Binho Nova_ supports I2C bus speeds from 100kHz to 4MHz. Per the I2C specification, the common clock frequencies are 100kHz, 400kHz, and 1MHz, although it's possible to run the bus at other frequencies.
 
@@ -63,7 +63,7 @@ print(binhoDevice.getClockI2C(0))
 #-I2C0 CLK 1000000
 ```
 
-### setPullUpStateI2C\(i2cIndex, state\)
+### setPullUpStateI2C(i2cIndex, state)
 
 This function is used to engage / disengage the 2.2kOhm internal pull-up resistors on the SDA and SCL signals.
 
@@ -104,7 +104,7 @@ binhoDevice.setPullUpStateI2C(0, '0')
 binhoDevice.setPullUpStateI2C(0, 'OFF')
 ```
 
-### getPullUpStateI2C\(i2cIndex\)
+### getPullUpStateI2C(i2cIndex)
 
 This function is used to get the status of the 2.2kOhm internal pull-up resistors on the SDA and SCL signals, as in whether they are currently engaged or disengaged.
 
@@ -140,7 +140,7 @@ print(binhoDevice.getPullUpStateI2C(0))
 #-I2C0 PULL DISABLED
 ```
 
-### scanAddrI2C\(i2cIndex, address\)
+### scanAddrI2C(i2cIndex, address)
 
 This function is used to scan a single address to determine if a slave device is present and responding.
 
@@ -173,7 +173,7 @@ print(binhoDevice.scanAddrI2C(0, 0x42))
 #-I2C0 SCAN 0x42 OK
 ```
 
-### writeByteI2C\(i2cIndex, data\)
+### writeByteI2C(i2cIndex, data)
 
 This function is used to write a single byte to a peripheral device on the I2C bus.
 
@@ -207,7 +207,7 @@ binhoDevice.writeByteI2C(0, 0xFA)
 binhoDevice.endI2C(0)
 ```
 
-### readByteI2C\(i2cIndex, address\)
+### readByteI2C(i2cIndex, address)
 
 This function is used to request a single byte from a peripheral device on the I2C bus.
 
@@ -240,7 +240,7 @@ print(binhoDevice.readByteI2C(0, 0x42))
 #-I2C0 RXD 0xAB
 ```
 
-### readBytesI2C\(i2cIndex, address, numBytes\)
+### readBytesI2C(i2cIndex, address, numBytes)
 
 This function is used to request data from a peripheral device on the I2C bus. The maximum number of bytes in a single request is 256.
 
@@ -274,7 +274,7 @@ print(binhoDevice.readBytesI2C(0, 0x42, 4))
 #-I2C0 RXD 0xAB 0xAC 0xAD 0xAE
 ```
 
-### writeFromBufferI2C\(i2cIndex, numBytes\)
+### writeFromBufferI2C(i2cIndex, numBytes)
 
 This function is used to send data to a peripheral device on the I2C bus from the internal buffer.
 
@@ -312,7 +312,7 @@ binhoDevice.addByteToBuffer(0, 255)
 binhoDevice.writeFromBufferI2C(0, 4)
 ```
 
-### readToBufferI2C\(i2cIndex, address, numBytes\)
+### readToBufferI2C(i2cIndex, address, numBytes)
 
 This function is used to request data from a peripheral device on the I2C bus and receive it into BUF0. The maximum number of bytes in a single request is 256.
 
@@ -347,7 +347,7 @@ print(binhoDevice.readBuffer(0, 4))
 #BUF0 12 136 0 255
 ```
 
-### startI2C\(i2cIndex, address\)
+### startI2C(i2cIndex, address)
 
 This function is used to start an I2C transmission to a target peripheral device on the I2C bus.
 
@@ -381,9 +381,9 @@ binhoDevice.writeByteI2C(0, 0xFA)
 binhoDevice.endI2C(0)
 ```
 
-### endI2C\(i2cIndex, repeat\)
+### endI2C(i2cIndex, repeat)
 
-This function ends an I2C transmission. It can be used to send a stop bit or a repeated start bit. 
+This function ends an I2C transmission. It can be used to send a stop bit or a repeated start bit.&#x20;
 
 #### Inputs:
 
@@ -415,9 +415,9 @@ binhoDevice.writeByteI2C(0, 0xFA)
 binhoDevice.endI2C(0)
 ```
 
-### writeToReadFromI2C\(i2cIndex, addr, stop, numRBytes, numWBytes, data\)
+### writeToReadFromI2C(i2cIndex, addr, stop, numRBytes, numWBytes, data)
 
-This function performs a write of 0 to 1024 bytes followed by a read of 0 to 1024 bytes in a single transaction. This function minimizes the number of round-trips between the PC and Nova in order to maximize I2C throughput. This function is highly recommended for reading/writing I2C memory devices or in any other application where multibyte transactions are frequently used. 
+This function performs a write of 0 to 1024 bytes followed by a read of 0 to 1024 bytes in a single transaction. This function minimizes the number of round-trips between the PC and Nova in order to maximize I2C throughput. This function is highly recommended for reading/writing I2C memory devices or in any other application where multibyte transactions are frequently used.&#x20;
 
 #### Inputs:
 
@@ -432,7 +432,7 @@ This function takes two parameters:
 
 #### Outputs:
 
-The host adapter will respond with '-OK' upon successful execution of the command if numRBytes is 0. If numRBytes &gt; 0, then the response will be 'I2C0 RXD' followed by the received data in Hex. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+The host adapter will respond with '-OK' upon successful execution of the command if numRBytes is 0. If numRBytes > 0, then the response will be 'I2C0 RXD' followed by the received data in Hex. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
 
 #### Example Usage:
 
@@ -456,9 +456,9 @@ binhoDevice.writeToReadFromI2C(0, 'A0', 1, 8, 2, 'ABCD')
 
 ```
 
-### setSlaveAddressI2C\(i2cIndex, address\)
+### setSlaveAddressI2C(i2cIndex, address)
 
-This function configures _Nova_ to behave as an I2C peripheral device assigned to the provided address. 
+This function configures _Nova_ to behave as an I2C peripheral device assigned to the provided address.&#x20;
 
 #### Inputs:
 
@@ -487,9 +487,9 @@ binhoDevice.setPullUpStateI2C(0, "EN")
 binhoDevice.setSlaveAddressI2C(0, 0xA0)
 ```
 
-### getSlaveAddressI2C\(i2cIndex\)
+### getSlaveAddressI2C(i2cIndex)
 
-This function returns the address assigned to Nova while operating in I2C peripheral mode. 
+This function returns the address assigned to Nova while operating in I2C peripheral mode.&#x20;
 
 #### Inputs:
 
@@ -518,9 +518,9 @@ binhoDevice.setSlaveAddressI2C(0, 0xA0)
 print(binhoDevice.getSlaveAddressI2C(0))
 ```
 
-### setSlaveModeI2C\(i2cIndex, mode\)
+### setSlaveModeI2C(i2cIndex, mode)
 
-This function configures the behavior of the emulated I2C peripheral device. At this time, the Binho Nova I2C peripheral supports two modes of operation which allow it to behave like some of the most common I2C peripheral devices. Please see the description of the modes on the [I2C Slave Mode command documentation](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) page. 
+This function configures the behavior of the emulated I2C peripheral device. At this time, the Binho Nova I2C peripheral supports two modes of operation which allow it to behave like some of the most common I2C peripheral devices. Please see the description of the modes on the [I2C Slave Mode command documentation](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) page.&#x20;
 
 #### Inputs:
 
@@ -550,9 +550,9 @@ binhoDevice.setSlaveAddressI2C(0, 0xA0)
 binhoDevice.setSlaveModeI2C(0, "USEPTR")
 ```
 
-### getSlaveModeI2C\(i2cIndex\)
+### getSlaveModeI2C(i2cIndex)
 
-This function returns the configured mode of the emulated I2C peripheral device. At this time, the Binho Nova I2C peripheral supports two modes of operation which allow it to behave like some of the most common I2C peripheral devices. Please see the description of the modes on the [I2C Slave Mode command documentation](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) page. 
+This function returns the configured mode of the emulated I2C peripheral device. At this time, the Binho Nova I2C peripheral supports two modes of operation which allow it to behave like some of the most common I2C peripheral devices. Please see the description of the modes on the [I2C Slave Mode command documentation](https://support.binho.io/user-guide/ascii-interface/i2c-commands#slave-mode) page.&#x20;
 
 #### Inputs:
 
@@ -562,7 +562,7 @@ This function takes one parameter:
 
 #### Outputs:
 
-The host adapter will respond with 'I2C0 SLAVE MODE' followed by either _USEPTR_ or _STARTZERO_ upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+The host adapter will respond with 'I2C0 SLAVE MODE' followed by either _USEPTR_ or _STARTZERO _upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
 
 #### Example Usage:
 
@@ -582,9 +582,9 @@ binhoDevice.setSlaveModeI2C(0, "USEPTR")
 print(binhoDevice.getSlaveModeI2C(0))
 ```
 
-### setSlaveRegisterCount\(i2cIndex, registerCount\)
+### setSlaveRegisterCount(i2cIndex, registerCount)
 
-This function configures the number of registers to emulate in the I2C peripheral device memory bank while operating in I2C peripheral mode. 
+This function configures the number of registers to emulate in the I2C peripheral device memory bank while operating in I2C peripheral mode.&#x20;
 
 #### Inputs:
 
@@ -616,9 +616,9 @@ binhoDevice.setSlaveModeI2C(0, "USEPTR")
 binhoDevice.setSlaveRegisterCount(0, 128)
 ```
 
-### getSlaveRegisterCount\(i2cIndex\)
+### getSlaveRegisterCount(i2cIndex)
 
-This function returns the number of registers being emulated in the I2C peripheral device memory bank while operating in I2C peripheral mode. 
+This function returns the number of registers being emulated in the I2C peripheral device memory bank while operating in I2C peripheral mode.&#x20;
 
 #### Inputs:
 
@@ -650,9 +650,9 @@ binhoDevice.setSlaveRegisterCount(0, 128)
 print(binhoDevice.getSlaveRegisterCount(0))
 ```
 
-### setSlaveRegister\(i2cIndex, register, value\)
+### setSlaveRegister(i2cIndex, register, value)
 
-This function sets the value stored in a given register in the emulated I2C peripheral device to the provided value while operating in I2C peripheral mode. 
+This function sets the value stored in a given register in the emulated I2C peripheral device to the provided value while operating in I2C peripheral mode.&#x20;
 
 #### Inputs:
 
@@ -689,9 +689,9 @@ binhoDevice.setSlaveRegisterI2C(0, 2, 0xBE)
 binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
 ```
 
-### getSlaveRegisterI2C\(i2cIndex, register\)
+### getSlaveRegisterI2C(i2cIndex, register)
 
-This function returns the value stored in a given register in the emulated I2C peripheral device while operating in I2C peripheral mode. 
+This function returns the value stored in a given register in the emulated I2C peripheral device while operating in I2C peripheral mode.&#x20;
 
 #### Inputs:
 
@@ -729,7 +729,7 @@ binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
 print(binhoDevice.getSlaveRegisterI2C(0,2))
 ```
 
-### setSlaveWriteMaskI2C\(i2cIndex, register, mask\)
+### setSlaveWriteMaskI2C(i2cIndex, register, mask)
 
 This function sets the value of any register's writemask which is used to determine which bits in a register can be written to by an I2C controller on the bus.
 
@@ -739,7 +739,7 @@ This function takes three parameters:
 
 * `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
 * `register`, which can be any integer value from 0 to the number of registers configured in the device.
-* `mask`, which can be any integer value from 0 to 255, where a 1 corresponds to granting write ****access to the corresponding bit in the register.
+* `mask`, which can be any integer value from 0 to 255, where a 1 corresponds to granting write** **access to the corresponding bit in the register.
 
 #### Outputs:
 
@@ -775,7 +775,7 @@ binhoDevice.setSlaveWriteMaskI2C(0, 2, 0x00)
 binhoDevice.setSlaveWriteMaskI2C(0, 3, 0x00)
 ```
 
-### getSlaveWriteMaskI2C\(i2cIndex, register\)
+### getSlaveWriteMaskI2C(i2cIndex, register)
 
 This function returns the value of any register's writemask which is used to determine which bits in a register can be written to by an I2C controller on the bus.
 
@@ -817,9 +817,9 @@ binhoDevice.setSlaveWriteMaskI2C(0, 1, 0x0F)
 print(binhoDevice.getSlaveWriteMaskI2C(0, 1))
 ```
 
-### setSlaveReadMaskI2C\(i2cIndex, register, mask\)
+### setSlaveReadMaskI2C(i2cIndex, register, mask)
 
-This function sets the value of any register's readmask which is used to determine which bits in a register can be read from by an I2C controller on the bus. This can be used to emulate _strobe_ bits in a register.
+This function sets the value of any register's readmask which is used to determine which bits in a register can be read from by an I2C controller on the bus. This can be used to emulate _strobe _bits in a register.
 
 #### Inputs:
 
@@ -859,7 +859,7 @@ binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
 binhoDevice.setSlaveReadMaskI2C(0, 1, 0x0F)
 ```
 
-### getSlaveReadMaskI2C\(i2cIndex, register\)
+### getSlaveReadMaskI2C(i2cIndex, register)
 
 This function returns the value of any register's readmask which is used to determine which bits in a register can be read from by an I2C controller on the bus.
 
@@ -900,4 +900,3 @@ binhoDevice.setSlaveRegisterI2C(0, 3, 0xEF)
 binhoDevice.setSlaveReadMaskI2C(0, 1, 0x0F)
 print(binhoDevice.getSlaveReadMaskI2C(0,1))
 ```
-

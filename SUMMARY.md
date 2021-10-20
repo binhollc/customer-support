@@ -49,7 +49,7 @@
     * [Socket Station](user-guide/accessories/socket-station.md)
 * [Python Libraries](python-libraries/README.md)
   * [Binho Python Package](python-libraries/binho-python-package.md)
-  * [Python Wrapper \(legacy\)](python-libraries/python-wrapper/README.md)
+  * [Python Wrapper (legacy)](python-libraries/python-wrapper/README.md)
     * [binhoHostAdapter](python-libraries/python-wrapper/binhohostadapter/README.md)
       * [Device Functions](python-libraries/python-wrapper/binhohostadapter/device.md)
       * [Buffer Functions](python-libraries/python-wrapper/binhohostadapter/buffer.md)
@@ -75,6 +75,7 @@
         * [Replay UART](python-libraries/python-wrapper/examples/replaying-logic-captures/replay-uart.md)
 * [Mission Control Software](software/README.md)
   * [Releases](software/releases/README.md)
+    * [V1.1.6 Release](software/releases/v1.1.6-release.md)
     * [V1.1.4 Release](software/releases/v1.1.4-release.md)
     * [V1.1.3 Release](software/releases/v1.1.3-release.md)
     * [V1.1.0 Release](software/releases/v1.1.0-release.md)
@@ -126,4 +127,3 @@
 * [What is a host adapter?](learn-and-grow/what-is-a-host-adapter.md)
 * [Binho + CircuitPython](learn-and-grow/binho-+-circuitpython.md)
 * [Binho + Sparkfun Qwiic\_Py](learn-and-grow/binho-sparkfun-qwiic-py.md)
-

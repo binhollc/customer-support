@@ -1,31 +1,31 @@
 # Receiving Responses
 
-As mentioned previously, every command sent to the host adapter will receive a response. 
+As mentioned previously, every command sent to the host adapter will receive a response.&#x20;
 
 {% hint style="info" %}
-The response to **every** command from the host adapter will begin with`-`.
+The response to **every **command from the host adapter will begin with`-`.
 {% endhint %}
 
 The Response Packets fall into one of three categories:
 
 ### ACK Response
 
-An **ACK** response from the host adapter indicates that the received command has been executed successfully. An **ACK** response is represented by `-OK`
+An **ACK **response from the host adapter indicates that the received command has been executed successfully. An **ACK **response is represented by `-OK`
 
-For example, the PING command always elicits an **ACK** response from the device:
+For example, the PING command always elicits an **ACK **response from the device:
 
-```text
+```
 +PING
 -OK
 ```
 
 ### NAK Response
 
-A **NAK** response from the host adapter indicates that the received command failed to execute. This could be indicative of a spelling error/typo, invalid command name or parameter values, or the failure to successfully execute the called function. A **NAK** response is represented by `-NG`
+A **NAK **response from the host adapter indicates that the received command failed to execute. This could be indicative of a spelling error/typo, invalid command name or parameter values, or the failure to successfully execute the called function. A **NAK **response is represented by `-NG`
 
 For example, a keyboard error caused `+PING` to be misspelled as `+PONG`, which is a non-existent command:
 
-```text
+```
 +PONG
 -NG
 ```
@@ -36,16 +36,17 @@ Many of the commands sent to the host adapter result in the host adapter respond
 
 For example, sending the +FWVER command causes the device to respond as such:
 
-```text
+```
 +FWVER
 -FWVER 0.1.5
 ```
 
 The ASCII Command Set Reference Guide provides detailed example responses for of the host adapter commands. You can jump to that section of the guide here:
 
-{% page-ref page="../ascii-interface/" %}
+{% content-ref url="../ascii-interface/" %}
+[ascii-interface](../ascii-interface/)
+{% endcontent-ref %}
 
 ### But wait... What About Interrupts?
 
 We thought you'd never ask. Interrupts aren't actually a response to a command - they are somewhat unsolicited transmissions. As such, they are worthy of their own page in this guide.
-

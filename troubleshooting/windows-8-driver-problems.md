@@ -18,11 +18,11 @@ Our device drivers are not digitally signed, therefore should you need to manual
 
 Once the driver signature enforcement has been disabled, please follow the same steps presented on the Windows 7 Driver Installation page to manually install the driver:
 
-{% page-ref page="windows-driver-installation.md" %}
+{% content-ref url="windows-driver-installation.md" %}
+[windows-driver-installation.md](windows-driver-installation.md)
+{% endcontent-ref %}
 
 Note that if you do not following the steps to properly disable device driver signature enforcement, you will likely encounter the following error message when trying to update the device driver:
 
 ![](../.gitbook/assets/image001.png)
-
-
 

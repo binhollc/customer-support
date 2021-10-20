@@ -124,4 +124,3 @@ def test_TestDevicesCommCheck(self, dut, testFixture):
 ```
 
 Writing automated hardware and firmware tests has never been easier!
-

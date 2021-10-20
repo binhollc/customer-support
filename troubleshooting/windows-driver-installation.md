@@ -12,19 +12,19 @@ We're in the process of creating a streamlined way to install the device drivers
 
 ### Step 2: Plug in the Binho Nova to the PC
 
-![](../.gitbook/assets/1_devicemanagerunknown.png)
+![](../.gitbook/assets/1\_deviceManagerUnknown.png)
 
 ### Step 3: Right Click and Select "Update Driver Software..."
 
-![](../.gitbook/assets/2_updatedriversoftware.png)
+![](../.gitbook/assets/2\_updateDriverSoftware.png)
 
 ### Step 4: Choose "Browse my computer for driver software"
 
-![](../.gitbook/assets/3_browsemycomputer.png)
+![](../.gitbook/assets/3\_browseMyComputer.png)
 
 ### Step 5: Select the location of the unzipped driver file from Step 1 and click Next
 
-![](../.gitbook/assets/4_driverlocationnext.png)
+![](../.gitbook/assets/4\_driverLocationNext.png)
 
 {% hint style="danger" %}
 If Step 5 above fails, please try the [alternate installation process](https://support.binho.io/troubleshooting/windows-driver-installation#alternative-driver-installation-method) detailed below.
@@ -32,19 +32,19 @@ If Step 5 above fails, please try the [alternate installation process](https://s
 
 ### Step 6: Select "Install this driver software anyway"
 
-![](../.gitbook/assets/5_warninginstalldriveranyway.png)
+![](../.gitbook/assets/5\_warningInstallDriverAnyway.png)
 
 ### Step 7: Installation Completed Successfully, Close the Installer
 
-![](../.gitbook/assets/6_success.png)
+![](../.gitbook/assets/6\_success.png)
 
 ### Step 8: Confirm Device Driver Installation Success in Device Manager
 
-![](../.gitbook/assets/7_correctdevicemanager.png)
+![](../.gitbook/assets/7\_correctDeviceManager.png)
 
 ### Step 9: Enjoy the Binho Nova on Your Windows 7 PC
 
-![](../.gitbook/assets/8_guiwin7.png)
+![](../.gitbook/assets/8\_GUIWin7.png)
 
 {% hint style="danger" %}
 At this time, our Windows 7 driver regrettably does not support communicating with the Binho Nova while it's in Bootloader mode. You will need to connect the device to a computer running Windows 8+, MacOS, or Ubuntu in order to update the device firmware.
@@ -56,23 +56,22 @@ If you are unable to install the driver following the method above by "Browsing"
 
 ### Step A: Select "Let me pick from a list of device drivers on my computer"
 
-![](../.gitbook/assets/image%20%2829%29.png)
+![](<../.gitbook/assets/image (17).png>)
 
-### Step B: Select "Ports \(COM & LPT\)" From the Common Hardware Types List
+### Step B: Select "Ports (COM & LPT)" From the Common Hardware Types List
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](<../.gitbook/assets/image (18).png>)
 
 ### Step C: Click the "Have Disk..." button
 
-![](../.gitbook/assets/image%20%281%29.png)
+![](<../.gitbook/assets/image (19).png>)
 
 ### Step D: Browse to the binho\_usbser.inf file downloaded from this page and click OK
 
-![](../.gitbook/assets/image%20%2824%29.png)
+![](<../.gitbook/assets/image (20).png>)
 
 ### Step E: Select "Binho USB Host Adapter" and click "Next"
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](<../.gitbook/assets/image (21).png>)
 
 #### At this point, you can return to [Step 6](https://support.binho.io/troubleshooting/windows-driver-installation#step-6-select-install-this-driver-software-anyway) above to complete the process.
-

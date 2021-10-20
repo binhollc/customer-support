@@ -1,6 +1,6 @@
 # Dropping Legacy Terminology
 
-The _Binho_ support portal and product documentation have been updated to replace legacy industry terms with modern terminology. 
+The _Binho_ support portal and product documentation have been updated to replace legacy industry terms with modern terminology.&#x20;
 
 ### I2C Terminology
 
@@ -45,4 +45,3 @@ Maxim Integrated has already been using the terms Host and Device in their docum
 ### Why did we change our documentation?
 
 The electronics industry in particular has been using an embarrassingly outdated lexicon when it comes to discussing communication bus topology and the various roles and modes of operation of devices on the bus. It's unfortunate that this has gone on this long without acknowledging the need to leave these terms in the past. Thankfully, the industry is already making the shift, and many device manufacturers have already begun to adopt new terminology. _Binho_ is proud to help push for the [industry-wide adoption of modern terminology](https://www.oshwa.org/a-resolution-to-redefine-spi-signal-names/) that is inclusive. Let's celebrate the ability to change and improve over time!
-

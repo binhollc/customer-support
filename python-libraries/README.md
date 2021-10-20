@@ -4,7 +4,9 @@ Automation of Binho Nova is made to be extremely easy using the Binho Python Pac
 
 ### Stable Release
 
-{% page-ref page="binho-python-package.md" %}
+{% content-ref url="binho-python-package.md" %}
+[binho-python-package.md](binho-python-package.md)
+{% endcontent-ref %}
 
 ### Legacy
 
@@ -12,7 +14,7 @@ Automation of Binho Nova is made to be extremely easy using the Binho Python Pac
 This library is still supported, but is not recommended for new designs.
 {% endhint %}
 
-{% page-ref page="python-wrapper/" %}
-
-
+{% content-ref url="python-wrapper/" %}
+[python-wrapper](python-wrapper/)
+{% endcontent-ref %}
 

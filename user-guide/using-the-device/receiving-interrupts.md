@@ -34,4 +34,3 @@ Thankfully, our python library is an excellent reference for how to implement a 
 Anyways, let's come out of this rabbit hole for now -- there will be more discussion on this topic in the "Using IO" section coming up.
 
 The next pages in this section of the guide will provide instructions to utilize the full set of supported protocols and features of your host adapter.
-

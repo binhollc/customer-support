@@ -2,7 +2,7 @@
 
 ### CLK
 
-Gets/sets the I2C clock frequency. The I2C clock frequency can be configured from 100kHz to 3.4MHz in 1kHz steps. The default clock frequency is 400kHz. 
+Gets/sets the I2C clock frequency. The I2C clock frequency can be configured from 100kHz to 3.4MHz in 1kHz steps. The default clock frequency is 400kHz.&#x20;
 
 Set the I2C clock frequency: `I2C0 CLK [frequency]`
 
@@ -18,7 +18,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 CLK ?
 -I2C0 CLK 400000
 
@@ -44,7 +44,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 ADDR ?
 -I2C0 ADDR 8BIT
 
@@ -73,7 +73,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 PULL ?
 -I2C0 PULL DISABLED
 
@@ -98,11 +98,11 @@ The `address` parameter can be set to any valid 7-bit I2C device address.
 
 **Response:**
 
-For each address scanned, the command returns `-I2C0 SCAN [address]` followed by either `OK` if a device was found with that address, or `NG` if no device was found. In the case of scanning the entire bus for device, upon the completion of the scan a summary will be reported: `-I2C0 SCAN OK [n] DEVICES` where `n` indicates the number of devices discovered on the bus.
+For each address scanned, the command returns `-I2C0 SCAN [address]` followed by either `OK `if a device was found with that address, or `NG` if no device was found. In the case of scanning the entire bus for device, upon the completion of the scan a summary will be reported: `-I2C0 SCAN OK [n] DEVICES` where `n` indicates the number of devices discovered on the bus.
 
 **Example Usage:**
 
-```text
+```
 I2C0 SCAN 0xC2
 -I2C0 SCAN 0xC2 NG
 
@@ -131,7 +131,7 @@ Write up to 256 bytes from a buffer: `I2C0 WRITE BUF[n] [count]`
 
 **Parameters:**
 
-The `data` parameter can be any valid 8-bit integer \(byte\) of data to send.
+The `data` parameter can be any valid 8-bit integer (byte) of data to send.
 
 The `count` parameter is the number of bytes to be sent from the buffer, from 1 to 256.
 
@@ -141,7 +141,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 START 0xC2
 -OK
 
@@ -184,7 +184,7 @@ This function returns a Data Response with the received bytes in the format of `
 
 **Example Usage:**
 
-```text
+```
 I2C0 REQ 0xC2 4
 -I2C0 RXD 0xAB 0xAC 0xAD 0xAE
 
@@ -203,7 +203,7 @@ BUF0 READ 4
 
 ### START
 
-Starts an I2C transmission to a given device by sending a start bit on the I2C bus. 
+Starts an I2C transmission to a given device by sending a start bit on the I2C bus.&#x20;
 
 Start an I2C transmission: `I2C0 START [address]`
 
@@ -217,7 +217,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 START 0xC2
 -OK
 ```
@@ -240,7 +240,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 END
 -OK
 
@@ -270,11 +270,11 @@ The `hexPayload` parameter is the data that will be written to the I2C periphera
 
 **Response:**
 
-This function returns either `OK` or `NG` when the WHR command is used only to write data \(_bytesToRead_ = 0\) to an I2C Peripheral device. When the WHR command is used to perform a read operation \(bytesToRead &gt; 0\), the response will contain the requested number of data bytes read from the I2C peripheral device, or `NG` indicating that command failed to execute successfully.
+This function returns either `OK` or `NG` when the WHR command is used only to write data (_bytesToRead _= 0) to an I2C Peripheral device. When the WHR command is used to perform a read operation (bytesToRead > 0), the response will contain the requested number of data bytes read from the I2C peripheral device, or `NG` indicating that command failed to execute successfully.
 
 **Example Usage:**
 
-```text
+```
 I2C0 WHR 76 0 1 1 0F
 -I2C0 RXD 01
 
@@ -304,7 +304,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 SLAVE 0xA0
 -OK
 ```
@@ -337,7 +337,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 SLAVE MODE ?
 -I2C0 SLAVE MODE USEPTR
 
@@ -364,7 +364,7 @@ Get the current number of registers: `I2C0 SLAVE REGCNT ?`
 
 **Parameters:**
 
-The `count` ****parameter can be any integer value from 1 to 256.
+The `count`** **parameter can be any integer value from 1 to 256.
 
 **Response:**
 
@@ -372,7 +372,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 SLAVE REGCNT ?
 -I2C0 SLAVE REGCNT 0x100
 
@@ -393,7 +393,7 @@ Get the value of a peripheral register: `I2C0 SLAVE REG [register] ?`
 
 **Parameters:**
 
-The `register` ****parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255. This parameter can also be `PTR` to access the pointer register.
+The `register`** **parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255. This parameter can also be `PTR` to access the pointer register.
 
 The `value` parameter can be any integer value from 0 to 255.
 
@@ -403,7 +403,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 SLAVE REG 0x00 ?
 -I2C0 SLAVE REG 0x00 0xFF
 
@@ -433,7 +433,7 @@ Get the value of a peripheral register: `I2C0 SLAVE READMASK [register] ?`
 
 **Parameters:**
 
-The `register` ****parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
+The `register`** **parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
 
 The `mask` parameter can be any integer value from 0 to 255, where a 1 corresponds to granting read access to the corresponding bit in the register.
 
@@ -443,7 +443,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 SLAVE READMASK 0x00 0x3F
 -OK
 
@@ -461,9 +461,9 @@ Get the value of a peripheral register: `I2C0 SLAVE WRITEMASK [register] ?`
 
 **Parameters:**
 
-The `register` ****parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
+The `register`** **parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
 
-The `mask` parameter can be any integer value from 0 to 255, where a 1 corresponds to granting write ****access to the corresponding bit in the register.
+The `mask` parameter can be any integer value from 0 to 255, where a 1 corresponds to granting write** **access to the corresponding bit in the register.
 
 **Response:**
 
@@ -471,11 +471,10 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 I2C0 SLAVE WRITEMASK 0x00 0xF0
 -OK
 
 I2C0 SLAVE WRITEMASK 0x00 ?
 -I2C0 SLAVE WRITEMASK 0x00 0xF0
 ```
-

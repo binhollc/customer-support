@@ -36,4 +36,3 @@ Our Linux build is a 64-bit application which runs on the following operating sy
 * Fedora 13 Desktop or later
 
 #### Download [Binho V1.0.0 Alpha Linux64](https://cdn.binho.io/sw/missioncontrol/1.0.0/linux64/BinhoAlphaLinux.zip)
-

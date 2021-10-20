@@ -4,13 +4,19 @@ This section addresses some common issues and how to resolve them. If you find y
 
 ### Top Issues:
 
-{% page-ref page="windows-driver-installation.md" %}
+{% content-ref url="windows-driver-installation.md" %}
+[windows-driver-installation.md](windows-driver-installation.md)
+{% endcontent-ref %}
 
-{% page-ref page="windows-8-driver-problems.md" %}
+{% content-ref url="windows-8-driver-problems.md" %}
+[windows-8-driver-problems.md](windows-8-driver-problems.md)
+{% endcontent-ref %}
 
-{% page-ref page="linux-permissions.md" %}
+{% content-ref url="linux-permissions.md" %}
+[linux-permissions.md](linux-permissions.md)
+{% endcontent-ref %}
 
-{% page-ref page="macos-permissions.md" %}
-
-
+{% content-ref url="macos-permissions.md" %}
+[macos-permissions.md](macos-permissions.md)
+{% endcontent-ref %}
 

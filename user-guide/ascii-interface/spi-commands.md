@@ -2,7 +2,7 @@
 
 ### CLK
 
-Gets/sets the SPI clock frequency. The SPI clock frequency can be configured from 500kHz to 12MHz in 1kHz steps. The default clock frequency is 2MHz. 
+Gets/sets the SPI clock frequency. The SPI clock frequency can be configured from 500kHz to 12MHz in 1kHz steps. The default clock frequency is 2MHz.&#x20;
 
 Set the SPI clock frequency: `SPI0 CLK [frequency]`
 
@@ -18,7 +18,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SPI0 CLK ?
 -SPI0 CLK 2000000
 
@@ -47,7 +47,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SPI0 ORDER ?
 -SPI0 ORDER MSBFIRST
 
@@ -68,11 +68,11 @@ Get the current SPI bus mode setting: `SPI0 MODE ?`
 The `spiMode` parameter shall be set to 0, 1, 2, or 3 based on the desired clock polarity and phase settings:
 
 | **SPI Mode** | **CPOL** | **CPHA** |
-| :---: | :---: | :---: |
-| 0 | 0 | 0 |
-| 1 | 0 | 1 |
-| 2 | 1 | 0 |
-| 3 | 1 | 1 |
+| :----------: | :------: | :------: |
+|       0      |     0    |     0    |
+|       1      |     0    |     1    |
+|       2      |     1    |     0    |
+|       3      |     1    |     1    |
 
 **Response:**
 
@@ -80,7 +80,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SPI0 MODE ?
 -SPI0 MODE 0
 
@@ -115,7 +115,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SPI0 CPOL ?
 -SPI0 CPOL 0
 
@@ -144,7 +144,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SPI0 CPHA ?
 -SPI0 CPHA 0
 
@@ -173,7 +173,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SPI0 TXBITS ?
 -SPI0 TXBITS 8
 
@@ -197,7 +197,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SPI0 BEGIN
 -OK
 ```
@@ -218,7 +218,7 @@ Before sending the **TXRX** command, be sure you've selected the target peripher
 
 When using the buffer method, `count` is the number of bytes to transfer from 1 to 256.
 
-When using direct transfer, `[data]` is the 8-bit or 16-bit payload to transfer. The size of data depends on the `TXBITS` setting.
+When using direct transfer, `[data]` is the 8-bit or 16-bit payload to transfer. The size of data depends on the `TXBITS `setting.
 
 **Response:**
 
@@ -226,7 +226,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 IO0 MODE DOUT
 -OK
 
@@ -280,7 +280,7 @@ This function returns an [ACK Response](https://support.binho.io/user-guide/usin
 
 **Example Usage:**
 
-```text
+```
 SPI0 END
 -OK
 ```
@@ -303,15 +303,14 @@ The `hexPayload` parameter is the data that will be written to the SPI bus. This
 
 **Response:**
 
-This function returns either `OK` or `NG` when the WHR command is used only to write data \(_writeOnlyFlag_ = 1\) to the SPI bus. When the WHR command is used to perform a read operation \(writeOnlyFlag = 0\), the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
+This function returns either `OK` or `NG` when the WHR command is used only to write data (_writeOnlyFlag _= 1) to the SPI bus. When the WHR command is used to perform a read operation (writeOnlyFlag = 0), the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
 
 **Example Usage:**
 
-```text
+```
 SPI0 WHR 1 4 DEADBEEF
 -OK
 
 SPI0 WHR 0 4 00000000
 -SPI0 RXD DEADBEEF
 ```
-
