@@ -516,12 +516,12 @@ This function takes five parameters:
 * `spiIndex`, which is always 0 on _Binho Nova_ host adapter.
 * `writeFlag`, which should be 1 if the transaction includes writing data to the SPI bus, or 0 if the transaction is only reading data.
 * `readFlag`, which should be 1 if the transaction includes reading data from the SPI bus, or 0 if the transaction is only writing data.
-* `numBytes`, which indicates the number of bytes to be transferred on the SPI bus and must match the length of the _data _parameter.
+* `numBytes`, which indicates the number of bytes to be transferred on the SPI bus and must match the length of the _data_ parameter.
 * `data`, which is a string of hex characters without the leading '0x' and no spaces indicating the data to be written to the bus, and must match the length specified by the numBytes parameter.
 
 #### Outputs:
 
-The host adapter will respond with '-OK' upon successful execution of the command when the _readFlag _is 0. If _readFlag _is 1, the host adapter will respond with '-SPI0 RXD' followed by the data read from the SPI bus. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+The host adapter will respond with '-OK' upon successful execution of the command when the _readFlag_ is 0. If _readFlag_ is 1, the host adapter will respond with '-SPI0 RXD' followed by the data read from the SPI bus. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
 
 #### Example Usage:
 

@@ -562,7 +562,7 @@ This function takes one parameter:
 
 #### Outputs:
 
-The host adapter will respond with 'I2C0 SLAVE MODE' followed by either _USEPTR_ or _STARTZERO _upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
+The host adapter will respond with 'I2C0 SLAVE MODE' followed by either _USEPTR_ or _STARTZERO_ upon successful execution of the command. In case of an invalid parameter, the host adapter will respond with '-NG' indicating the command did not execute successfully.
 
 #### Example Usage:
 
@@ -739,7 +739,7 @@ This function takes three parameters:
 
 * `i2cIndex`, which is always 0 on _Binho Nova_ host adapter.
 * `register`, which can be any integer value from 0 to the number of registers configured in the device.
-* `mask`, which can be any integer value from 0 to 255, where a 1 corresponds to granting write** **access to the corresponding bit in the register.
+* `mask`, which can be any integer value from 0 to 255, where a 1 corresponds to granting write **** access to the corresponding bit in the register.
 
 #### Outputs:
 
@@ -819,7 +819,7 @@ print(binhoDevice.getSlaveWriteMaskI2C(0, 1))
 
 ### setSlaveReadMaskI2C(i2cIndex, register, mask)
 
-This function sets the value of any register's readmask which is used to determine which bits in a register can be read from by an I2C controller on the bus. This can be used to emulate _strobe _bits in a register.
+This function sets the value of any register's readmask which is used to determine which bits in a register can be read from by an I2C controller on the bus. This can be used to emulate _strobe_ bits in a register.
 
 #### Inputs:
 

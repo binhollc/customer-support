@@ -78,7 +78,7 @@ IO1 Value 830
 
 ### PWM Output
 
-IO0, IO2, IO3, and IO4 pins have PWM output capabilities. The duty cycle and frequency can both be controlled programmatically. The duty cycle can be set either in _counts _from 0 to 1024, or in _percentage _from 0% to 100%. Both are implemented with the `VALUE `command.
+IO0, IO2, IO3, and IO4 pins have PWM output capabilities. The duty cycle and frequency can both be controlled programmatically. The duty cycle can be set either in _counts_ from 0 to 1024, or in _percentage_ from 0% to 100%. Both are implemented with the `VALUE` command.
 
 ```
 IO0 MODE PWM

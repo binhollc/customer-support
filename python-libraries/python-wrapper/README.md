@@ -24,7 +24,7 @@ This library is essentially a wrapper for all of the commands presented in the [
 
 #### binhoUtilities
 
-This library provides a handful of functions which aid in device management, as in identifying COM ports and _Binho _devices attached to the host computer.
+This library provides a handful of functions which aid in device management, as in identifying COM ports and _Binho_ devices attached to the host computer.
 
 {% content-ref url="binhoutilities.md" %}
 [binhoutilities.md](binhoutilities.md)
@@ -34,7 +34,7 @@ Here's where the releases live on PyPi:
 
 {% embed url="https://pypi.org/project/binho-host-adapter/" %}
 
-## Installation <a href="installation" id="installation"></a>
+## Installation <a href="#installation" id="installation"></a>
 
 The officially-supported Python library can easily be installed using pip:
 
@@ -44,7 +44,7 @@ pip install binho-host-adapter
 
 This library is cross-platform and is intended for use with Python 3.x.
 
-## Example Usage <a href="example-usage" id="example-usage"></a>
+## Example Usage <a href="#example-usage" id="example-usage"></a>
 
 ```python
 from binhoHostAdapter import binhoHostAdapter
@@ -86,7 +86,7 @@ There are also many examples of the python libraries in action in the examples s
 [examples](examples/)
 {% endcontent-ref %}
 
-## API Reference <a href="api-reference" id="api-reference"></a>
+## API Reference <a href="#api-reference" id="api-reference"></a>
 
 The library contains two classes, each with a distinct purpose. Please see the following pages for the documentation on each of these classes.
 

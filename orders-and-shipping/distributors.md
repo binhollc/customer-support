@@ -28,9 +28,15 @@ _Also serving Malaysia, Singapore, and Vietnam_
 
 ### Europe
 
+#### Sweden
+
 ![The Lab eShop](../.gitbook/assets/Logo\_LAB\_noshadow\_notext.jpg)
 
 Serving the EU and nearby markets including the UK and Russia.
+
+#### Norway
+
+![Adroit ](../.gitbook/assets/adroit-logo.png)
 
 ### Israel
 

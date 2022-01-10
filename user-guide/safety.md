@@ -5,7 +5,7 @@ Before using your _Binho Nova Multi-Protocol USB Host Adapter,_ let's review som
 ### Electrical Isolation
 
 {% hint style="warning" %}
-The _Binho Nova Multi-Protocol USB Host Adapter_ is **not **electrically isolated from the PC.
+The _Binho Nova Multi-Protocol USB Host Adapter_ is **not** electrically isolated from the PC.
 {% endhint %}
 
 ### Ground Current Safety

@@ -3,16 +3,16 @@
 As mentioned previously, every command sent to the host adapter will receive a response.&#x20;
 
 {% hint style="info" %}
-The response to **every **command from the host adapter will begin with`-`.
+The response to **every** command from the host adapter will begin with`-`.
 {% endhint %}
 
 The Response Packets fall into one of three categories:
 
 ### ACK Response
 
-An **ACK **response from the host adapter indicates that the received command has been executed successfully. An **ACK **response is represented by `-OK`
+An **ACK** response from the host adapter indicates that the received command has been executed successfully. An **ACK** response is represented by `-OK`
 
-For example, the PING command always elicits an **ACK **response from the device:
+For example, the PING command always elicits an **ACK** response from the device:
 
 ```
 +PING
@@ -21,7 +21,7 @@ For example, the PING command always elicits an **ACK **response from the device
 
 ### NAK Response
 
-A **NAK **response from the host adapter indicates that the received command failed to execute. This could be indicative of a spelling error/typo, invalid command name or parameter values, or the failure to successfully execute the called function. A **NAK **response is represented by `-NG`
+A **NAK** response from the host adapter indicates that the received command failed to execute. This could be indicative of a spelling error/typo, invalid command name or parameter values, or the failure to successfully execute the called function. A **NAK** response is represented by `-NG`
 
 For example, a keyboard error caused `+PING` to be misspelled as `+PONG`, which is a non-existent command:
 

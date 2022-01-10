@@ -42,7 +42,7 @@ Now let's adjust some CoolTerm settings to make it even easier to use.
 
 ### Step #4: Open the Serial Connection
 
-Now that the connection parameters have been configured correctly, it's time to connect to the _Binho Nova. _Click the "Connect" button on the toolbar to open the serial connection.
+Now that the connection parameters have been configured correctly, it's time to connect to the _Binho Nova._ Click the "Connect" button on the toolbar to open the serial connection.
 
 ![](../.gitbook/assets/CoolTerm-Connect.gif)
 

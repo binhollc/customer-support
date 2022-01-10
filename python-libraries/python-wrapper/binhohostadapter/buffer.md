@@ -64,7 +64,7 @@ binhoDevice.addByteToBuffer(0, 255)
 
 ### readBuffer(_index_, _numBytes_)
 
-This function reads out a given number of bytes from the buffer. Note that the bytes are **not **cleared out of the buffer after the read. They will remain in the buffer until they are overwritten or when the buffer is cleared.
+This function reads out a given number of bytes from the buffer. Note that the bytes are **not** cleared out of the buffer after the read. They will remain in the buffer until they are overwritten or when the buffer is cleared.
 
 **Inputs:**
 

@@ -1,6 +1,6 @@
 # UART in Mission Control
 
-The diagram below shows the pin assignments (in green) for the TX and RX pins on the_ Binho Nova Multi-Protocol USB Host Adapter_ when it is in UART mode.
+The diagram below shows the pin assignments (in green) for the TX and RX pins on the _Binho Nova Multi-Protocol USB Host Adapter_ when it is in UART mode.
 
 ![](../../.gitbook/assets/20200619\_novaPinout.png)
 

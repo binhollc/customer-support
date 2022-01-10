@@ -66,9 +66,9 @@ This function sets the mode of operation of the given adapter interface. This de
 
 This function takes 2 parameters, _index_, as an integer, and _mode_, as a string.&#x20;
 
-Note that for _Binho Multi-Protocol USB Host Adapter_, the only valid _index _is 0. This aspect of the protocol is design to support future products which may have more than one adapter interface.
+Note that for _Binho Multi-Protocol USB Host Adapter_, the only valid _index_ is 0. This aspect of the protocol is design to support future products which may have more than one adapter interface.
 
-The following list of values are valid values for _mode _parameter:
+The following list of values are valid values for _mode_ parameter:
 
 * 'I2C'
 * 'SPI'
@@ -111,7 +111,7 @@ This function gets the host adapter operation mode. This determines which protoc
 
 **Inputs:**
 
-This function takes 1 parameters, _index_, as an integer. Note that for Binho Multi-Protocol USB Host Adapter, the only valid _index _is 0. This aspect of the protocol is design to support future products which may have more than one adapter interface.
+This function takes 1 parameters, _index_, as an integer. Note that for Binho Multi-Protocol USB Host Adapter, the only valid _index_ is 0. This aspect of the protocol is design to support future products which may have more than one adapter interface.
 
 **Outputs:**
 

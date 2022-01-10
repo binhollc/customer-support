@@ -85,7 +85,7 @@ This command has no parameters.
 
 **Response:**
 
-This function returns a Data Response containing the received byte in the format of `1WIRE0 READ [data] `
+This function returns a Data Response containing the received byte in the format of `1WIRE0 READ [data]`&#x20;
 
 **Example Usage:**
 
@@ -222,7 +222,7 @@ Syntax: `1WIRE0 WHR [cmd] [bytesToRead] [bytesToWrite] [hexPayload]`
 
 The `cmd` parameter instructs Nova to optionally begin the transaction with a SKIP or SELECT command. The possible values for this parameter are `SKIP`, `SELECT`, or `NONE`.
 
-The `bytesToRead` parameter indicates the number of bytes to read after writing the hexPayload to the 1-Wire bus. This value can be from `0 `to `1024`.
+The `bytesToRead` parameter indicates the number of bytes to read after writing the hexPayload to the 1-Wire bus. This value can be from `0` to `1024`.
 
 The `bytesToWrite` parameter indicates the number of bytes to read to the 1-Wire bus. This value can be from `0` to `1024` and must match the length of the `hexPayload` parameter.
 
@@ -230,7 +230,7 @@ The `hexPayload` parameter is the data that will be written to the 1-Wire bus. T
 
 **Response:**
 
-This function returns either `OK` or `NG` when the WHR command is used only to write data (_bytesToRead _= 0) to the 1-Wire bus. When the WHR command is used to perform a read operation, the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
+This function returns either `OK` or `NG` when the WHR command is used only to write data (_bytesToRead_ = 0) to the 1-Wire bus. When the WHR command is used to perform a read operation, the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
 
 **Example Usage:**
 

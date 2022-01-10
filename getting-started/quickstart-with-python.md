@@ -1,6 +1,6 @@
 # QuickStart with Python
 
-We've released python libraries to make it lighting fast to start automating test and development tasks with a _Binho Nova Multi-Protocol USB Host Adapter. _
+We've released python libraries to make it lighting fast to start automating test and development tasks with a _Binho Nova Multi-Protocol USB Host Adapter._&#x20;
 
 ### Step #1: Download and Install Binho Python Package
 
@@ -85,7 +85,7 @@ This library is essentially a wrapper for all of the commands presented in the [
 
 #### binhoUtilities
 
-This library provides a handful of functions which aid in device management, as in identifying COM ports and _Binho _devices attached to the host computer.
+This library provides a handful of functions which aid in device management, as in identifying COM ports and _Binho_ devices attached to the host computer.
 
 ### Step #1: Download and Install the Binho Host Adapter Libraries
 

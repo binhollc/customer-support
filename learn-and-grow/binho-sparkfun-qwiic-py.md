@@ -25,7 +25,7 @@ This demo was built using the _Binho Multi-Protocol USB Host Adapter_ along with
 Setting up the demo is quite simple. The following steps are used to add the I2C driver for the _Binho Multi-Protocol USB Host Adapter_ into the Qwiic\_Py package and then register the new driver so that it will be used by default when python determines that it's being run on a Windows, MacOS, or Ubuntu system.
 
 {% hint style="info" %}
-We'll be making a pull request on Sparkfun's official repository for this project, and if accepted, the _Binho _driver will come already setup and this process can be omitted. However, for now, the easiest way to set this up is to use our git patch detailed below.
+We'll be making a pull request on Sparkfun's official repository for this project, and if accepted, the _Binho_ driver will come already setup and this process can be omitted. However, for now, the easiest way to set this up is to use our git patch detailed below.
 {% endhint %}
 
 #### Prerequisite
@@ -77,11 +77,11 @@ In order to ensure the new local changes to the package get applied globally (eq
 
 First, step up a directory into qwiic\_i2c folder and install that submodule:
 
-`python setup.py install `
+`python setup.py install`&#x20;
 
 Then step up once again to the Qwiic\_Py root directory and install that package:
 
-`python setup.py install `
+`python setup.py install`&#x20;
 
 {% hint style="warning" %}
 MacOS may require sudo: `sudo python setup.py install`

@@ -218,7 +218,7 @@ Before sending the **TXRX** command, be sure you've selected the target peripher
 
 When using the buffer method, `count` is the number of bytes to transfer from 1 to 256.
 
-When using direct transfer, `[data]` is the 8-bit or 16-bit payload to transfer. The size of data depends on the `TXBITS `setting.
+When using direct transfer, `[data]` is the 8-bit or 16-bit payload to transfer. The size of data depends on the `TXBITS` setting.
 
 **Response:**
 
@@ -303,7 +303,7 @@ The `hexPayload` parameter is the data that will be written to the SPI bus. This
 
 **Response:**
 
-This function returns either `OK` or `NG` when the WHR command is used only to write data (_writeOnlyFlag _= 1) to the SPI bus. When the WHR command is used to perform a read operation (writeOnlyFlag = 0), the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
+This function returns either `OK` or `NG` when the WHR command is used only to write data (_writeOnlyFlag_ = 1) to the SPI bus. When the WHR command is used to perform a read operation (writeOnlyFlag = 0), the response will contain the requested number of data bytes read from the bus, or `NG` indicating that command failed to execute successfully.
 
 **Example Usage:**
 

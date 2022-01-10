@@ -67,4 +67,4 @@
 [alpha-release-1-0-0.md](alpha-release-1-0-0.md)
 {% endcontent-ref %}
 
-_Initial Release _
+_Initial Release_&#x20;

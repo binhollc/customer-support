@@ -10,7 +10,7 @@ The ASCII Commands are broken down into several categories.
 
 ### Device
 
-The _device _category includes functions which get device information, control the LED, and set the mode of operation among other things.
+The _device_ category includes functions which get device information, control the LED, and set the mode of operation among other things.
 
 {% content-ref url="device-commands.md" %}
 [device-commands.md](device-commands.md)
@@ -18,7 +18,7 @@ The _device _category includes functions which get device information, control t
 
 ### Buffer
 
-The _buffer _category includes the functions necessary to read/write the internal buffer. Using the buffer is especially useful when sending predetermined multi-byte transfers, such as when reading and writing FRAM, EEPROM, and FLASH memories.
+The _buffer_ category includes the functions necessary to read/write the internal buffer. Using the buffer is especially useful when sending predetermined multi-byte transfers, such as when reading and writing FRAM, EEPROM, and FLASH memories.
 
 {% content-ref url="buffer-commands.md" %}
 [buffer-commands.md](buffer-commands.md)
@@ -26,7 +26,7 @@ The _buffer _category includes the functions necessary to read/write the interna
 
 ### IO
 
-The _IO _category includes the functions necessary to control the pins when not being used for digital communications. Each of the available IO pins can be assigned a variety of functions such as digital input, digital output, analog input, analog output, PWM output, and other specialized functions.
+The _IO_ category includes the functions necessary to control the pins when not being used for digital communications. Each of the available IO pins can be assigned a variety of functions such as digital input, digital output, analog input, analog output, PWM output, and other specialized functions.
 
 {% content-ref url="io-commands.md" %}
 [io-commands.md](io-commands.md)

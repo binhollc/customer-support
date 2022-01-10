@@ -98,7 +98,7 @@ The `address` parameter can be set to any valid 7-bit I2C device address.
 
 **Response:**
 
-For each address scanned, the command returns `-I2C0 SCAN [address]` followed by either `OK `if a device was found with that address, or `NG` if no device was found. In the case of scanning the entire bus for device, upon the completion of the scan a summary will be reported: `-I2C0 SCAN OK [n] DEVICES` where `n` indicates the number of devices discovered on the bus.
+For each address scanned, the command returns `-I2C0 SCAN [address]` followed by either `OK` if a device was found with that address, or `NG` if no device was found. In the case of scanning the entire bus for device, upon the completion of the scan a summary will be reported: `-I2C0 SCAN OK [n] DEVICES` where `n` indicates the number of devices discovered on the bus.
 
 **Example Usage:**
 
@@ -270,7 +270,7 @@ The `hexPayload` parameter is the data that will be written to the I2C periphera
 
 **Response:**
 
-This function returns either `OK` or `NG` when the WHR command is used only to write data (_bytesToRead _= 0) to an I2C Peripheral device. When the WHR command is used to perform a read operation (bytesToRead > 0), the response will contain the requested number of data bytes read from the I2C peripheral device, or `NG` indicating that command failed to execute successfully.
+This function returns either `OK` or `NG` when the WHR command is used only to write data (_bytesToRead_ = 0) to an I2C Peripheral device. When the WHR command is used to perform a read operation (bytesToRead > 0), the response will contain the requested number of data bytes read from the I2C peripheral device, or `NG` indicating that command failed to execute successfully.
 
 **Example Usage:**
 
@@ -364,7 +364,7 @@ Get the current number of registers: `I2C0 SLAVE REGCNT ?`
 
 **Parameters:**
 
-The `count`** **parameter can be any integer value from 1 to 256.
+The `count` **** parameter can be any integer value from 1 to 256.
 
 **Response:**
 
@@ -393,7 +393,7 @@ Get the value of a peripheral register: `I2C0 SLAVE REG [register] ?`
 
 **Parameters:**
 
-The `register`** **parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255. This parameter can also be `PTR` to access the pointer register.
+The `register` **** parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255. This parameter can also be `PTR` to access the pointer register.
 
 The `value` parameter can be any integer value from 0 to 255.
 
@@ -433,7 +433,7 @@ Get the value of a peripheral register: `I2C0 SLAVE READMASK [register] ?`
 
 **Parameters:**
 
-The `register`** **parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
+The `register` **** parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
 
 The `mask` parameter can be any integer value from 0 to 255, where a 1 corresponds to granting read access to the corresponding bit in the register.
 
@@ -461,9 +461,9 @@ Get the value of a peripheral register: `I2C0 SLAVE WRITEMASK [register] ?`
 
 **Parameters:**
 
-The `register`** **parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
+The `register` **** parameter can be any integer value from 0 to the number of registers configured in the device using the `REGCNT` command, a max of 255.
 
-The `mask` parameter can be any integer value from 0 to 255, where a 1 corresponds to granting write** **access to the corresponding bit in the register.
+The `mask` parameter can be any integer value from 0 to 255, where a 1 corresponds to granting write **** access to the corresponding bit in the register.
 
 **Response:**
 

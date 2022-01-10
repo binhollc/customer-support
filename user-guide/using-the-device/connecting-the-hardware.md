@@ -4,7 +4,7 @@
 
 Use the provided USB Type-C (male) to USB Type-A (male) cable to connect the _Binho Nova Multi-Protocol USB Host Adapter_ to your host PC. The device can be plugged into any available USB port - there is no requirement to plug it into a USB 3.0 port.
 
-Upon power up, the Status LED on the _Binho Nova Multi-Protocol USB Host adapter _will shine _yellow _while it is waiting for the COM port to be opened. When connected properly, the device should immediately enumerate and become available for use as a new COM port. Once a serial connection has been established between the device and the host computer, the Status LED will shine _blue_.
+Upon power up, the Status LED on the _Binho Nova Multi-Protocol USB Host adapter_ will shine _yellow_ while it is waiting for the COM port to be opened. When connected properly, the device should immediately enumerate and become available for use as a new COM port. Once a serial connection has been established between the device and the host computer, the Status LED will shine _blue_.
 
 {% hint style="info" %}
 The Status LED is user-programmable, so after initial power up and establishment of the serial connection, the Status LED color meaning is not correlated with any particular device state unless specifically set from within the test scripts.

@@ -36,7 +36,7 @@ While this step is totally optional, it is quite the productivity boost to enabl
 
 ### Opening the Connection
 
-Now that the connection parameters have been configured correctly, it's time to connect to the _Binho Nova Multi-Protocol USB Host Adapter. _Click the "Connect" button to open the serial connection with the device.
+Now that the connection parameters have been configured correctly, it's time to connect to the _Binho Nova Multi-Protocol USB Host Adapter._ Click the "Connect" button to open the serial connection with the device.
 
 ![](../../.gitbook/assets/CoolTerm-Connect.gif)
 

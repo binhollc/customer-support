@@ -1,6 +1,6 @@
 # SPI in Mission Control
 
-The diagram below shows the pin assignments (in yellow) for the SCK, SDI, and SDO pins on the_ Binho Nova Multi-Protocol USB Host Adapter_ when it is in SPI mode.
+The diagram below shows the pin assignments (in yellow) for the SCK, SDI, and SDO pins on the _Binho Nova Multi-Protocol USB Host Adapter_ when it is in SPI mode.
 
 ![](../../.gitbook/assets/20200619\_novaPinout.png)
 

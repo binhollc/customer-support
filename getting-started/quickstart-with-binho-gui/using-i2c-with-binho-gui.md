@@ -1,6 +1,6 @@
 # I2C in Mission Control
 
-The diagram below shows the pin assignments (in purple) for the SCL and SDA pins on the_ Binho Nova Multi-Protocol USB Host Adapter_ when it is in I2C mode.
+The diagram below shows the pin assignments (in purple) for the SCL and SDA pins on the _Binho Nova Multi-Protocol USB Host Adapter_ when it is in I2C mode.
 
 ![](../../.gitbook/assets/20200619\_novaPinout.png)
 
