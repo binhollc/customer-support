@@ -4,9 +4,9 @@
 
 CoolTerm is a very popular cross-platform serial console application developed by Roger Meier. It's got all the necessary features for communicating with hardware devices and an elegant user interface.
 
-![CoolTerm Application Window](<../.gitbook/assets/image (3).png>)
+![CoolTerm Application Window](<../.gitbook/assets/image (15).png>)
 
-You can [download the latest release](https://freeware.the-meiers.org) directly from his website. Installation simply entails extracting the folder from it's compressed .zip archive and placing in a known location on your drive.
+You can [download the latest release](https://freeware.the-meiers.org/) directly from his website. Installation simply entails extracting the folder from it's compressed .zip archive and placing in a known location on your drive.
 
 ### Step #2: Connect the Binho Multi-Protocol USB Host Adapter
 

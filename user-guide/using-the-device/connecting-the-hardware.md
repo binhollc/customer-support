@@ -30,7 +30,7 @@ Dallas 1-WIRE and Atmel SWI (Single-Wire Interface) protocol can be configured t
 
 Clearly the most convenient method to connect the signals is by including a footprint for the 2x5 IDC connector on your circuit board, but this isn't always an option. As such, you can use the included Breadboard Adapter board to breakout the signals to 0.1in/2.54mm pitch headers which can easily be connected with jumper wires.
 
-![Using the Breadboard Breakout Adapter](../../.gitbook/assets/image.png)
+![Using the Breadboard Breakout Adapter](<../../.gitbook/assets/image (26).png>)
 
 Furthermore, there are several accessories available that make it easy to connect directly to your test circuitry. You can learn all about them here:
 

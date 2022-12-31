@@ -34,7 +34,7 @@ The easiest way to get familiar with your _Binho Nova Multi-Protocol USB Host Ad
 
 ### Serial Console Installation
 
-Chances are that you already have a serial console application installed on your system. Go ahead and use the one you prefer. This documentation is written for [CoolTerm](https://freeware.the-meiers.org), but there's nothing particular about the serial connection, so any serial console application should be just fine. You can see the specifics of the device connection properties on the following page:
+Chances are that you already have a serial console application installed on your system. Go ahead and use the one you prefer. This documentation is written for [CoolTerm](https://freeware.the-meiers.org/), but there's nothing particular about the serial connection, so any serial console application should be just fine. You can see the specifics of the device connection properties on the following page:
 
 {% content-ref url="sending-commands.md" %}
 [sending-commands.md](sending-commands.md)
@@ -42,7 +42,7 @@ Chances are that you already have a serial console application installed on your
 
 If you don't already have a serial terminal application installed, or you'd like to try out something new/different from what you've been using, feel free to download one of these popular serial consoles:
 
-* [CoolTerm ](https://freeware.the-meiers.org)(Cross-Platform)
+* [CoolTerm ](https://freeware.the-meiers.org/)(Cross-Platform)
 * [PuTTY ](https://www.chiark.greenend.org.uk/\~sgtatham/putty/latest.html)(Cross-Platform)
 
 {% hint style="info" %}
@@ -54,7 +54,7 @@ Our friends over at [Sparkfun Electronics](https://www.sparkfun.com) have create
 More than likely you'll want to start writing scripts to employ the _Binho Nova Multi-Protocol USB Host Adapter_ in automated testing. You'll need Python 3 to use the provided libraries. If you don't already have Python 3 installed, you can download it [here](https://www.python.org/downloads/).
 
 {% hint style="warning" %}
-Our Python Libraries do not work with Python 2.7. Python 2.7 was [retired on January 1, 2020](https://pythonclock.org), so it's a great time to make the switch.&#x20;
+Our Python Libraries do not work with Python 2.7. Python 2.7 was [retired on January 1, 2020](https://pythonclock.org/), so it's a great time to make the switch.&#x20;
 {% endhint %}
 
 All of the documentation for the Python libraries can be found on the following page:

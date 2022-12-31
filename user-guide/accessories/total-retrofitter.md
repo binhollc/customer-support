@@ -1,6 +1,6 @@
 # Total Retrofitter
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (17).png>)
 
 This board makes it easy to interface your Binho host adapter with common 2 x 5 pin 2.54mm pitch connectors used for other common USB host adapters. Beyond changing the connector pitch, it also implements the pinout of TotalPhase(R) Cheetah and Aardvark adapters so that you can readily use any of your existing development boards and fixtures designed for use with those tools.
 

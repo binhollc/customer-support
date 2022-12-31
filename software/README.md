@@ -22,20 +22,20 @@ Take a look at the Getting Started section of our support portal for an introduc
 
 ### Device Tab
 
-![](<../.gitbook/assets/image (24).png>)
+![](<../.gitbook/assets/image (19).png>)
 
 ### IO Tab
 
-![](<../.gitbook/assets/image (25).png>)
+![](<../.gitbook/assets/image (12).png>)
 
 ### SPI Tab
 
-![](<../.gitbook/assets/image (26).png>)
+![](<../.gitbook/assets/image (21).png>)
 
 ### I2C Tab
 
-![](<../.gitbook/assets/image (27).png>)
+![](<../.gitbook/assets/image (5).png>)
 
 ### UART Tab
 
-![](<../.gitbook/assets/image (29).png>)
+![](<../.gitbook/assets/image (14).png>)

@@ -56,22 +56,22 @@ If you are unable to install the driver following the method above by "Browsing"
 
 ### Step A: Select "Let me pick from a list of device drivers on my computer"
 
-![](<../.gitbook/assets/image (17).png>)
+![](<../.gitbook/assets/image (18).png>)
 
 ### Step B: Select "Ports (COM & LPT)" From the Common Hardware Types List
 
-![](<../.gitbook/assets/image (18).png>)
+![](<../.gitbook/assets/image (24).png>)
 
 ### Step C: Click the "Have Disk..." button
 
-![](<../.gitbook/assets/image (19).png>)
+![](<../.gitbook/assets/image (8).png>)
 
 ### Step D: Browse to the binho\_usbser.inf file downloaded from this page and click OK
 
-![](<../.gitbook/assets/image (20).png>)
+![](<../.gitbook/assets/image (10).png>)
 
 ### Step E: Select "Binho USB Host Adapter" and click "Next"
 
-![](<../.gitbook/assets/image (21).png>)
+![](<../.gitbook/assets/image (28).png>)
 
 #### At this point, you can return to [Step 6](https://support.binho.io/troubleshooting/windows-driver-installation#step-6-select-install-this-driver-software-anyway) above to complete the process.

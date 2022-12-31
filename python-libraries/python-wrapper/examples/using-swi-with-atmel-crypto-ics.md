@@ -130,4 +130,4 @@ print(binhoTester.receiveBytesSWI(swiIndex, 0x23))
 binhoTester.close()
 ```
 
-A special shout out to our friends at [Sparkfun ](https://www.sparkfun.com)who produced a similar example above for their ATSHA204 Arduino Library many, many moons ago. This demo is built to match their example.
+A special shout out to our friends at [Sparkfun ](https://www.sparkfun.com/)who produced a similar example above for their ATSHA204 Arduino Library many, many moons ago. This demo is built to match their example.

@@ -1,6 +1,6 @@
 # Binho + CircuitPython
 
-The _Binho Nova_ host adapter works seamlessly with [CircuitPython](https://circuitpython.org). You can leverage all of the open-source device drivers and example code right from your PC. In the video below, Shannon Morse walks through the process of setting this up from scratch, starting with Python installation, and shows how simple it is to use with Nova.
+The _Binho Nova_ host adapter works seamlessly with [CircuitPython](https://circuitpython.org/). You can leverage all of the open-source device drivers and example code right from your PC. In the video below, Shannon Morse walks through the process of setting this up from scratch, starting with Python installation, and shows how simple it is to use with Nova.
 
 {% embed url="https://www.youtube.com/watch?v=aTzU04I9W1M" %}
 
